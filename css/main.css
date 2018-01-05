@@ -14,3 +14,12 @@ body {
 
 
 h1 {}
+
+
+.pagination {
+  width: 100px;
+  height: 20px;
+background-color: lightblue;
+}
+
+foo
