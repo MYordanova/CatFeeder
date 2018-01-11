@@ -10,13 +10,16 @@
 }
 
 body {
-  width: 375px;
-  height: 667 px;
+  width: 100%;
+  height: 100vh;
   background-color: #ffffff;
   color: #333;
+  overflow: hidden;
 }
 
+#all {
 
+}
 .pagination {
   width: 100px;
   height: 20px;
@@ -58,11 +61,7 @@ font-style: normal;
 font-weight: 500;
 }
 
-&.clicked {
-  path {
-        fill: #6AAA3B;
-      }
-  background {
+&:focus {
+  svg {
     fill: #6AAA3B;
-  }
 }
