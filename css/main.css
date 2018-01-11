@@ -61,7 +61,21 @@ font-style: normal;
 font-weight: 500;
 }
 
-&:focus {
-  svg {
-    fill: #6AAA3B;
+.activated svg g {
+  fill: #6AAA3B;
+}
+
+
+/* Navigation */
+#mainnavi li {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  transition: 0.2s;
+}
+#mainnavi #mainpage {
+  background-image: url('irgendwo/mein.svg');
+}
+#mainnavi #mainpage.activated {
+  background-image: url('irgendwo/meinaktives.svg') !important;
 }
