@@ -5,8 +5,8 @@
     <meta http-equiv="Cache-control" content="no-cache">
     <link rel="stylesheet" type="text/css" href="css/main.css">
       <!-- NOTE: jquery Library -->
-      <script src="jquery.js"></script>
-      <script src="main.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 		<content>
 			<ul id="chapters">
 
-				<li id="mh1ainPageContent" class="chapter"></li>
+				<li id="mainPageContent" class="chapter"></li>
 
 				<li id="historyContent" class="chapter">
           <h1>History</h1>
@@ -162,23 +162,27 @@
 		</content>
 <br>
 		<footer>
-			<ul id="mainnavi">
-				<li id="mainPage" class="navientry">
-        <button type="button" name="button">
-            <svg class="menuIcon" xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41">
-              <g fill="none" fill-rule="evenodd" stroke="#87BCD2">
-                <ellipse cx="20.106" cy="20.5" rx="19.512" ry="20"/>
-                <path stroke-width="1.2" d="M9.9566454,16.3318439 L8.62894783,22.167385 C8.62894783,22.167385 3.58917839,28.3026316 20.2211788,28.3026316 C36.852418,28.3026316 31.4708273,22.167385 31.4708273,22.167385 L30.1431298,16.3318439 C30.1446524,16.2064823 28.3061262,13.5 20.0498876,13.5 C11.793649,13.5 9.95512281,16.2064823 9.9566454,16.3318439 Z"/>
-                <path stroke-width="1.2" d="M10.1577983,16.3195489 C10.1577983,16.3195489 14.1903866,19.1390977 20.2715359,19.1390977 C26.3519347,19.1390977 30.0551025,16.3195489 30.0551025,16.3195489"/>
-              </g>
-            </svg>
-          </button>
-          </li>
-				<li id="history" class="navientry">Diagram</li>
-				<li id="profile" class="navientry">Cat Profile</li>
-				<li id="settings" class="navientry">More Settings</li>
-			</ul>
-		</footer>
+      <footer>
+    <nav>
+      <ul id="mainnavi">
+        <li id="mainPage" class="navientry">
+          <a href="index.html">Pet Feeder</a>
+        </li>
+
+        <li id="history" class="navientry">
+          <a href="history.html">History</a>
+        </li>
+
+        <li id="profile" class="navientry">
+          <a href="profile.html">Profile</a>
+        </li>
+
+        <li id="settings" class="navientry">
+          <a href="settings.html">Settings</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 	</div>
 </body>
 </html>
