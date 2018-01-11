@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  font-family: sofia-pro, sans-serif;
+  font-family: "sofia-pro", sans-serif;
   font-style: normal;
   font-weight: 500;;
 }
@@ -68,6 +68,9 @@ font-weight: 500;
 
 /* Navigation */
 #mainnavi li {
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
