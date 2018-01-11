@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="121" height="121" viewBox="0 0 121 121">
+  <defs>
+    <circle id="iconcirclefeedsmall-a" cx="45.531" cy="51.511" r="40"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(.053)">
+    <use fill="#B5E1DE" xlink:href="#iconcirclefeedsmall-a"/>
+    <circle cx="45.531" cy="51.511" r="40"/>
+    <circle cx="60.232" cy="60.427" r="59" stroke="#4A4A4A" stroke-width="2"/>
+  </g>
+</svg>
