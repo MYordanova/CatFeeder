@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="41" viewBox="0 0 40 41">
+  <defs>
+    <circle id="icondeleteinactive-a" cx="20" cy="20" r="20"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="rotate(45 19.65 20.127)">
+    <use fill="#FFF" xlink:href="#icondeleteinactive-a"/>
+    <circle cx="20" cy="20" r="19" stroke="#87BCD2" stroke-width="2"/>
+    <path stroke="#87BCD2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 11L20 29M11 20L29 20"/>
+  </g>
+</svg>
