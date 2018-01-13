@@ -17,50 +17,26 @@
 				<li id="mainPageContent" class="chapter"></li>
 
 				<li id="historyContent" class="chapter">
-          <h1>History</h1>
-          <div class="pagination"></div>
+          <div class="history">
+            <h1>History</h1>
+            <div class="pagination"></div>
+          </div>
 
-          <div id="foodContent" class="page">
-						<div class="pageContent">
-							<h2>Food</h2>
-              <ul class="Date">
-                <li>Year</li>
-                <li>Month</li>
-                <li>Week</li>
-                <li>Day</li>
-              </ul>
-							<section class="diagram">
-                <div class="infocirle">Info Circle</div>
-                <div class="curclepointer">Circle Pointer</div>
-                <div class="curve">Curve</div>
-                <ul style="list-style-type: none;" class="monthsfood">
-                  <li>January</li>
-                  <li>February</li>
-                  <li>March</li>
-                  <li>April</li>
-                  <li>May</li>
-                  <li>June</li>
-                  <li>July</li>
-                  <li>August</li>
-                </ul>
-							</section>
-						</div>
-					</div>
-
-          <div id="waterContent" class="page">
+          <div id="foodwaterContent">
+            <div id="foodContent" class="page">
   						<div class="pageContent">
-  							<h2>Water</h2>
-  							<ul class="Date">
+  							<h2>Food</h2>
+                <ul class="Date">
                   <li>Year</li>
                   <li>Month</li>
                   <li>Week</li>
                   <li>Day</li>
                 </ul>
-                <section class="diagram">
+  							<section class="diagram">
                   <div class="infocirle">Info Circle</div>
                   <div class="curclepointer">Circle Pointer</div>
                   <div class="curve">Curve</div>
-                  <ul style="list-style-type: none;" class="monthswater">
+                  <ul style="list-style-type: none;" class="monthsfood">
                     <li>January</li>
                     <li>February</li>
                     <li>March</li>
@@ -71,73 +47,107 @@
                     <li>August</li>
                   </ul>
   							</section>
-              </div>
+  						</div>
   					</div>
-					</div>
+
+            <div id="waterContent" class="page">
+                <div class="pageContent">
+                  <h2>Water</h2>
+                  <ul class="Date">
+                    <li>Year</li>
+                    <li>Month</li>
+                    <li>Week</li>
+                    <li>Day</li>
+                  </ul>
+                  <section class="diagram">
+                    <div class="infocirle">Info Circle</div>
+                    <div class="curclepointer">Circle Pointer</div>
+                    <div class="curve">Curve</div>
+                    <ul style="list-style-type: none;" class="monthswater">
+                      <li>January</li>
+                      <li>February</li>
+                      <li>March</li>
+                      <li>April</li>
+                      <li>May</li>
+                      <li>June</li>
+                      <li>July</li>
+                      <li>August</li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </div>
+
+
+
         </li>
 
 				<li id="profileContent" class="chapter">
-          <h1>Pet Profile</h1>
-          <div class="pagination"></div>
-
-					<div id="generalInfoProfile" class="page">
-						<div class="pageContent">
-							<h2>General information</h2>
-							<div>Round graphic with plus button</div>
-							<section class="datasheet">
-								<div>
-									<label>Name</label>
-									<input type="text" name="name">
-								</div>
-								<div>
-                  <label>Breed</label>
-                  <input type="text" name="breed">
-                </div>
-								<div>
-                  <label>Age</label>
-                  <input type="text" name="age">
-                </div>
-                <label>Weight</label>
-                <input type="text" name="weight">
-							</section>
-						</div>
+          <div class="profile">
+            <h1>Pet Profile</h1>
+            <div class="pagination"></div>
           </div>
 
-          <div id="foodProfile"class="page">
-            <div class="pageContent">
-              <h2>Food Profile</h2>
-              <div>Scan Area</div>
-							<section class="datasheet">
-								<div>
-									<label>Brand</label>
-									<input type="text" name="brand">
-								</div>
-								<div>
-                  <label>Food Kind</label>
-                  <input type="text" name="breed">
-                </div>
-								<div>
-                  <label>Food Protion Amount</label>
-                  <input type="text" name="age">
-                </div>
-							</section>
+          <div id="petProfile">
+  					<div id="generalInfoProfile" class="page">
+  						<div class="pageContent">
+  							<h2>General information</h2>
+  							<div>Round graphic with plus button</div>
+  							<section class="datasheet">
+  								<div>
+  									<label>Name</label>
+  									<input type="text" name="name">
+  								</div>
+  								<div>
+                    <label>Breed</label>
+                    <input type="text" name="breed">
+                  </div>
+  								<div>
+                    <label>Age</label>
+                    <input type="text" name="age">
+                  </div>
+                  <label>Weight</label>
+                  <input type="text" name="weight">
+  							</section>
+  						</div>
             </div>
-          </div>
 
-          <div id="eatingHabitsProfile"class="page">
-            <div class="pageContent">
-              <h2>Eating Habits</h2>
-              <div class="buttons">
-                <div class="addButton">Add Button</div>
-                <div class="closeButton">Close Button</div>
-                <div class="saveButton">Save Button</div>
+            <div id="foodProfile" class="page">
+              <div class="pageContent">
+                <h2>Food Profile</h2>
+                <div>Scan Area</div>
+  							<section class="datasheet">
+  								<div>
+  									<label>Brand</label>
+  									<input type="text" name="brand">
+  								</div>
+  								<div>
+                    <label>Food Kind</label>
+                    <input type="text" name="breed">
+                  </div>
+  								<div>
+                    <label>Food Protion Amount</label>
+                    <input type="text" name="age">
+                  </div>
+  							</section>
               </div>
-              <section>
-                <div class="mode">
-                  <div class="duration">Duration</div>
-                  <div>Food Amount</div>
+            </div>
+
+            <div id="eatingHabitsProfile" class="page">
+              <div class="pageContent">
+                <h2>Eating Habits</h2>
+                <div class="buttons">
+                  <div class="addButton">Add Button</div>
+                  <div class="closeButton">Close Button</div>
+                  <div class="saveButton">Save Button</div>
                 </div>
-              </section>
+                <section>
+                  <div class="mode">
+                    <div class="duration">Duration</div>
+                    <div>Food Amount</div>
+                  </div>
+                </section>
+              </div>
             </div>
           </div>
         </li>
@@ -148,15 +158,16 @@
             <div class="pagination"></div>
             <div class="chaptercontent">
               <div id="settingsnavigation"class="page">
-              <div id="notifications"class="page">Notifications</div>
-              <div id="autoFeedDuration"class="page">Auto-Feed Duration</div>
-              <div id="moreSettings"class="page">More Settings</div>
+              <div id="notifications">Notifications</div>
+              <div id="autoFeedDuration">Auto-Feed Duration</div>
+              <div id="moreSettings" >More Settings</div>
               </div>
             </div>
           </div>
         </li>
 			</ul>
 		</content>
+  </div>
 	<footer>
     <nav role="navigation">
       <ul id="mainnavi">
