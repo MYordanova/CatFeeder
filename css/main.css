@@ -169,6 +169,7 @@ label {
   opacity: 0.5;
 }
 
+<<<<<<< HEAD
 input{
   padding-top: 9px;
   padding-bottom: 18px;
@@ -182,6 +183,8 @@ input{
 }
 
 
+=======
+>>>>>>> cddf85cbce13b13b21fdb5f76f9a2ff25cd9d995
 
 /* Footer   Navigation */
 
@@ -190,32 +193,56 @@ footer {
   height: 80px;
   position: fixed;
   bottom: 0;
+  background: white;
 }
 
 nav {
   width: 280px;
   height: 40px;
   margin: 20px auto;
-  background: red;
+}
+
+#mainNavi {
+  width: 280px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #mainNavi .navientry {
   width: 40px;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: grey;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 40px 40px;
-  transition: 2s;
+  transition: 0s;
 }
 
-#mainNavi #mainPage {
+
+#naviMainPage {
   background-image: url('../images/mainNaviElements/iconMainPageInactive.svg');
 }
+#naviMainPage.activated {
+  background-image: url('../images/mainNaviElements/iconMainPageActive.svg') !important;
+}
 
-#mainNavi #mainPage.activated {
-  background-image: url('../images/mainNaviElements/iconMainPageActive.svg');
+#naviHistory {
+  background-image: url('../images/mainNaviElements/iconHistoryInactive.svg');
+}
+#naviHistory.activated {
+  background-image: url('../images/mainNaviElements/iconHistoryActive.svg') !important;
+}
+
+#naviProfile {
+  background-image: url('../images/mainNaviElements/iconProfileInactive.svg');
+}
+#naviProfile.activated {
+  background-image: url('../images/mainNaviElements/iconProfileActive.svg') !important;
+}
+
+#naviSettings {
+  background-image: url('../images/mainNaviElements/iconSettingsInactive.svg');
+}
+#naviSettings.activated {
+  background-image: url('../images/mainNaviElements/iconSettingsActive.svg') !important;
 }
