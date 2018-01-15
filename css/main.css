@@ -3,17 +3,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   font-family: "sofia-pro", sans-serif;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 500;;
+
+  /* NOTE: font weight for normal is 400. The Info is from typekit */
+  font-weight: 400;
 }
 
+html {
+
+}
 body {
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
-  color: #333;
+  color: #4A4A4A;
   /* NOTE: overflow: hidden; */
 }
 
@@ -95,15 +100,17 @@ body {
   width: 100%;
   background-color: grey;
 }
-}
-
 
 h1 {
   text-align: center;
+  font-size: 1.5rem; /* NOTE: 16*1.5 = 24px */
+  font-weight: 500;
 }
 
 h2 {
   text-align: center;
+  font-size: 1.25rem; /* NOTE: 20px  */
+  font-weight: 500;
 }
 
 .curve {
@@ -129,7 +136,8 @@ ul {
 }
 
 li {
-font-family: sofia-pro, sans-serif;
+  /* NOTE: defined for whole file. see tag *  */
+ /* font-family: "sofia-pro",sans-serif; */
 font-style: normal;
 font-weight: 500;
 }
@@ -138,8 +146,34 @@ font-weight: 500;
   fill: #6AAA3B;
 }
 
+/* NOTE: Cat Profile */
 
+form {
 
+}
+form input {
+  box-sizing: border-box;
+  outline: 0;
+  border-bottom: 1px solid;
+  border-bottom-color: #87BCD2;
+  width: 100%;
+  margin: 0px 0px 9px;
+  /* background: yellow; */
+  height: 40px;
+}
+label {
+  display: inline-block;
+  text-align: left;
+  /* color: green; */
+  position: absolute;
+  opacity: 0.5;
+}
+
+input{
+  padding-top: 9px;
+  padding-bottom: 18px;
+  color: #4A4A4A;
+}
 #mainnavi #mainpage {
   background-image: url('irgendwo/mein.svg');
 }
