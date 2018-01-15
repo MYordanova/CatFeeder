@@ -9,9 +9,16 @@ $(document).ready (function() {
     $('.navientry').removeClass('activated');
     $(this).addClass('activated');
 
-
-
-
   });
 
+// Cat Profile Buttons
+
+  $('.confirmHabit').hide();
+
+  $('#buttonAddHabit').click(function(){
+      $('.confirmHabit').show();
+      $(this).hide();
+  });
+
+  
 });

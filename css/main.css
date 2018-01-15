@@ -146,7 +146,7 @@ font-weight: 500;
   fill: #6AAA3B;
 }
 
-/* NOTE: Cat Profile */
+/* NOTE: Cat Profile Form */
 
 form {
 
@@ -157,9 +157,8 @@ form input {
   border-bottom: 1px solid;
   border-bottom-color: #87BCD2;
   width: 100%;
-  margin: 0px 0px 9px;
   /* background: yellow; */
-  height: 40px;
+  height: 50px;
 }
 label {
   display: inline-block;
@@ -169,22 +168,43 @@ label {
   opacity: 0.5;
 }
 
-<<<<<<< HEAD
 input{
-  padding-top: 9px;
-  padding-bottom: 18px;
   color: #4A4A4A;
 }
+
+/* NOTE: Cat Profile Button */
+
+.buttonAction {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  transition: 0s;
+}
+
+#buttonAddHabit {
+  background-image: url('../images/button/addInactive.svg');
+}
+
+#buttonCloseHabit {
+  background-image: url('../images/button/closeInactive.svg');
+}
+
+#buttonConfirmHabit {
+  background-image: url('../images/button/confirmInactive.svg');
+}
+
+/* NOTE: Cat Profile new Habbit  */
+
+
+/*
 #mainnavi #mainpage {
   background-image: url('irgendwo/mein.svg');
 }
 #mainnavi #mainpage.activated {
   background-image: url('irgendwo/meinaktives.svg') !important;
-}
+} */
 
-
-=======
->>>>>>> cddf85cbce13b13b21fdb5f76f9a2ff25cd9d995
 
 /* Footer   Navigation */
 
