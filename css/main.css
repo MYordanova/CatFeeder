@@ -140,14 +140,6 @@ font-weight: 500;
 
 
 
-#mainnavi #mainpage {
-  background-image: url('irgendwo/mein.svg');
-}
-#mainnavi #mainpage.activated {
-  background-image: url('irgendwo/meinaktives.svg') !important;
-}
-
-
 
 /* Footer   Navigation */
 
@@ -186,26 +178,26 @@ nav {
   background-image: url('../images/mainNaviElements/iconMainPageInactive.svg');
 }
 #naviMainPage.activated {
-  background-image: url('../images/mainNaviElements/iconMainPageActive.svg');
+  background-image: url('../images/mainNaviElements/iconMainPageActive.svg') !important;
 }
 
 #naviHistory {
   background-image: url('../images/mainNaviElements/iconHistoryInactive.svg');
 }
 #naviHistory.activated {
-  background-image: url('../images/mainNaviElements/iconHistoryActive.svg');
+  background-image: url('../images/mainNaviElements/iconHistoryActive.svg') !important;
 }
 
 #naviProfile {
   background-image: url('../images/mainNaviElements/iconProfileInactive.svg');
 }
 #naviProfile.activated {
-  background-image: url('../images/mainNaviElements/iconProfileActive.svg');
+  background-image: url('../images/mainNaviElements/iconProfileActive.svg') !important;
 }
 
 #naviSettings {
   background-image: url('../images/mainNaviElements/iconSettingsInactive.svg');
 }
 #naviSettings.activated {
-  background-image: url('../images/mainNaviElements/iconSettingsActive.svg');
+  background-image: url('../images/mainNaviElements/iconSettingsActive.svg') !important;
 }
