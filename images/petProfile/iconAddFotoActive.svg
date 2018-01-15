@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="141" height="121" viewBox="0 0 141 121">
+  <defs>
+    <circle id="iconaddfotoactive-a" cx="20" cy="20" r="20"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="60.5" cy="60.5" r="59.5" stroke="#87BCD2" stroke-width="2" transform="translate(.053)"/>
+    <g transform="translate(100.053 50.291)">
+      <use fill="#87BCD2" xlink:href="#iconaddfotoactive-a"/>
+      <circle cx="20" cy="20" r="19" stroke="#87BCD2" stroke-width="2"/>
+      <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 11L20 29M11 20L29 20"/>
+    </g>
+  </g>
+</svg>

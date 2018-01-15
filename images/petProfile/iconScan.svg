@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="142" height="120" viewBox="0 0 142 120">
+  <g fill="none" fill-rule="evenodd" transform="translate(1.271 1)">
+    <path stroke="#87BCD2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 19.5L19 98.5M39 19.5L39 77.5M79.176 19.5L79.176 98.5M59 19.5L59 77.5M99 19.5L99 77.5M120 19.5L120 98.5"/>
+    <polyline stroke="#87BCD2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points=".5 18 .5 0 18.5 0"/>
+    <polyline stroke="#87BCD2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="121 18 121 0 139 0" transform="matrix(-1 0 0 1 260 0)"/>
+    <polyline stroke="#87BCD2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="121 118 121 100 139 100" transform="rotate(180 130 109)"/>
+    <path fill="#87BCD2" d="M41 96.996C41 95.894 40.103984 95 38.9994989 95 37.8950138 95 37 95.894 37 96.996 37 98.098 37.8950138 98.992 38.9994989 98.992 40.103984 98.992 41 98.098 41 96.996M61 97.0005011C61 95.896016 60.103984 95 58.9994989 95 57.8950138 95 57 95.896016 57 97.0005011 57 98.1049862 57.8950138 99.0010023 58.9994989 99.0010023 60.103984 99.0010023 61 98.1049862 61 97.0005011M101 97.0005011C101 95.896016 100.103984 95 98.9994989 95 97.8950138 95 97 95.896016 97 97.0005011 97 98.1049862 97.8950138 99.0010023 98.9994989 99.0010023 100.103984 99.0010023 101 98.1049862 101 97.0005011"/>
+    <polyline stroke="#87BCD2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="0 118 0 100 18 100" transform="matrix(1 0 0 -1 0 218)"/>
+  </g>
+</svg>

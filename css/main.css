@@ -23,20 +23,80 @@ body {
 }
 
 .content {
-  width:280px;
-  height:560px;
-  margin: 0 auto;
-  position: fixed;
-  background-color: yellow;
+  width:100%;
+  height:587px;
+}
+
+#chapters {
+  width: 100%;
+  height: 587px;
+}
+
+.page {
+  width:100%;
+  height:537px;
+}
+
+#mainPageContent {
+  width:100%;
+  height:587px;
+  background-color: black;
+}
+
+#foodwaterContent {
+  display: flex;
+  flex-flow: row;
+}
+
+#foodContent {
+  width: 100%;
+  background-color: blue;
+}
+
+#waterContent {
+  width: 100%;
+  background-color: pink;
 }
 
 .pagination {
-  width: 100px;
+  width: 100%;
   height: 20px;
   background-color: lightblue;
   margin-left: auto;
   margin-right: auto;
 }
+
+.pagination li {
+  background-color:#fff;
+  border:1px solid black;
+  height:8px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  width:8px;
+}
+
+#petProfile {
+  display: flex;
+  flex-flow: row;
+}
+
+#generalInfoProfile {
+  width: 100%;
+  background-color: blue;
+}
+
+#foodProfile {
+  width: 100%;
+  background-color: pink;
+}
+
+#eatingHabitsProfile {
+  width: 100%;
+  background-color: grey;
+}
+}
+
 
 h1 {
   text-align: center;
@@ -63,6 +123,9 @@ h2 {
   transform: rotate(270deg);
   margin-left: auto;
   margin-right: auto;
+}
+ul {
+  list-style-type: none;
 }
 
 li {
