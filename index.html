@@ -117,20 +117,22 @@
   							<h2>General information</h2>
   							<div>Round graphic with plus button</div>
   							<section class="datasheet">
+                  <form class="catInformation" action="index.html" method="post">
   								<div>
-  									<label>Name</label>
-  									<input type="text" name="name">
+  									<label class="name"></label>
+  									<input type="text" name="name" placeholder="Name">
   								</div>
   								<div>
-                    <label>Breed</label>
-                    <input type="text" name="breed">
+                    <label class="breed"></label>
+                    <input type="text" name="breed" placeholder="Breed">
                   </div>
   								<div>
-                    <label>Age</label>
-                    <input type="text" name="age">
+                    <label class="age"></label>
+                    <input type="text" name="age" placeholder="Age">
                   </div>
-                  <label>Weight</label>
-                  <input type="text" name="weight">
+                  <label class="weight"></label>
+                  <input type="text" name="weight" placeholder="Weight">
+                    </form>
   							</section>
   						</div>
             </div>
@@ -162,14 +164,31 @@
               <div class="pageContent">
                 <h2>Eating Habits</h2>
                 <div class="buttons">
-                  <div class="addButton">Add Button</div>
-                  <div class="closeButton">Close Button</div>
-                  <div class="saveButton">Save Button</div>
+                  <div id="buttonAddHabit" class="buttonAction"></div>
+                    <div class="confirmHabit">
+                      <div id="buttonCloseHabit" class="buttonAction"></div>
+                      <div id="buttonConfirmHabit" class="buttonAction"></div>
+                    </div>
                 </div>
                 <section>
-                  <div class="mode">
-                    <div class="duration">Duration</div>
-                    <div>Food Amount</div>
+                  <div id="newHabit" class="addnewHabit">
+
+                    <div class="timePicker">
+                      <span>Time</span>
+                      <div class="displayInfromation">
+                        <div class="hours">12</div>
+                        <div class="minutes">30</div>
+                      </div>
+                    </div>
+
+                    <div class="portion">
+                      <span>Portion</span>
+                      <div class="displayInformation">
+                        <div class="amount">30</div>
+                        <div class="measure">g</div>
+                      </div>
+
+                    </div>
                   </div>
                 </section>
               </div>
