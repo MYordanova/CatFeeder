@@ -1,3 +1,7 @@
+
+
+/* allgemeine informationen */
+
 * {
   border: 0;
   margin: 0;
@@ -11,10 +15,7 @@
   font-weight: 400;
 }
 
-html {
-
-}
-
+html,
 body {
   width: 100%;
   height: 100vh;
@@ -32,7 +33,6 @@ body {
   width:100%;
   height:587px;
 }
-/* Chapters Content */
 
 #chapters {
   width: 100%;
@@ -43,6 +43,32 @@ body {
   width:100%;
   height:537px;
 }
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem; /* NOTE: 16*1.5 = 24px */
+  font-weight: 500;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.25rem; /* NOTE: 20px  */
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  /* NOTE: defined for whole file. see tag *  */
+ /* font-family: "sofia-pro",sans-serif; */
+font-style: normal;
+font-weight: 500;
+}
+
+
+/* Main Page */
 
 #mainPageContent {
   width:100%;
@@ -97,6 +123,8 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+
 
 #foodwaterContent {
   width: 100%;
@@ -169,17 +197,6 @@ flex-direction: row;
   background-color: grey;
 }
 
-h1 {
-  text-align: center;
-  font-size: 1.5rem; /* NOTE: 16*1.5 = 24px */
-  font-weight: 500;
-}
-
-h2 {
-  text-align: center;
-  font-size: 1.25rem; /* NOTE: 20px  */
-  font-weight: 500;
-}
 
 .curve {
   hight: 200px;
@@ -200,16 +217,7 @@ h2 {
   margin-right: auto;
 }
 
-ul {
-  list-style-type: none;
-}
 
-li {
-  /* NOTE: defined for whole file. see tag *  */
- /* font-family: "sofia-pro",sans-serif; */
-font-style: normal;
-font-weight: 500;
-}
 
 .activated svg g {
   fill: #6AAA3B;
@@ -266,14 +274,7 @@ input{
 /* NOTE: Cat Profile new Habbit  */
 
 
-/*
-#mainnavi #mainpage {
-  background-image: url('irgendwo/mein.svg');
-}
-#mainnavi #mainpage.activated {
-  background-image: url('irgendwo/meinaktives.svg') !important;*/
-
-/* Footer   Navigation */
+/* footer navigation */
 
 footer {
   width: 100%;

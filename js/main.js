@@ -8,7 +8,6 @@ $(document).ready (function() {
   $('.navientry').on('click', function() {
     $('.navientry').removeClass('activated');
     $(this).addClass('activated');
-
   });
 
 // Cat Profile Buttons
@@ -20,5 +19,5 @@ $(document).ready (function() {
       $(this).hide();
   });
 
-  
+
 });
