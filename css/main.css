@@ -37,11 +37,24 @@ body {
   height:537px;
 }
 
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+/* Main Page */
+
 #mainPageContent {
   width:100%;
   height:587px;
   background-color: black;
 }
+
+
 
 #foodwaterContent {
   display: flex;
@@ -97,14 +110,6 @@ body {
 }
 }
 
-
-h1 {
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
-}
 
 .curve {
   hight: 200px;

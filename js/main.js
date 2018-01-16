@@ -8,10 +8,6 @@ $(document).ready (function() {
   $('.navientry').on('click', function() {
     $('.navientry').removeClass('activated');
     $(this).addClass('activated');
-
-
-
-
   });
 
 });
