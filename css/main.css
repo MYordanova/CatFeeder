@@ -14,6 +14,7 @@
 html {
 
 }
+
 body {
   width: 100%;
   height: 100vh;
@@ -31,6 +32,7 @@ body {
   width:100%;
   height:587px;
 }
+/* Chapters Content */
 
 #chapters {
   width: 100%;
@@ -45,22 +47,90 @@ body {
 #mainPageContent {
   width:100%;
   height:587px;
-  background-color: black;
+}
+
+#containerInformation {
+  width: 280px;
+  height: 80px;
+  background-color: lightblue;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controlCircle {
+  /* NOTE: will be replaced with our value driven graphic */
+  width: 267px;
+  height: 267px;
+  border: 2px solid lightblue;
+  margin: 90px auto 90px auto;
+  -moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	border-radius: 200px;
+}
+
+.autoFeed {
+  /* NOTE: change with svg Feed Button, keep margins */
+  width: 128px;
+  height: 128px;
+  border: 2px solid lightblue;
+  margin-top: -100px; margin-left: -50px;
+  -moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 80px;
+}
+
+.feedButton {
+  /* NOTE: change with svg Auto Feed, keep margins */
+  width: 75px;
+  height: 75px;
+  border: 2px solid lightblue;
+  margin-top: -110px; margin-left: 260px;
+  -moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 80px;
+}
+
+.container {
+  width: 90px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.amount {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #foodwaterContent {
+  width: 100%;
   display: flex;
   flex-flow: row;
 }
 
 #foodContent {
-  width: 100%;
   background-color: blue;
 }
 
 #waterContent {
-  width: 100%;
   background-color: pink;
+}
+
+.date li {
+  text-align:left;
+}
+
+.views {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.views li {
+display: flex;
+flex-direction: row;
 }
 
 .pagination {
@@ -79,6 +149,11 @@ body {
   -moz-border-radius:50%;
   -webkit-border-radius:50%;
   width:8px;
+}
+
+.date {
+  display: flex;
+  flex-flow: row;
 }
 
 #petProfile {
@@ -131,6 +206,7 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
+
 ul {
   list-style-type: none;
 }
@@ -169,7 +245,6 @@ label {
   opacity: 0.5;
 }
 
-<<<<<<< HEAD
 input{
   padding-top: 9px;
   padding-bottom: 18px;
@@ -181,10 +256,6 @@ input{
 #mainnavi #mainpage.activated {
   background-image: url('irgendwo/meinaktives.svg') !important;
 }
-
-
-=======
->>>>>>> cddf85cbce13b13b21fdb5f76f9a2ff25cd9d995
 
 /* Footer   Navigation */
 
@@ -229,6 +300,7 @@ nav {
 #naviHistory {
   background-image: url('../images/mainNaviElements/iconHistoryInactive.svg');
 }
+
 #naviHistory.activated {
   background-image: url('../images/mainNaviElements/iconHistoryActive.svg') !important;
 }
@@ -243,6 +315,7 @@ nav {
 #naviSettings {
   background-image: url('../images/mainNaviElements/iconSettingsInactive.svg');
 }
+
 #naviSettings.activated {
   background-image: url('../images/mainNaviElements/iconSettingsActive.svg') !important;
 }

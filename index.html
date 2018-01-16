@@ -16,7 +16,29 @@
 		<content class="content">
 			<ul id="chapters">
 
-				<li id="mainPageContent" class="chapter"></li>
+				<li id="mainPageContent" class="chapter">
+          <ul id="containerInformation">
+            <li id="waterTank" class="container">
+              <div class="waterTankAmount">Icon1</div>
+              <h6>Water Tank</h6>
+            </li>
+
+            <li id="foodTank" class="container">
+              <div class="foodTankAmount">Icon2</div>
+              <h6>Food Tank</h6>
+            </li>
+
+            <li id="foodBowl" class="container">
+              <div id="foodBowlAmount">Icon3</div>
+              <h6>Food Bowl </h6>
+            </li>
+          </ul>
+
+          <div class="controlCircle"></div>
+          <div class="autoFeed"></div>
+          <div class="feedButton"></div>
+
+        </li>
 
 				<li id="historyContent" class="chapter">
           <div class="history">
@@ -28,11 +50,11 @@
             <div id="foodContent" class="page">
   						<div class="pageContent">
   							<h2>Food</h2>
-                <ul class="Date">
-                  <li>Year</li>
-                  <li>Month</li>
-                  <li>Week</li>
-                  <li>Day</li>
+                <ul class="date">
+                  <li>2018</li>
+                  <li>M</li>
+                  <li>W</li>
+                  <li>D</li>
                 </ul>
   							<section class="diagram">
                   <div class="infocirle">Info Circle</div>
@@ -55,12 +77,14 @@
             <div id="waterContent" class="page">
                 <div class="pageContent">
                   <h2>Water</h2>
-                  <ul class="Date">
-                    <li>Year</li>
-                    <li>Month</li>
-                    <li>Week</li>
-                    <li>Day</li>
-                  </ul>
+                  <div class="date">
+                    <h3>2018</h3>
+                    <ul class="views">
+                      <li>M</li>
+                      <li>W</li>
+                      <li>D</li>
+                    </ul>
+                  </div>
                   <section class="diagram">
                     <div class="infocirle">Info Circle</div>
                     <div class="curclepointer">Circle Pointer</div>
@@ -79,9 +103,6 @@
                 </div>
               </div>
             </div>
-
-
-
         </li>
 
 				<li id="profileContent" class="chapter">
@@ -169,6 +190,7 @@
             </div>
           </div>
         </li>
+
 			</ul>
 		</content>
   </div>
