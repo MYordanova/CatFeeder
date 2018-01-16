@@ -60,36 +60,27 @@ body {
 }
 
 .controlCircle {
-  /* NOTE: will be replaced with our value driven graphic */
+  background-image: url('../images/mainPage/iconCircleFeedBig.svg');
+  background-repeat: no-repeat;
   width: 267px;
   height: 267px;
-  border: 2px solid lightblue;
   margin: 90px auto 90px auto;
-  -moz-border-radius: 200px;
-	-webkit-border-radius: 200px;
-	border-radius: 200px;
 }
 
 .autoFeed {
-  /* NOTE: change with svg Feed Button, keep margins */
+  background-image: url('../images/mainPage/iconCircleAutofeedsmall.svg');
+  background-repeat: no-repeat;
   width: 128px;
   height: 128px;
-  border: 2px solid lightblue;
   margin-top: -100px; margin-left: -50px;
-  -moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 80px;
 }
 
 .feedButton {
-  /* NOTE: change with svg Auto Feed, keep margins */
-  width: 75px;
-  height: 75px;
-  border: 2px solid lightblue;
-  margin-top: -110px; margin-left: 260px;
-  -moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 80px;
+  background-image: url('../images/button/buttonFeedActive.svg');
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  margin-top: -115px; margin-left: 255px;
 }
 
 .container {
