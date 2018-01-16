@@ -3,17 +3,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   font-family: "sofia-pro", sans-serif;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 500;;
+
+  /* NOTE: font weight for normal is 400. The Info is from typekit */
+  font-weight: 400;
+}
+
+html {
+
 }
 
 body {
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
-  color: #333;
+  color: #4A4A4A;
   /* NOTE: overflow: hidden; */
 }
 
@@ -26,6 +32,7 @@ body {
   width:100%;
   height:587px;
 }
+/* Chapters Content */
 
 #chapters {
   width: 100%;
@@ -51,24 +58,83 @@ h2 {
 #mainPageContent {
   width:100%;
   height:587px;
-  background-color: black;
+}
+
+#containerInformation {
+  width: 280px;
+  height: 80px;
+  background-color: lightblue;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controlCircle {
+  background-image: url('../images/mainPage/iconCircleFeedBig.svg');
+  background-repeat: no-repeat;
+  width: 267px;
+  height: 267px;
+  margin: 90px auto 90px auto;
+}
+
+.autoFeed {
+  background-image: url('../images/mainPage/iconCircleAutofeedsmall.svg');
+  background-repeat: no-repeat;
+  width: 128px;
+  height: 128px;
+  margin-top: -100px; margin-left: -50px;
+}
+
+.feedButton {
+  background-image: url('../images/button/buttonFeedActive.svg');
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  margin-top: -115px; margin-left: 255px;
+}
+
+.container {
+  width: 90px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.amount {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 
 #foodwaterContent {
+  width: 100%;
   display: flex;
   flex-flow: row;
 }
 
 #foodContent {
-  width: 100%;
   background-color: blue;
 }
 
 #waterContent {
-  width: 100%;
   background-color: pink;
+}
+
+.date li {
+  text-align:left;
+}
+
+.views {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.views li {
+display: flex;
+flex-direction: row;
 }
 
 .pagination {
@@ -87,6 +153,11 @@ h2 {
   -moz-border-radius:50%;
   -webkit-border-radius:50%;
   width:8px;
+}
+
+.date {
+  display: flex;
+  flex-flow: row;
 }
 
 #petProfile {
@@ -108,9 +179,22 @@ h2 {
   width: 100%;
   background-color: grey;
 }
+
+<<<<<<< HEAD
+=======
+h1 {
+  text-align: center;
+  font-size: 1.5rem; /* NOTE: 16*1.5 = 24px */
+  font-weight: 500;
 }
 
+h2 {
+  text-align: center;
+  font-size: 1.25rem; /* NOTE: 20px  */
+  font-weight: 500;
+}
 
+>>>>>>> 22dc4ebf21ca707900b9fe251e1e783704d32f93
 .curve {
   hight: 200px;
 }
@@ -129,12 +213,14 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
+
 ul {
   list-style-type: none;
 }
 
 li {
-font-family: sofia-pro, sans-serif;
+  /* NOTE: defined for whole file. see tag *  */
+ /* font-family: "sofia-pro",sans-serif; */
 font-style: normal;
 font-weight: 500;
 }
@@ -143,8 +229,63 @@ font-weight: 500;
   fill: #6AAA3B;
 }
 
+/* NOTE: Cat Profile Form */
+
+form {
+
+}
+form input {
+  box-sizing: border-box;
+  outline: 0;
+  border-bottom: 1px solid;
+  border-bottom-color: #87BCD2;
+  width: 100%;
+  /* background: yellow; */
+  height: 50px;
+}
+label {
+  display: inline-block;
+  text-align: left;
+  /* color: green; */
+  position: absolute;
+  opacity: 0.5;
+}
+
+input{
+  color: #4A4A4A;
+}
+
+/* NOTE: Cat Profile Button */
+
+.buttonAction {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  transition: 0s;
+}
+
+#buttonAddHabit {
+  background-image: url('../images/button/addInactive.svg');
+}
+
+#buttonCloseHabit {
+  background-image: url('../images/button/closeInactive.svg');
+}
+
+#buttonConfirmHabit {
+  background-image: url('../images/button/confirmInactive.svg');
+}
+
+/* NOTE: Cat Profile new Habbit  */
 
 
+/*
+#mainnavi #mainpage {
+  background-image: url('irgendwo/mein.svg');
+}
+#mainnavi #mainpage.activated {
+  background-image: url('irgendwo/meinaktives.svg') !important;*/
 
 /* Footer   Navigation */
 
@@ -189,6 +330,7 @@ nav {
 #naviHistory {
   background-image: url('../images/mainNaviElements/iconHistoryInactive.svg');
 }
+
 #naviHistory.activated {
   background-image: url('../images/mainNaviElements/iconHistoryActive.svg') !important;
 }
@@ -203,6 +345,7 @@ nav {
 #naviSettings {
   background-image: url('../images/mainNaviElements/iconSettingsInactive.svg');
 }
+
 #naviSettings.activated {
   background-image: url('../images/mainNaviElements/iconSettingsActive.svg') !important;
 }
