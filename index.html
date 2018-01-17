@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<head>
-  <title>Pet Feeder</title>
-  <meta charset="utf-8" />
-  <meta http-equiv="Cache-control" content="no-cache">
+  <head>
+    <title>Pet Feeder</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-control" content="no-cache">
 
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" href="https://use.typekit.net/yzu5crl.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yzu5crl.css">
 
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-</head>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/progressbar.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
 
-<body>
-	<div id="all">
-		<content class="content">
-			<ul id="chapters">
+  <body>
+    <div id="all">
+      <content>
+        <ul id="chapters">
 
-				<li id="mainPageContent" class="chapter">
-          <ul id="containerInformation">
-            Statusbar füge ich später ein !!!
-          </ul>
+          <li id="mainPageContent" class="chapter">
+            <div class="statusbar">
+              <div class="progressbar tank watertank"></div>
+              <div class="progressbar tank foodtank"></div>
+              <div class="progressbar bowl"></div>
+            </div>
+            <button type="button" name="refill" class="refill">refill</button>
 
-          <div class="controlCircle"></div>
-          <div class="autoFeed"></div>
-          <div class="feedButton"></div>
-        </li>
 
-				<li id="historyContent" class="chapter">
-          <div class="history">
-            <h1>History</h1>
-            <div class="pagination"></div>
-          </div>
+            <div class="controlCircle"></div>
+            <div class="feedButton"></div>
+            <div class="autofeedCircle"></div>
 
-          <div id="foodwaterContent">
-            <div id="foodContent" class="page">
-  						<div class="pageContent">
-  							<h2>Food</h2>
+          </li>
+
+          <li id="historyContent" class="chapter">
+            <div class="heading history">
+              <h1>History</h1>
+              <div class="pagination"></div>
+            </div>
+
+            <div id="foodwaterContent">
+              <div id="foodContent" class="page">
+
+                <h2>Food</h2>
                 <ul class="date">
                   <li>2018</li>
                   <li>M</li>
                   <li>W</li>
                   <li>D</li>
                 </ul>
-  							<section class="diagram">
+                <section class="diagram">
                   <div class="infocirle">Info Circle</div>
                   <div class="curclepointer">Circle Pointer</div>
                   <div class="curve">Curve</div>
@@ -58,105 +64,105 @@
                     <li>July</li>
                     <li>August</li>
                   </ul>
-  							</section>
-  						</div>
-  					</div>
+                </section>
 
-            <div id="waterContent" class="page">
-                <div class="pageContent">
-                  <h2>Water</h2>
-                  <div class="date">
-                    <h3>2018</h3>
-                    <ul class="views">
-                      <li>M</li>
-                      <li>W</li>
-                      <li>D</li>
-                    </ul>
-                  </div>
-                  <section class="diagram">
-                    <div class="infocirle">Info Circle</div>
-                    <div class="curclepointer">Circle Pointer</div>
-                    <div class="curve">Curve</div>
-                    <ul style="list-style-type: none;" class="monthswater">
-                      <li>January</li>
-                      <li>February</li>
-                      <li>March</li>
-                      <li>April</li>
-                      <li>May</li>
-                      <li>June</li>
-                      <li>July</li>
-                      <li>August</li>
-                    </ul>
-                  </section>
+              </div>
+
+              <div id="waterContent" class="page">
+
+                <h2>Water</h2>
+                <div class="date">
+                  <h3>2018</h3>
+                  <ul class="views">
+                    <li>M</li>
+                    <li>W</li>
+                    <li>D</li>
+                  </ul>
                 </div>
+                <section class="diagram">
+                  <div class="infocirle">Info Circle</div>
+                  <div class="curclepointer">Circle Pointer</div>
+                  <div class="curve">Curve</div>
+                  <ul style="list-style-type: none;" class="monthswater">
+                    <li>January</li>
+                    <li>February</li>
+                    <li>March</li>
+                    <li>April</li>
+                    <li>May</li>
+                    <li>June</li>
+                    <li>July</li>
+                    <li>August</li>
+                  </ul>
+                </section>
+
               </div>
             </div>
-        </li>
+          </li>
 
-				<li id="profileContent" class="chapter">
-          <div class="profile">
-            <h1>Pet Profile</h1>
-            <div class="pagination"></div>
-          </div>
-
-          <div id="petProfile">
-  					<div id="generalInfoProfile" class="page">
-  						<div class="pageContent">
-  							<h2>General information</h2>
-  							<div>Round graphic with plus button</div>
-  							<section class="datasheet">
-                  <form class="catInformation" action="index.html" method="post">
-  								<div>
-  									<label class="name"></label>
-  									<input type="text" name="name" placeholder="Name">
-  								</div>
-  								<div>
-                    <label class="breed"></label>
-                    <input type="text" name="breed" placeholder="Breed">
-                  </div>
-  								<div>
-                    <label class="age"></label>
-                    <input type="text" name="age" placeholder="Age">
-                  </div>
-                  <label class="weight"></label>
-                  <input type="text" name="weight" placeholder="Weight">
-                    </form>
-  							</section>
-  						</div>
+          <li id="profileContent" class="chapter">
+            <div class="heading profile">
+              <h1>Pet Profile</h1>
+              <div class="pagination"></div>
             </div>
 
-            <div id="foodProfile" class="page">
-              <div class="pageContent">
+            <div id="petProfile">
+              <div id="generalInfoProfile" class="page">
+
+                <h2>General information</h2>
+                <div>Round graphic with plus button</div>
+                <section class="datasheet">
+                  <form class="catInformation" action="index.html" method="post">
+                    <div>
+                      <label class="name"></label>
+                      <input type="text" name="name" placeholder="Name">
+                    </div>
+                    <div>
+                      <label class="breed"></label>
+                      <input type="text" name="breed" placeholder="Breed">
+                    </div>
+                    <div>
+                      <label class="age"></label>
+                      <input type="text" name="age" placeholder="Age">
+                    </div>
+                    <label class="weight"></label>
+                    <input type="text" name="weight" placeholder="Weight">
+                  </form>
+                </section>
+
+              </div>
+
+              <div id="foodProfile" class="page">
+
                 <h2>Food Profile</h2>
                 <div>Scan Area</div>
-  							<section class="datasheet">
+                <section class="datasheet">
                   <form class="foodinformation" action="index.html" method="post">
-    								<div>
-    									<label class="brand"></label>
-    									<input type="text" name="brand" placeholder="Brand">
-    								</div>
-    								<div>
+                    <div>
+                      <label class="brand"></label>
+                      <input type="text" name="brand" placeholder="Brand">
+                    </div>
+                    <div>
                       <label class="sort"></label>
                       <input type="text" name="sort" placeholder="Sort">
                     </div>
-    								<div>
+                    <div>
                       <label class="portion"></label>
                       <input type="text" name="portion" placeholder="Portion">
                     </div>
                   </form>
-  							</section>
+                </section>
               </div>
-            </div>
 
-            <div id="eatingHabitsProfile" class="page">
-              <div class="pageContent">
+
+              <div id="eatingHabitsProfile" class="page">
+
                 <h2>Eating Habits</h2>
                 <div class="buttons">
                   <div id="buttonAddHabit" class="buttonAction"></div>
-                    <div class="confirmHabit">
-                      <div id="buttonCloseHabit" class="buttonAction"></div>
-                      <div id="buttonConfirmHabit" class="buttonAction"></div>
-                    </div>
+                  <div class="confirmHabit">
+                    <div id="buttonCloseHabit" class="buttonAction"></div>
+                    <div id="buttonConfirmHabit" class="buttonAction"></div>
+                  </div>
                 </div>
                 <section>
                   <div id="newHabit" class="addnewHabit">
@@ -179,42 +185,43 @@
                     </div>
                   </div>
                 </section>
+
               </div>
             </div>
-          </div>
-        </li>
+          </li>
 
-				<li id="settingsContent" class="chapter">
-          <div class="pageContent">
-            <h1>Settings</h1>
-            <div class="pagination"></div>
-            <div class="chaptercontent">
+          <li id="settingsContent" class="chapter">
+            <div class="heading settings">
+              <h1>Settings</h1>
+              <div class="pagination"></div>
+            </div>
+
+            <div id="" class="page">
               <div id="settingsnavigation"class="page">
-              <div id="notifications">Notifications</div>
-              <div id="autoFeedDuration">Auto-Feed Duration</div>
-              <div id="moreSettings" >More Settings</div>
+                <div id="notifications">Notifications</div>
+                <div id="autoFeedDuration">Auto-Feed Duration</div>
+                <div id="moreSettings" >More Settings</div>
               </div>
             </div>
-          </div>
-        </li>
+          </li>
 
-			</ul>
-		</content>
+        </ul>
+      </content>
+    </div>
+
+
+    <!-- footer -->
+
+    <footer>
+      <nav role="navigation">
+        <ul id="mainNavi">
+          <li id="naviMainPage" class="navientry activated"></li>
+          <li id="naviHistory" class="navientry"></li>
+          <li id="naviProfile" class="navientry"></li>
+          <li id="naviSettings" class="navientry"></li>
+        </ul>
+      </nav>
+    </footer>
   </div>
-
-
-<!-- footer -->
-
-	<footer>
-    <nav role="navigation">
-      <ul id="mainNavi">
-        <li id="naviMainPage" class="navientry activated"></li>
-        <li id="naviHistory" class="navientry"></li>
-        <li id="naviProfile" class="navientry"></li>
-        <li id="naviSettings" class="navientry"></li>
-      </ul>
-    </nav>
-  </footer>
-	</div>
 </body>
 </html>

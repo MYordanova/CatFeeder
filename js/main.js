@@ -2,15 +2,18 @@ $(document).ready (function() {
   //mydegree = currentfingerposition*3.6;
   //$(".meinkringel").css("transform","rotate("+mydegree+")");
 
+  // statusbar
 
-// MainNavigation
+  $('.progressbar').loading();
 
-  $('.navientry').on('click', function() {
+  // main navigation
+
+  $('.navientry').click(function() {
     $('.navientry').removeClass('activated');
     $(this).addClass('activated');
   });
 
-// Cat Profile Buttons
+  // Cat Profile Buttons
 
   $('.confirmHabit').hide();
 

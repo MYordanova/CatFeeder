@@ -10,9 +10,7 @@
   font-family: "sofia-pro", sans-serif;
   font-size: 16px;
   font-style: normal;
-
-  /* NOTE: font weight for normal is 400. The Info is from typekit */
-  font-weight: 400;
+  font-weight: 400; /* NOTE: font weight for normal is 400. The Info is from typekit */
 }
 
 html,
@@ -21,7 +19,7 @@ body {
   height: 100vh;
   background-color: #ffffff;
   color: #4A4A4A;
-  /* NOTE: overflow: hidden; */
+  overflow: hidden;
 }
 
 #all {
@@ -29,7 +27,7 @@ body {
   height:100vh;
 }
 
-.content {
+content {
   width:100%;
   height:587px;
 }
@@ -37,6 +35,43 @@ body {
 #chapters {
   width: 100%;
   height: 587px;
+}
+
+.chapter {
+  width: 100%;
+  height: 587px;
+  background: white !important;
+  position: absolute;
+  top: 0;
+  /* left: calc(50% - 140px); */
+}
+
+/* z-index zum bearbeiten der jeweiligen seite auf 1 setzen */
+
+#mainPageContent {
+  z-index: 1;
+}
+
+#historyContent {
+  z-index: ;
+}
+
+#profileContent {
+  z-index: ;
+}
+
+#settingsContent {
+  z-index: ;
+}
+
+.heading {
+
+  width: 280px;
+
+}
+
+.pagination {
+
 }
 
 .page {
@@ -61,8 +96,7 @@ ul {
 }
 
 li {
-  /* NOTE: defined for whole file. see tag *  */
- /* font-family: "sofia-pro",sans-serif; */
+/* font-family: "sofia-pro",sans-serif; */
 font-style: normal;
 font-weight: 500;
 }
@@ -70,20 +104,107 @@ font-weight: 500;
 
 /* Main Page */
 
-#mainPageContent {
-  width:100%;
-  height:587px;
+
+
+
+
+/* statusbar */
+
+.statusbar {
+  position: absolute;
+  height: 80px;
+  width: 280px;
+  left: calc(50% - 140px);
+  display: flex;
+  justify-content: center;
 }
 
-#containerInformation {
-  width: 280px;
-  height: 80px;
-  background-color: lightblue;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
+.progressbar {
+  height: 60px;
+  width: 60px;
+  margin: 0 10px;
+
 }
+
+.progressbar div {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.progressbar div span {
+  position: absolute;
+  font-size: 14px;
+  line-height: 56px;
+  height: 56px;
+  width: 56px;
+  left: 2px;
+  top: 2px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* tank */
+
+.progressbar .background_tank {
+  background-color: #B5D8DE;
+}
+
+.progressbar .rotate_tank {
+  background-color: #5C5C61;
+  clip: rect(0 30px 60px 0);
+}
+
+.progressbar .left_tank {
+  background-color: #B5D8DE;
+  clip: rect(0 30px 60px 0);
+  opacity: 1;
+}
+
+.progressbar .right_tank {
+  background-color: #5C5C61;
+  clip: rect(0 30px 60px 0);
+  transform: rotate(180deg);
+  opacity: 0;
+}
+
+/* bowl */
+
+.progressbar .background_bowl {
+  background-color: #B5D8DE;
+}
+
+.progressbar .rotate_bowl {
+  background-color: #5C5C61;
+  clip: rect(0 30px 60px 0);
+}
+
+.progressbar .left_bowl {
+  background-color: #B5D8DE;
+  clip: rect(0 30px 60px 0);
+  opacity: 1;
+}
+
+.progressbar .right_bowl {
+  background-color: #5C5C61;
+  clip: rect(0 30px 60px 0);
+  transform: rotate(180deg);
+  opacity: 0;
+}
+
+@keyframes toggle {
+  0% {
+    opacity: 0;
+  }
+ 100% {
+   opacity: 1;
+ }
+}
+
+
+/* control circle */
 
 .controlCircle {
   background-image: url('../images/mainPage/iconCircleFeedBig.svg');
@@ -93,7 +214,19 @@ font-weight: 500;
   margin: 90px auto 90px auto;
 }
 
-.autoFeed {
+
+/* feed button */
+
+.feedButton {
+  background-image: url('../images/mainPage/feedButtonInactive.svg');
+  width: 80px;
+  height: 80px;
+  margin-top: -115px; margin-left: 255px;
+}
+
+
+
+.autofeedCircle {
   background-image: url('../images/mainPage/iconCircleAutofeedsmall.svg');
   background-repeat: no-repeat;
   width: 128px;
@@ -101,15 +234,14 @@ font-weight: 500;
   margin-top: -100px; margin-left: -50px;
 }
 
-.feedButton {
-  background-image: url('../images/button/buttonFeedActive.svg');
-  background-repeat: no-repeat;
-  width: 80px;
-  height: 80px;
-  margin-top: -115px; margin-left: 255px;
-}
 
-.container {
+
+
+
+
+
+
+ .container { /* diese klasse existiert nicht im html dokument ?! */
   width: 90px;
   height: 60px;
   margin-left: auto;
@@ -152,23 +284,7 @@ display: flex;
 flex-direction: row;
 }
 
-.pagination {
-  width: 100%;
-  height: 20px;
-  background-color: lightblue;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.pagination li {
-  background-color:#fff;
-  border:1px solid black;
-  height:8px;
-  border-radius:50%;
-  -moz-border-radius:50%;
-  -webkit-border-radius:50%;
-  width:8px;
-}
 
 .date {
   display: flex;
@@ -223,6 +339,7 @@ flex-direction: row;
 
 /* NOTE: Cat Profile Form */
 
+
 form {
 
 }
@@ -270,6 +387,9 @@ input{
 }
 
 /* NOTE: Cat Profile new Habbit  */
+
+
+
 
 
 /* footer navigation */
