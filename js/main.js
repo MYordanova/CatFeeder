@@ -34,6 +34,24 @@ $(document).ready (function() {
     $(this).addClass('activated');
   });
 
+  $('#naviMainPage').click(function() {
+    $('.chapter').css('z-index','1');
+    $('#mainPageContent').css('z-index','2');
+  });
 
+  $('#naviHistory').click(function() {
+    $('.chapter').css('z-index','1');
+    $('#historyContent').css('z-index','2');
+  });
+
+  $('#naviProfile').click(function() {
+    $('.chapter').css('z-index','1');
+    $('#profileContent').css('z-index','2');
+  });
+
+  $('#naviSettings').click(function() {
+    $('.chapter').css('z-index','1');
+    $('#settingsContent').css('z-index','2');
+  });
 
 });
