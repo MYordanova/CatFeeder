@@ -137,6 +137,7 @@ content {
   width:100%;
   width:200%;
   height:537px;
+
 }
 
 h1 {
@@ -419,7 +420,6 @@ flex-direction: row;
 
 /* NOTE: Cat Profile Form */
 
-
 form {
 
 }
@@ -445,6 +445,7 @@ input{
 }
 
 /* NOTE: Cat Profile Button */
+
 
 .buttonAction {
   width: 40px;

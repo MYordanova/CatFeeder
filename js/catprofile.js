@@ -32,4 +32,9 @@ $(document).ready (function() {
       $(this).addClass('activated');
     });
 
+    $( "#naviThirdPage" ).click(function() {
+   $('html,body').animate({
+         scrollTop: $("#eatingHabitsProfile").offset().top},
+        'slow');
+});
 });
