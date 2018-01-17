@@ -13,14 +13,6 @@ $(document).ready (function() {
     $(this).addClass('activated');
   });
 
-  // Cat Profile Buttons
-
-  $('.confirmHabit').hide();
-
-  $('#buttonAddHabit').click(function(){
-      $('.confirmHabit').show();
-      $(this).hide();
-  });
 
 
 });
