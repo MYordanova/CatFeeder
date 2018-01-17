@@ -1,10 +1,29 @@
 $(document).ready (function() {
 
-  $('.confirmHabit').hide();
+  $('#buttonConfirmHabit').hide();
+  $('#buttonCloseHabit').hide();
+  $('.addnewHabit').hide();
+
 
   $('#buttonAddHabit').click(function(){
-      $('.confirmHabit').show();
       $(this).hide();
+      $('#buttonConfirmHabit').show();
+      $('#buttonCloseHabit').show();
+      $('.addnewHabit').show();
+
   });
-  
+
+  $('#buttonCloseHabit').click(function(){
+      $(this).hide();
+      $('#buttonConfirmHabit').hide();
+      $('.addnewHabit').hide();
+      $('#buttonAddHabit').show();
+  });
+
+  $('#buttonConfirmHabit').click(function(){
+      $(this).hide();
+      $('#buttonCloseHabit').hide();
+      $('.addnewHabit').show();
+      $('#buttonAddHabit').show();
+    });
 });

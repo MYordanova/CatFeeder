@@ -404,8 +404,8 @@ input{
  display: flex;
  background: black;
  height: 30px;
-
 }
+
 .displayTime {
   background: yellow;
   display: flex;
@@ -435,22 +435,29 @@ text-align: center;
 
 .portion {
   background-color: pink;
-  text-align: center;
+  width: 40px;
 }
 
 .displayPortion {
-  width: 40px;
   display: flex;
+  border-top: 1px solid;
+  border-top-color: #87BCD2;
+  border-bottom: 1px solid;
+  border-bottom-color: #87BCD2;
 }
 
 .amount span{
-  margin-left: 10px;
+  margin-left: 4px;
+  margin-right: 10px;
   text-align: right;
+  background-color: yellow;
 }
 
 .measure span{
   text-align: left;
   font-size: 12px;
+  background-color: yellow;
+  /* margin-right: 4px; */
 }
 
 
