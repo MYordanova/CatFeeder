@@ -43,13 +43,12 @@ content {
   background: white !important;
   position: absolute;
   top: 0;
-  /* left: calc(50% - 140px); */
 }
 
 /* z-index zum bearbeiten der jeweiligen seite auf 1 setzen */
 
 #mainPageContent {
-  z-index: ;
+  z-index: 1;
 }
 
 #historyContent {
@@ -66,10 +65,8 @@ content {
 
 .heading {
   width: 100%;
-  background: red;
+  background: blue;
 }
-
-/* NOTE: Pagination */
 
 .pagination {
   height: 10px;
@@ -106,14 +103,21 @@ content {
   height:10px;
 }
 
-.page {
-<<<<<<< HEAD
-  width:100%;
+.pages {
+  width: 200%;
+  display: flex;
+  justify-content: flex-start;
+}
 
-=======
-  width:200%;
->>>>>>> 75673746f491b577cff517e33fff8b51122f8edc
+.page {
+  width:100%;
   height:537px;
+}
+
+.pageSwipeToLeft {
+  /* margin-left: -375px; */
+  transform: translateX(-375px);
+  transition: 1s;
 }
 
 h1 {
@@ -148,9 +152,11 @@ font-weight: 500;
   position: absolute;
   height: 80px;
   width: 280px;
+  top: 45px;
   left: calc(50% - 140px);
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .progressbar {
@@ -178,6 +184,10 @@ font-weight: 500;
   text-align: center;
   border-radius: 50%;
   background-color: white;
+}
+
+.statusinfo {
+  margin: 5px;
 }
 
 /* watertank */
@@ -262,14 +272,89 @@ font-weight: 500;
 }
 
 
-/* control circle */
+/* feed circle */
 
-.controlCircle {
-  background-image: url('../images/mainPage/iconCircleFeedBig.svg');
-  background-repeat: no-repeat;
-  width: 267px;
-  height: 267px;
-  margin: 40px auto 90px auto;
+.feedCircle {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  top: 190px;
+  left: calc(50% - 120px);
+}
+
+.feedCircleRing {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+
+}
+
+.feedPicker {
+  background-image: url('../images/mainPage/feedPickerActive.svg');
+  background-size: 30px 132px;
+  position: absolute;
+  width: 30px;
+  height: 132px;
+  top: -12px;
+  left: calc(50% - 15px);
+  /* transform: rotate(180deg); */
+  transform-origin: bottom ;
+  z-index: 1;
+}
+
+.feedCircleShape {
+  background-image: url('../images/mainPage/feedCircleShape.svg');
+  background-size: 160px 160px;
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+}
+
+.circlePortion {
+  font-size: 3.125rem;
+  margin-right: 5px;
+}
+
+.circleGram {
+  font-size: 1.5rem;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+
+/* autofeed circle */
+
+.autofeedCircle {
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  top: 450px;
+  left: -45px;
+}
+
+.autofeedCircleRing {
+  height: 120px;
+  width: 120px;
+  position: absolute;
+}
+
+.autofeedCircleShape {
+  background-image: url('../images/mainPage/autofeedCircleShape.svg');
+  background-size: 80px 80px;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 12px;
+  right: 6px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 
@@ -277,21 +362,13 @@ font-weight: 500;
 
 .feedButton {
   background-image: url('../images/mainPage/feedButtonInactive.svg');
+  background-size: 80px 80px;
   width: 80px;
   height: 80px;
-  margin-top: -115px; margin-left: 255px;
+  position: absolute;
+  top: 470px;
+  left: 250px;
 }
-
-
-
-.autofeedCircle {
-  background-image: url('../images/mainPage/iconCircleAutofeedsmall.svg');
-  background-repeat: no-repeat;
-  width: 128px;
-  height: 128px;
-  margin-top: -120px; margin-left: -50px;
-}
-
 
 
 
@@ -523,10 +600,15 @@ text-align: center;
 
 /* settings */
 
+#pagesSetting {
+
+}
+
 #settingsNavigation {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: yellow;
 }
 
 .settingsNavi {
@@ -547,23 +629,35 @@ text-align: center;
   height: 20px;
   width: 40px;
   background-size: 40px 20px;
-  background-image: url(../images/button/toggleButtonInactive.svg);
   display: flex;
-  justify-content: flex-end;
 }
 
 .reminderToggle.on {
   background-image: url(../images/button/toggleButtonActive.svg);
+
+  transition: 5s;
+}
+
+.reminderToggle.off {
+  background-image: url(../images/button/toggleButtonInactive.svg);
+
+  transition: 5s;
 }
 
 .reminderToggleCircle {
   height: 16px;
   width: 16px;
   margin: 2px;
+  margin-left: 22px;
   background-size: 16px 16px;
   background-image: url(../images/button/toggleButtonCircle.svg);
+  transition: 0.5s;
 }
 
+
+#autofeed {
+  background: green;
+}
 
 
 /* footer navigation */

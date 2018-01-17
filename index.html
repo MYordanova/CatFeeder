@@ -25,13 +25,43 @@
               <div class="progressbar tank watertank"></div>
               <div class="progressbar tank foodtank"></div>
               <div class="progressbar bowl"></div>
+              <p class="statusinfo">Water Tank</p>
+              <p class="statusinfo">Food Tank</p>
+              <p class="statusinfo">Food Bowl</p>
             </div>
             <button type="button" name="refill" class="refill">refill</button>
 
+            <div class="feedCircle">
 
-            <div class="controlCircle"></div>
+              <div class="hallo"></div>
+
+              <div class="feedCircleRing">
+                <div class="maus"></div>
+                <svg viewBox="0 0 240 240">
+                  <circle cx="120px" cy="120px" r="118px" fill="none" stroke="#4A4A4A" stroke-width="2px" />
+                </svg>
+              </div>
+
+              <div class="feedPicker"></div>
+
+              <div class="feedCircleShape">
+                <p class="circlePortion">0</p>
+                <p class="circleGram">g</p>
+              </div>
+
+            </div>
+
+            <div class="autofeedCircle">
+              <div class="autofeedCircleRing">
+                <svg viewBox="0 0 120 120">
+                  <circle cx="60px" cy="60px" r="58px" fill="none" stroke="#4A4A4A" stroke-width="2px" />
+                </svg>
+              </div>
+
+              <div class="autofeedCircleShape"></div>
+            </div>
+
             <div class="feedButton"></div>
-            <div class="autofeedCircle"></div>
 
           </li>
 
@@ -220,42 +250,45 @@
               <div class="pagination"></div>
             </div>
 
-            <div id="settingsNavigation" class="page">
-              <div id="settingsReminder" class="settingsNavi">
-                Reminder
-                <div class="reminderToggle on">
-                  <div class="reminderToggleCircle">
+            <div id="pagesSetting" class="pages">
+              <div id="settingsNavigation" class="page">
+                <div id="settingsReminder" class="settingsNavi">
+                  Reminder
+                  <div class="reminderToggle on">
+                    <div class="reminderToggleCircle">
 
+                    </div>
                   </div>
                 </div>
+
+                <div id="settingsAutofeed" class="settingsNavi">Auto-Feed</div>
+
+                <div id="settingsMoreSettings" class="settingsNavi">More Settings</div>
               </div>
-              <div id="settingsAutofeed" class="settingsNavi">Auto-Feed</div>
-              <div id="settingsMoreSettings" class="settingsNavi">More Settings</div>
+
+              <div id="autofeed" class="page">
+
+              </div>
             </div>
-
-            <div id="autofeed" class="page">
-
-            </div>
-
           </li>
 
         </ul>
       </content>
+
+
+
+      <!-- footer -->
+
+      <footer>
+        <nav role="navigation">
+          <ul id="mainNavi">
+            <li id="naviMainPage" class="navientry activated"></li>
+            <li id="naviHistory" class="navientry"></li>
+            <li id="naviProfile" class="navientry"></li>
+            <li id="naviSettings" class="navientry"></li>
+          </ul>
+        </nav>
+      </footer>
     </div>
-
-
-    <!-- footer -->
-
-    <footer>
-      <nav role="navigation">
-        <ul id="mainNavi">
-          <li id="naviMainPage" class="navientry activated"></li>
-          <li id="naviHistory" class="navientry"></li>
-          <li id="naviProfile" class="navientry"></li>
-          <li id="naviSettings" class="navientry"></li>
-        </ul>
-      </nav>
-    </footer>
-  </div>
-</body>
-</html>
+  </body>
+  </html>

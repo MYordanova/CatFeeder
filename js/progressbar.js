@@ -128,20 +128,34 @@ $(document).ready(function() {
 
 
 
+		// feed circle
+
+		var circlePortion;
+		var circleRotation;
+
+		$('.feedCircle').mousemove(function(event) {
+			circlePortion = Math.ceil((event.pageX - 67) / 2.4 / 5) * 5;
+			circleRotation = (circlePortion * 3.6);
+
+			$('.circlePortion').text(circlePortion);
+			$('.feedPicker').css('transform', 'rotate(' + circleRotation + 'deg)')
+
+			$('.progressbar').loading();
+		});
+
+
+
     // feed button
 
-    var portion = 20;
-
     $('.feedButton').click(function() {
-      if(opts_foodtank.percent >= portion && portion <= (100 - opts_bowl.percent)) {
-        var foodtank_new = opts_foodtank.percent - portion;
-        var bowl_new = opts_bowl.percent + portion;
+      if(opts_foodtank.percent >= circlePortion && circlePortion <= (100 - opts_bowl.percent)) {
+        var foodtank_new = opts_foodtank.percent - circlePortion;
+        var bowl_new = opts_bowl.percent + circlePortion;
 
         $('.foodtank').removeData('percent');
         $('.bowl').removeData('percent');
         $('.foodtank').attr('data-percent', foodtank_new);
         $('.bowl').attr('data-percent', bowl_new);
-
 
         $('.progressbar').loading();
       }
