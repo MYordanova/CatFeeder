@@ -145,24 +145,48 @@ font-weight: 500;
   background-color: white;
 }
 
-/* tank */
+/* watertank */
 
-.progressbar .background_tank {
+.progressbar .background_watertank {
   background-color: #B5D8DE;
 }
 
-.progressbar .rotate_tank {
+.progressbar .rotate_watertank {
   background-color: #5C5C61;
   clip: rect(0 30px 60px 0);
 }
 
-.progressbar .left_tank {
+.progressbar .left_watertank {
   background-color: #B5D8DE;
   clip: rect(0 30px 60px 0);
   opacity: 1;
 }
 
-.progressbar .right_tank {
+.progressbar .right_watertank {
+  background-color: #5C5C61;
+  clip: rect(0 30px 60px 0);
+  transform: rotate(180deg);
+  opacity: 0;
+}
+
+/* watertank */
+
+.progressbar .background_foodtank {
+  background-color: #B5D8DE;
+}
+
+.progressbar .rotate_foodtank {
+  background-color: #5C5C61;
+  clip: rect(0 30px 60px 0);
+}
+
+.progressbar .left_foodtank {
+  background-color: #B5D8DE;
+  clip: rect(0 30px 60px 0);
+  opacity: 1;
+}
+
+.progressbar .right_foodtank {
   background-color: #5C5C61;
   clip: rect(0 30px 60px 0);
   transform: rotate(180deg);

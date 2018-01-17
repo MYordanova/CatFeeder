@@ -5,35 +5,39 @@ $(document).ready(function() {
 			duration: 1000
 		};
 
+    var opts_watertank;
+    var opts_foodtank;
+    var opts_bowl;
 
-		// statusbar water and food tank (100% = 1000)
 
-		$('.tank').each(function() {
-			var target_tank  = $(this); // var = $('.tank')
+		// statusbar water tank (100% = 1000)
 
-			var opts_tank = {
-			percent: target_tank.data('percent') ? target_tank.data('percent') : DEFAULTS.percent, // percent: if data-percent vorhanden ?dann data-percent nutzen :else DEFAULT percent nutzen
-			duration: target_tank.data('duration') ? target_tank.data('duration') : DEFAULTS.duration
+		$('.watertank').each(function() {
+			var target_watertank  = $(this); // var = $('.watertank')
+
+			opts_watertank = {
+			percent: target_watertank.data('percent') ? target_watertank.data('percent') : DEFAULTS.percent, // percent: if data-percent vorhanden ?dann data-percent nutzen :else DEFAULT percent nutzen
+			duration: target_watertank.data('duration') ? target_watertank.data('duration') : DEFAULTS.duration
 			};
 
-			target_tank.append('<div class="background_tank"></div><div class="rotate_tank"></div><div class="left_tank"></div><div class="right_tank"></div><div class=""><span>' + opts_tank.percent + '</span></div>');
+			target_watertank.append('<div class="background_watertank"></div><div class="rotate_watertank"></div><div class="left_watertank"></div><div class="right_watertank"></div><div class=""><span>' + opts_watertank.percent + '</span></div>');
 
-			var rotate = target_tank.find('.rotate_tank');
+			var rotate_watertank = target_watertank.find('.rotate_watertank');
 			setTimeout(function() {
-				rotate.css({
-					'transition': 'transform ' + opts_tank.duration + 'ms linear',
-					'transform': 'rotate(' + opts_tank.percent * 0.36 + 'deg)'
+				rotate_watertank.css({
+					'transition': 'transform ' + opts_watertank.duration + 'ms linear',
+					'transform': 'rotate(' + opts_watertank.percent * 0.36 + 'deg)'
 				});
 			},1);
 
-			if (opts_tank.percent > 500) {
-				var animationRight = 'toggle ' + (opts_tank.duration / opts_tank.percent * 500) + 'ms step-end';
-				var animationLeft = 'toggle ' + (opts_tank.duration / opts_tank.percent * 500) + 'ms step-start';
-				target_tank.find('.right_tank').css({
+			if (opts_watertank.percent > 500) {
+				var animationRight = 'toggle ' + (opts_watertank.duration / opts_watertank.percent * 500) + 'ms step-end';
+				var animationLeft = 'toggle ' + (opts_watertank.duration / opts_watertank.percent * 500) + 'ms step-start';
+				target_watertank.find('.right_watertank').css({
 					animation: animationRight,
 					opacity: 1
 				});
-				target_tank.find('.left_tank').css({
+				target_watertank.find('.left_watertank').css({
 					animation: animationLeft,
 					opacity: 0
 				});
@@ -41,21 +45,58 @@ $(document).ready(function() {
 		});
 
 
+
+    // statusbar food tank (100% = 1000)
+
+		$('.foodtank').each(function() {
+			var target_foodtank  = $(this); // var = $('.foodtank')
+
+			opts_foodtank = {
+			percent: target_foodtank.data('percent') ? target_foodtank.data('percent') : DEFAULTS.percent, // percent: if data-percent vorhanden ?dann data-percent nutzen :else DEFAULT percent nutzen
+			duration: target_foodtank.data('duration') ? target_foodtank.data('duration') : DEFAULTS.duration
+			};
+
+			target_foodtank.append('<div class="background_foodtank"></div><div class="rotate_foodtank"></div><div class="left_foodtank"></div><div class="right_foodtank"></div><div class=""><span>' + opts_foodtank.percent + '</span></div>');
+
+			var rotate_foodtank = target_foodtank.find('.rotate_foodtank');
+			setTimeout(function() {
+				rotate_foodtank.css({
+					'transition': 'transform ' + opts_foodtank.duration + 'ms linear',
+					'transform': 'rotate(' + opts_foodtank.percent * 0.36 + 'deg)'
+				});
+			},1);
+
+			if (opts_foodtank.percent > 500) {
+				var animationRight = 'toggle ' + (opts_foodtank.duration / opts_foodtank.percent * 500) + 'ms step-end';
+				var animationLeft = 'toggle ' + (opts_foodtank.duration / opts_foodtank.percent * 500) + 'ms step-start';
+				target_foodtank.find('.right_foodtank').css({
+					animation: animationRight,
+					opacity: 1
+				});
+				target_foodtank.find('.left_foodtank').css({
+					animation: animationLeft,
+					opacity: 0
+				});
+			}
+		});
+
+
+
 		// statusbar food bowl (100% = 100)
 
 		$('.bowl').each(function() {
 			var target_bowl  = $(this);
 
-			var opts_bowl = {
+			opts_bowl = {
 			percent: target_bowl.data('percent') ? target_bowl.data('percent') : DEFAULTS.percent,
 			duration: target_bowl.data('duration') ? target_bowl.data('duration') : DEFAULTS.duration
 			};
 
 			target_bowl.append('<div class="background_bowl"></div><div class="rotate_bowl"></div><div class="left_bowl"></div><div class="right_bowl"></div><div class=""><span>' + opts_bowl.percent + '</span></div>');
 
-			var rotate = target_bowl.find('.rotate_bowl');
+			var rotate_bowl = target_bowl.find('.rotate_bowl');
 			setTimeout(function() {
-				rotate.css({
+				rotate_bowl.css({
 					'transition': 'transform ' + opts_bowl.duration + 'ms linear',
 					'transform': 'rotate(' + opts_bowl.percent * 3.6 + 'deg)'
 				});
@@ -75,17 +116,36 @@ $(document).ready(function() {
 			}
 		});
 
-		$('.refill').click(function() {
-	    $(".tank").attr('data-percent', '1000');
-			$('.progressbar').loading();
-	  })
 
-    // $('.feedButton').click(function() {
-    //   var minus = target_tank.data('percent') - 100;
-    //   $(".tank").attr('data-percent', minus);
-    // 
-		// 	$('.progressbar').loading();
-    // })
+
+    // refill tanks
+
+    $('.refill').click(function() {
+      $('.tank').removeData('percent');
+      $('.tank').attr('data-percent', 1000);
+      $('.progressbar').loading();
+    })
+
+
+
+    // feed button
+
+    var portion = 20;
+
+    $('.feedButton').click(function() {
+      if(opts_foodtank.percent >= portion && portion <= (100 - opts_bowl.percent)) {
+        var foodtank_new = opts_foodtank.percent - portion;
+        var bowl_new = opts_bowl.percent + portion;
+
+        $('.foodtank').removeData('percent');
+        $('.bowl').removeData('percent');
+        $('.foodtank').attr('data-percent', foodtank_new);
+        $('.bowl').attr('data-percent', bowl_new);
+
+
+        $('.progressbar').loading();
+      }
+    })
 
 	}
 });
