@@ -49,7 +49,7 @@ content {
 /* z-index zum bearbeiten der jeweiligen seite auf 1 setzen */
 
 #mainPageContent {
-  z-index: 1;
+  z-index: ;
 }
 
 #historyContent {
@@ -57,7 +57,7 @@ content {
 }
 
 #profileContent {
-  z-index: ;
+  z-index: 1;
 }
 
 #settingsContent {
@@ -410,8 +410,79 @@ input{
 
 /* NOTE: Cat Profile new Habbit  */
 
+/* NOTE: Cat Profile add new Habbit Time and Portion  */
 
+.addnewHabit {
+  padding: 0px 10px 0 10px;
+  margin: 0px 20px 0 20px;
+  display: flex;
+  justify-content: space-around;
+  background-color: red;
+}
 
+.displayHeader {
+  font-size: 14px;
+}
+
+.displayInformation {
+ display: flex;
+ background: black;
+ height: 30px;
+}
+
+.displayTime {
+  background: yellow;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+
+}
+
+.timePicker{
+  background-color: pink;
+  text-align: center;
+}
+
+.hours{
+text-align: center;
+width: 40px;
+border-top: 1px solid;
+border-top-color: #87BCD2;
+border-bottom: 1px solid;
+border-bottom-color: #87BCD2;
+}
+
+.colon {
+width: 20px;
+text-align: center;
+}
+
+.portion {
+  background-color: pink;
+  width: 40px;
+}
+
+.displayPortion {
+  display: flex;
+  border-top: 1px solid;
+  border-top-color: #87BCD2;
+  border-bottom: 1px solid;
+  border-bottom-color: #87BCD2;
+}
+
+.amount span{
+  margin-left: 4px;
+  margin-right: 10px;
+  text-align: right;
+  background-color: yellow;
+}
+
+.measure span{
+  text-align: left;
+  font-size: 12px;
+  background-color: yellow;
+  /* margin-right: 4px; */
+}
 
 
 /* footer navigation */
