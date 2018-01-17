@@ -124,25 +124,18 @@ content {
   height:10px;
 }
 
-<<<<<<< HEAD
+
 .pages {
   width: 200%;
   display: flex;
   justify-content: flex-start;
-=======
-#naviThirdPage .activated{
-  background-image: url('../images/naviElements/swipeActive.svg')!important;
   width: 10px;
   height: 10px;
->>>>>>> c9b2517a37ff62ae8facbff4ae88714dfc47ff02
 }
 
 .page {
   width:100%;
-<<<<<<< HEAD
-=======
   width:200%;
->>>>>>> c9b2517a37ff62ae8facbff4ae88714dfc47ff02
   height:537px;
 
 }
