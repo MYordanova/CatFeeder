@@ -27,4 +27,14 @@ $(document).ready (function() {
       $('#buttonAddHabit').show();
     });
 
+    $('.paginationDot').click(function() {
+      $('.paginationDot').removeClass('activated');
+      $(this).addClass('activated');
+    });
+
+    $( "#naviThirdPage" ).click(function() {
+   $('html,body').animate({
+         scrollTop: $("#eatingHabitsProfile").offset().top},
+        'slow');
+});
 });

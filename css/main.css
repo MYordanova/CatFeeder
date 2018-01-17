@@ -56,7 +56,7 @@ content {
 }
 
 #profileContent {
-  z-index: ;
+  z-index: 1;
 }
 
 #settingsContent {
@@ -85,8 +85,23 @@ content {
   margin-right: auto;
 }
 
+
+
+#naviFirstPage .activated{
+  background-image: url('../images/naviElements/swipeActive.svg')!important;
+  width: 10px;
+  height: 10px;
+}
+
+
 #naviFirstPage {
   background-image: url('../images/naviElements/swipeInactive.svg');
+  width: 10px;
+  height: 10px;
+}
+
+#naviFirstPage .activated {
+  background-image: url('../images/naviElements/swipeActive.svg')!important;
   width: 10px;
   height: 10px;
 }
@@ -97,21 +112,39 @@ content {
   height:10px;
 }
 
+#naviSecondPage .activated{
+  background-image: url('../images/naviElements/swipeActive.svg')!important;
+  width: 10px;
+  height:10px;
+}
+
 #naviThirdPage {
   background-image: url('../images/naviElements/swipeInactive.svg');
   width: 10px;
   height:10px;
 }
 
+<<<<<<< HEAD
 .pages {
   width: 200%;
   display: flex;
   justify-content: flex-start;
+=======
+#naviThirdPage .activated{
+  background-image: url('../images/naviElements/swipeActive.svg')!important;
+  width: 10px;
+  height: 10px;
+>>>>>>> c9b2517a37ff62ae8facbff4ae88714dfc47ff02
 }
 
 .page {
   width:100%;
+<<<<<<< HEAD
+=======
+  width:200%;
+>>>>>>> c9b2517a37ff62ae8facbff4ae88714dfc47ff02
   height:537px;
+
 }
 
 .pageSwipeToLeft {
@@ -425,10 +458,10 @@ flex-direction: row;
   flex-flow: row;
 }
 
-/* #petProfile {
+#petProfile {
   display: flex;
   flex-flow: row;
-} */
+}
 
 #generalInfoProfile {
   width: 100%;
@@ -473,7 +506,6 @@ flex-direction: row;
 
 /* NOTE: Cat Profile Form */
 
-
 form {
 
 }
@@ -499,6 +531,7 @@ input{
 }
 
 /* NOTE: Cat Profile Button */
+
 
 .buttonAction {
   width: 40px;
@@ -696,6 +729,7 @@ nav {
 #naviMainPage {
   background-image: url('../images/mainNaviElements/iconMainPageInactive.svg');
 }
+
 #naviMainPage.activated {
   background-image: url('../images/mainNaviElements/iconMainPageActive.svg') !important;
 }
