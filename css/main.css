@@ -57,7 +57,7 @@ content {
 }
 
 #profileContent {
-  z-index: 1;
+  z-index: ;
 }
 
 #settingsContent {
@@ -65,9 +65,8 @@ content {
 }
 
 .heading {
-
-  width: 280px;
-
+  width: 100%;
+  background: red;
 }
 
 .pagination {
@@ -75,7 +74,7 @@ content {
 }
 
 .page {
-  width:100%;
+  width:200%;
   height:537px;
 }
 
@@ -483,6 +482,51 @@ text-align: center;
   background-color: yellow;
   /* margin-right: 4px; */
 }
+
+
+/* settings */
+
+#settingsNavigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settingsNavi {
+  height: 50px;
+  width: 280px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#settingsAutofeed {
+  border-top: 1px solid #87BCD2;
+  border-bottom: 1px solid #87BCD2;
+}
+
+.reminderToggle {
+  height: 20px;
+  width: 40px;
+  background-size: 40px 20px;
+  background-image: url(../images/button/toggleButtonInactive.svg);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reminderToggle.on {
+  background-image: url(../images/button/toggleButtonActive.svg);
+}
+
+.reminderToggleCircle {
+  height: 16px;
+  width: 16px;
+  margin: 2px;
+  background-size: 16px 16px;
+  background-image: url(../images/button/toggleButtonCircle.svg);
+}
+
 
 
 /* footer navigation */

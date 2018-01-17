@@ -6,6 +6,19 @@ $(document).ready (function() {
 
   $('.progressbar').loading();
 
+  // reminder toggle
+
+  $('.reminderToggle').click(function() {
+    if($('.reminderToggle').hasClass('on')) {
+      $('.reminderToggle').removeClass('on');
+      $('.reminderToggle').css('justify-content', 'flex-start');
+
+    } else {
+      $('.reminderToggle').addClass('on');
+      $('.reminderToggle').css('justify-content', 'flex-end');
+    };
+  });
+
   // main navigation
 
   $('.navientry').click(function() {

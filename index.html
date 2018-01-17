@@ -113,21 +113,21 @@
                   <div>Round graphic with plus button</div>
                   <section class="datasheet">
                     <form class="catInformation" action="index.html" method="post">
-                    <div>
-                      <label class="name"></label>
-                      <input type="text" name="name" placeholder="Name">
-                    </div>
-                    <div>
-                      <label class="breed"></label>
-                      <input type="text" name="breed" placeholder="Breed">
-                    </div>
-                    <div>
-                      <label class="age"></label>
-                      <input type="text" name="age" placeholder="Age">
-                    </div>
-                    <label class="weight"></label>
-                    <input type="text" name="weight" placeholder="Weight">
-                      </form>
+                      <div>
+                        <label class="name"></label>
+                        <input type="text" name="name" placeholder="Name">
+                      </div>
+                      <div>
+                        <label class="breed"></label>
+                        <input type="text" name="breed" placeholder="Breed">
+                      </div>
+                      <div>
+                        <label class="age"></label>
+                        <input type="text" name="age" placeholder="Age">
+                      </div>
+                      <label class="weight"></label>
+                      <input type="text" name="weight" placeholder="Weight">
+                    </form>
                   </section>
                 </div>
               </div>
@@ -160,10 +160,10 @@
                   <h2>Eating Habits</h2>
                   <div class="buttons">
                     <div id="buttonAddHabit" class="buttonAction"></div>
-                      <div class="confirmHabit">
-                        <div id="buttonCloseHabit" class="buttonAction"></div>
-                        <div id="buttonConfirmHabit" class="buttonAction"></div>
-                      </div>
+                    <div class="confirmHabit">
+                      <div id="buttonCloseHabit" class="buttonAction"></div>
+                      <div id="buttonConfirmHabit" class="buttonAction"></div>
+                    </div>
                   </div>
                   <section>
                     <div id="newHabit" class="addnewHabit">
@@ -212,13 +212,23 @@
               <div class="pagination"></div>
             </div>
 
-            <div id="" class="page">
-              <div id="settingsnavigation"class="page">
-                <div id="notifications">Notifications</div>
-                <div id="autoFeedDuration">Auto-Feed Duration</div>
-                <div id="moreSettings" >More Settings</div>
+            <div id="settingsNavigation" class="page">
+              <div id="settingsReminder" class="settingsNavi">
+                Reminder
+                <div class="reminderToggle on">
+                  <div class="reminderToggleCircle">
+
+                  </div>
+                </div>
               </div>
+              <div id="settingsAutofeed" class="settingsNavi">Auto-Feed</div>
+              <div id="settingsMoreSettings" class="settingsNavi">More Settings</div>
             </div>
+
+            <div id="autofeed" class="page">
+
+            </div>
+
           </li>
 
         </ul>
