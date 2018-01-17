@@ -57,7 +57,7 @@ content {
 }
 
 #profileContent {
-  z-index: ;
+  z-index: 1;
 }
 
 #settingsContent {
@@ -88,8 +88,23 @@ content {
   margin-right: auto;
 }
 
+
+
+#naviFirstPage .activated{
+  background-image: url('../images/naviElements/swipeActive.svg')!important;
+  width: 10px;
+  height: 10px;
+}
+
+
 #naviFirstPage {
   background-image: url('../images/naviElements/swipeInactive.svg');
+  width: 10px;
+  height: 10px;
+}
+
+#naviFirstPage .activated {
+  background-image: url('../images/naviElements/swipeActive.svg')!important;
   width: 10px;
   height: 10px;
 }
@@ -100,19 +115,27 @@ content {
   height:10px;
 }
 
+#naviSecondPage .activated{
+  background-image: url('../images/naviElements/swipeActive.svg')!important;
+  width: 10px;
+  height:10px;
+}
+
 #naviThirdPage {
   background-image: url('../images/naviElements/swipeInactive.svg');
   width: 10px;
   height:10px;
 }
 
-.page {
-<<<<<<< HEAD
-  width:100%;
+#naviThirdPage .activated{
+  background-image: url('../images/naviElements/swipeActive.svg')!important;
+  width: 10px;
+  height: 10px;
+}
 
-=======
+.page {
+  width:100%;
   width:200%;
->>>>>>> 75673746f491b577cff517e33fff8b51122f8edc
   height:537px;
 }
 
@@ -348,10 +371,10 @@ flex-direction: row;
   flex-flow: row;
 }
 
-/* #petProfile {
+#petProfile {
   display: flex;
   flex-flow: row;
-} */
+}
 
 #generalInfoProfile {
   width: 100%;
@@ -602,6 +625,7 @@ nav {
 #naviMainPage {
   background-image: url('../images/mainNaviElements/iconMainPageInactive.svg');
 }
+
 #naviMainPage.activated {
   background-image: url('../images/mainNaviElements/iconMainPageActive.svg') !important;
 }

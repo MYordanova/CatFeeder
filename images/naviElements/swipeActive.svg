@@ -1,9 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="8" viewBox="0 0 8 8">
-  <defs>
-    <circle id="swipeactive-a" cx="172" cy="94" r="4"/>
-  </defs>
-  <g fill="none" fill-rule="evenodd" transform="translate(-168 -90)">
-    <use fill="#87BCD2" xlink:href="#swipeactive-a"/>
-    <circle cx="172" cy="94" r="3.5" stroke="#87BCD2"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+  <circle cx="181" cy="94" r="4" fill="#87BCD2" fill-rule="evenodd" stroke="#87BCD2" transform="translate(-176 -89)"/>
 </svg>

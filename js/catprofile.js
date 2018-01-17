@@ -27,4 +27,9 @@ $(document).ready (function() {
       $('#buttonAddHabit').show();
     });
 
+    $('.paginationDot').click(function() {
+      $('.paginationDot').removeClass('activated');
+      $(this).addClass('activated');
+    });
+
 });
