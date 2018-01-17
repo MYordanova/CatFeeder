@@ -26,4 +26,5 @@ $(document).ready (function() {
       $('.addnewHabit').show();
       $('#buttonAddHabit').show();
     });
+
 });
