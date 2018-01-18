@@ -1,16 +1,59 @@
 $(document).ready(function() {
+	var DEFAULTS = {
+		percent: 0,
+		duration: 1000
+	};
+
+	var opts_watertank;
+	var opts_foodtank;
+	var opts_bowl;
 	$.fn.loading = function() {
-		var DEFAULTS = {
-			percent: 0,
-			duration: 1000
-		};
-
-    var opts_watertank;
-    var opts_foodtank;
-    var opts_bowl;
 
 
-		// statusbar water tank (100% = 1000)
+    // refill tanks
+    $('.refill').click(function() {
+      //$('.tank').removeData('percent');
+      //$('.tank').attr('data-percent', 1000);
+      //$('.progressbar').loading();
+			refreshData(1000,1000,0);
+    })
+
+		// initial value setting
+		refreshData(0,0,0);
+
+
+		// feed circle
+		var circlePortion;
+		var circleRotation;
+
+		$('.feedCircle').mousemove(function(event) {
+			circlePortion = Math.ceil((event.pageX - 67) / 2.4 / 5) * 5;
+			circleRotation = (circlePortion * 3.6);
+
+			$('.circlePortion').text(circlePortion);
+			$('.feedPicker').css('transform', 'rotate(' + circleRotation + 'deg)')
+		});
+
+
+
+    // feed button
+
+    $('.feedButton').click(function() {
+
+      if(opts_foodtank.percent >= circlePortion && circlePortion <= (100 - opts_bowl.percent)) {
+        var foodtank_new = opts_foodtank.percent - circlePortion;
+        var bowl_new = opts_bowl.percent + circlePortion;
+
+        $('.bowl').attr('data-percent', bowl_new);
+				//$('.foodtank').attr('data-percent', foodtank_new);
+
+				refreshData(foodtank_new);
+      }
+    })
+
+	}
+
+	function refreshData(food){
 
 		$('.watertank').each(function() {
 			var target_watertank  = $(this); // var = $('.watertank')
@@ -46,13 +89,13 @@ $(document).ready(function() {
 
 
 
-    // statusbar food tank (100% = 1000)
+		// statusbar food tank (100% = 1000)
 
 		$('.foodtank').each(function() {
 			var target_foodtank  = $(this); // var = $('.foodtank')
-
+			$('.tank').attr('data-percent', food);
 			opts_foodtank = {
-			percent: target_foodtank.data('percent') ? target_foodtank.data('percent') : DEFAULTS.percent, // percent: if data-percent vorhanden ?dann data-percent nutzen :else DEFAULT percent nutzen
+			percent: food ? food : DEFAULTS.percent,
 			duration: target_foodtank.data('duration') ? target_foodtank.data('duration') : DEFAULTS.duration
 			};
 
@@ -115,51 +158,6 @@ $(document).ready(function() {
 				});
 			}
 		});
-
-
-
-    // refill tanks
-
-    $('.refill').click(function() {
-      $('.tank').removeData('percent');
-      $('.tank').attr('data-percent', 1000);
-      $('.progressbar').loading();
-    })
-
-
-
-		// feed circle
-
-		var circlePortion;
-		var circleRotation;
-
-		$('.feedCircle').mousemove(function(event) {
-			circlePortion = Math.ceil((event.pageX - 67) / 2.4 / 5) * 5;
-			circleRotation = (circlePortion * 3.6);
-
-			$('.circlePortion').text(circlePortion);
-			$('.feedPicker').css('transform', 'rotate(' + circleRotation + 'deg)')
-
-			$('.progressbar').loading();
-		});
-
-
-
-    // feed button
-
-    $('.feedButton').click(function() {
-      if(opts_foodtank.percent >= circlePortion && circlePortion <= (100 - opts_bowl.percent)) {
-        var foodtank_new = opts_foodtank.percent - circlePortion;
-        var bowl_new = opts_bowl.percent + circlePortion;
-
-        $('.foodtank').removeData('percent');
-        $('.bowl').removeData('percent');
-        $('.foodtank').attr('data-percent', foodtank_new);
-        $('.bowl').attr('data-percent', bowl_new);
-
-        $('.progressbar').loading();
-      }
-    })
-
 	}
+
 });

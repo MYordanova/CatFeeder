@@ -128,15 +128,23 @@ content {
 
 
 .pages {
-  width: 200%;
   display: flex;
   justify-content: flex-start;
+}
+
+#pagesPetProfile {
+  width: 300%;
+  transition: 1s;
+  
+}
+
+#pagesSetting {
+  width: 200%;
 }
 
 .page {
   width:100%;
   height:537px;
-
 }
 
 .pageSwipeToLeft {
@@ -429,10 +437,7 @@ hr {
   text-align: center;
 }
 
-.amount {
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 
 
@@ -489,14 +494,19 @@ flex-direction: row;
   height: 20px;
 }
 
-#petProfile {
-  display: flex;
-  flex-flow: row;
-}
+
+
+
+
+
+/* pet profile */
 
 #generalInfoProfile {
-  width: 100%;
-  background-color: blue;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: yellow;
 }
 
 #foodProfile {
@@ -508,6 +518,149 @@ flex-direction: row;
   width: 100%;
   background-color: grey;
 }
+
+/* NOTE: Cat Profile Form // Seite 1 */
+
+form {
+ width: 280px;
+}
+
+form input {
+  box-sizing: border-box;
+  outline: 0;
+  border-bottom: 1px solid;
+  border-bottom-color: #87BCD2;
+  width: 100%;
+  /* background: yellow; */
+  height: 50px;
+}
+
+label {
+  display: inline-block;
+  text-align: left;
+  /* color: green; */
+  position: absolute;
+  opacity: 0.5;
+}
+
+input{
+  color: #4A4A4A;
+}
+
+
+
+
+
+/* NOTE: Cat Profile Button // Seite 3 */
+
+
+.buttonAction {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  transition: 0s;
+}
+
+#buttonAddHabit {
+  background-image: url('../images/button/addInactive.svg');
+}
+
+#buttonCloseHabit {
+  background-image: url('../images/button/closeInactive.svg');
+}
+
+#buttonConfirmHabit {
+  background-image: url('../images/button/confirmInactive.svg');
+}
+
+/* NOTE: Cat Profile new Habbit  */
+
+/* NOTE: Cat Profile add new Habbit Time and Portion  */
+
+.addnewHabit {
+  padding: 0px 10px 0 10px;
+  margin: 0px 20px 0 20px;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: red; */
+}
+
+.displayHeader {
+  font-size: 14px;
+}
+
+.displayInformation {
+ display: flex;
+ /* background: black; */
+ height: 30px;
+
+}
+
+.displayTime {
+  background: yellow;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+
+}
+
+.timePicker{
+  background-color: pink;
+  text-align: center;
+}
+
+.hours{
+text-align: center;
+width: 40px;
+border-top: 1px solid;
+border-color: #87BCD2;
+border-bottom: 1px solid;
+border-bottom-color: #87BCD2;
+}
+
+.colon {
+width: 20px;
+text-align: center;
+}
+
+.portion {
+  background-color: pink;
+  width: 40px;
+}
+
+.displayPortion {
+  display: flex;
+  border-top: 1px solid;
+  border-top-color: #87BCD2;
+  border-bottom: 1px solid;
+  border-bottom-color: #87BCD2;
+}
+
+.amount {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.amount span{
+  margin-left: 4px;
+  margin-right: 10px;
+  text-align: right;
+  background-color: yellow;
+}
+
+.measure span{
+  text-align: left;
+  font-size: 12px;
+  background-color: yellow;
+  /* margin-right: 4px; */
+}
+
+
+
+
+
+
 
 /* History Content  */
 
@@ -645,138 +798,10 @@ flex-direction: row;
   fill: #6AAA3B;
 }
 
-/* NOTE: Cat Profile Form */
 
-form {
-
-}
-form input {
-  box-sizing: border-box;
-  outline: 0;
-  border-bottom: 1px solid;
-  border-bottom-color: #87BCD2;
-  width: 100%;
-  /* background: yellow; */
-  height: 50px;
-}
-label {
-  display: inline-block;
-  text-align: left;
-  /* color: green; */
-  position: absolute;
-  opacity: 0.5;
-}
-
-input{
-  color: #4A4A4A;
-}
-
-/* NOTE: Cat Profile Button */
-
-
-.buttonAction {
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  transition: 0s;
-}
-
-#buttonAddHabit {
-  background-image: url('../images/button/addInactive.svg');
-}
-
-#buttonCloseHabit {
-  background-image: url('../images/button/closeInactive.svg');
-}
-
-#buttonConfirmHabit {
-  background-image: url('../images/button/confirmInactive.svg');
-}
-
-/* NOTE: Cat Profile new Habbit  */
-
-/* NOTE: Cat Profile add new Habbit Time and Portion  */
-
-.addnewHabit {
-  padding: 0px 10px 0 10px;
-  margin: 0px 20px 0 20px;
-  display: flex;
-  justify-content: space-around;
-  /* background-color: red; */
-}
-
-.displayHeader {
-  font-size: 14px;
-}
-
-.displayInformation {
- display: flex;
- /* background: black; */
- height: 30px;
-
-}
-
-.displayTime {
-  background: yellow;
-  display: flex;
-  justify-content: center;
-  width: 100px;
-
-}
-
-.timePicker{
-  background-color: pink;
-  text-align: center;
-}
-
-.hours{
-text-align: center;
-width: 40px;
-border-top: 1px solid;
-border-color: #87BCD2;
-border-bottom: 1px solid;
-border-bottom-color: #87BCD2;
-}
-
-.colon {
-width: 20px;
-text-align: center;
-}
-
-.portion {
-  background-color: pink;
-  width: 40px;
-}
-
-.displayPortion {
-  display: flex;
-  border-top: 1px solid;
-  border-top-color: #87BCD2;
-  border-bottom: 1px solid;
-  border-bottom-color: #87BCD2;
-}
-
-.amount span{
-  margin-left: 4px;
-  margin-right: 10px;
-  text-align: right;
-  background-color: yellow;
-}
-
-.measure span{
-  text-align: left;
-  font-size: 12px;
-  background-color: yellow;
-  /* margin-right: 4px; */
-}
 
 
 /* settings */
-
-#pagesSetting {
-
-}
 
 #settingsNavigation {
   display: flex;

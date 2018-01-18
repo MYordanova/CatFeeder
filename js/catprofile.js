@@ -6,35 +6,38 @@ $(document).ready (function() {
 
 
   $('#buttonAddHabit').click(function(){
-      $(this).hide();
-      $('#buttonConfirmHabit').show();
-      $('#buttonCloseHabit').show();
-      $('.addnewHabit').show();
+    $(this).hide();
+    $('#buttonConfirmHabit').show();
+    $('#buttonCloseHabit').show();
+    $('.addnewHabit').show();
 
   });
 
   $('#buttonCloseHabit').click(function(){
-      $(this).hide();
-      $('#buttonConfirmHabit').hide();
-      $('.addnewHabit').hide();
-      $('#buttonAddHabit').show();
+    $(this).hide();
+    $('#buttonConfirmHabit').hide();
+    $('.addnewHabit').hide();
+    $('#buttonAddHabit').show();
   });
 
   $('#buttonConfirmHabit').click(function(){
-      $(this).hide();
-      $('#buttonCloseHabit').hide();
-      $('.addnewHabit').show();
-      $('#buttonAddHabit').show();
-    });
+    $(this).hide();
+    $('#buttonCloseHabit').hide();
+    $('.addnewHabit').show();
+    $('#buttonAddHabit').show();
+  });
 
-    $('.paginationDot').click(function() {
-      $('.paginationDot').removeClass('swipeActivated');
-      $(this).addClass('swipeActivated');
-    });
+  // pagination aktiv/inaktiv icon
 
-    $( "#naviThirdPage" ).click(function() {
-   $('html,body').animate({
-         scrollTop: $("#eatingHabitsProfile").offset().top},
-        'slow');
-});
+  $('.paginationDot').click(function() {
+    $('.paginationDot').removeClass('swipeActivated');
+    $(this).addClass('swipeActivated');
+  });
+
+  // pagination page swipe
+
+  $('#naviFirstPage').click(function() {
+    $('#pagesPetProfile').addClass('pageSwipeToLeft');
+  });
+
 });
