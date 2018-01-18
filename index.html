@@ -13,6 +13,8 @@
     <script type="text/javascript" src="js/progressbar.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/catprofile.js"></script>
+    <script type="text/javascript" src="js/chartjsUtils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   </head>
 
   <body>
@@ -38,48 +40,67 @@
           <li id="historyContent" class="chapter">
             <div class="heading history">
               <h1>History</h1>
-              <div class="pagination"></div>
+              <div class="pagination">
+                <nav role="swipe">
+                  <ul id="swipeNavi">
+                    <li id="naviFirstPage"class="paginationDot activated"></li>
+                    <li id="naviSecondPage" class="paginationDot"></li>
+                  </ul>
+                </nav>
+              </div>
             </div>
 
             <div id="foodwaterContent">
               <div id="foodContent" class="page">
-
+                <div>
                 <h2>Food</h2>
-                <ul class="date">
-                  <li>2018</li>
-                  <li>M</li>
-                  <li>W</li>
-                  <li>D</li>
-                </ul>
+                <div class="date">
+                  <h3>2018</h3>
+                  <div class="views">
+                    <span>M</span>
+                    <span>W</span>
+                    <span>D</span>
+                  </div>
+                </div>
+
+                <div class="dividingLine">
+                  <hr>
+                </div>
+
                 <section class="diagram">
-                  <div class="infocirle">Info Circle</div>
-                  <div class="curclepointer">Circle Pointer</div>
-                  <div class="curve">Curve</div>
-                  <ul style="list-style-type: none;" class="monthsfood">
-                    <li>January</li>
-                    <li>February</li>
-                    <li>March</li>
-                    <li>April</li>
-                    <li>May</li>
-                    <li>June</li>
-                    <li>July</li>
-                    <li>August</li>
-                  </ul>
+
+                    <canvas id="foodChart" ></canvas>
+
                 </section>
 
-              </div>
+                <ul style="list-style-type: none;" class="monthsfood">
+                  <li>January</li>
+                  <li>February</li>
+                  <li>March</li>
+                  <li>April</li>
+                  <li>May</li>
+                  <li>June</li>
+                  <li>July</li>
+                  <li>August</li>
+                </ul>
+
 
               <div id="waterContent" class="page">
 
                 <h2>Water</h2>
                 <div class="date">
                   <h3>2018</h3>
-                  <ul class="views">
-                    <li>M</li>
-                    <li>W</li>
-                    <li>D</li>
-                  </ul>
+                  <div class="views">
+                    <span>M</span>
+                    <span>W</span>
+                    <span>D</span>
+                  </div>
                 </div>
+
+                <div class="page">
+                  <hr class="dividingLine">
+                </div>
+
                 <section class="diagram">
                   <div class="infocirle">Info Circle</div>
                   <div class="curclepointer">Circle Pointer</div>
@@ -95,7 +116,6 @@
                     <li>August</li>
                   </ul>
                 </section>
-
               </div>
             </div>
           </li>
@@ -257,5 +277,59 @@
       </nav>
     </footer>
   </div>
+
+  <script>
+      var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      var config = {
+          type: 'line',
+          data: {
+              xLabels: ["January", "February", "March", "April", "May", "June", "July"],
+              yLabels: ['', 'Request Added', 'Request Viewed', 'Request Accepted', 'Request Solved', 'Solving Confirmed'],
+              datasets: [{
+                  label: "My First dataset",
+                  data: ['', 'Request Added', 'Request Added', 'Request Added', 'Request Viewed', 'Request Viewed', 'Request Viewed'],
+                  fill: false,
+                  borderColor: window.chartColors.lightblue,
+                  backgroundColor: window.chartColors.lightblue
+              }]
+          },
+          options: {
+              legend: {
+                  display: false
+               },
+              responsive: true,
+              title:{
+                  display:false,
+                  text:'Chart with Non Numeric Y Axis'
+              },
+              scales: {
+                  xAxes: [{
+                      display: false,
+                      scaleLabel: {
+                          display: false,
+                          labelString: 'Month'
+                      }
+                  }],
+                  yAxes: [{
+                      type: 'category',
+                      position: 'left',
+                      display: false,
+                      scaleLabel: {
+                          display: true,
+                          labelString: 'Request State'
+                      },
+                      ticks: {
+                          reverse: true
+                      }
+                  }]
+              }
+          }
+      };
+
+      window.onload = function() {
+          var ctx = document.getElementById("foodChart").getContext("2d");
+          window.myLine = new Chart(ctx, config);
+      };
+  </script>
 </body>
 </html>

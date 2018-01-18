@@ -53,11 +53,11 @@ content {
 }
 
 #historyContent {
-  z-index: ;
+  z-index: 1;
 }
 
 #profileContent {
-  z-index: 1;
+  z-index: ;
 }
 
 #settingsContent {
@@ -83,7 +83,7 @@ content {
   display: flex;
   height: 10px;
   width: 60px;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
 }
@@ -135,7 +135,6 @@ content {
 
 .page {
   width:100%;
-  width:200%;
   height:537px;
 
 }
@@ -147,9 +146,13 @@ h1 {
 }
 
 h2 {
-  text-align: center;
   font-size: 1.25rem; /* NOTE: 20px  */
   font-weight: 500;
+}
+
+h3 {
+  font-size: 1rem;
+  height: 20px;
 }
 
 ul {
@@ -160,6 +163,23 @@ li {
 /* font-family: "sofia-pro",sans-serif; */
 font-style: normal;
 font-weight: 500;
+}
+
+/* Lines  */
+
+hr {
+  background-color:#4A4A4A;
+  color:#4A4A4A;
+  border:#4A4A4A;
+  height:1px;
+}
+
+/* History Content Dividing Lines */
+
+.dividingLine {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -339,37 +359,55 @@ font-weight: 500;
 
 #foodwaterContent {
   width: 100%;
+  height: 587px;
   display: flex;
   flex-flow: row;
 }
 
 #foodContent {
-  background-color: blue;
+  background-color: fff;
+}
+
+#foodContent h2 {
+  width: 280px;
 }
 
 #waterContent {
   background-color: pink;
 }
 
+
+
 .date li {
   text-align:left;
 }
 
 .views {
-  display: flex;
-  justify-content: flex-end;
+  width: 50px;
+  height: 100%;
+  display: block;
+  float: right;
 }
 
 .views li {
 display: flex;
 flex-direction: row;
+
 }
 
-
-
 .date {
-  display: flex;
+  display: block;
   flex-flow: row;
+  width: 280px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.date h3 {
+  float: left;
+  font-size: 1rem;
+  height: 20px;
 }
 
 #petProfile {
@@ -392,17 +430,127 @@ flex-direction: row;
   background-color: grey;
 }
 
+/* History Content  */
+
+.diagram {
+  width: 280px;
+  height: 300px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: red;*/
+
+}
+/* Food Indexes Months  */
+
+.foodIndexJanuary {
+  width: 130px;
+}
+
+.foodIndexFebruary {
+  width: 120px;
+}
+
+.foodIndexMarch {
+  width: 110px;
+}
+
+.foodIndexApril {
+  width: 105px;
+}
+
+.foodIndexMay {
+  width: 105px;
+}
+
+.foodIndexJune {
+  width: 110px;
+}
+
+.foodIndexJuly {
+  width: 120px;
+}
+
+.foodIndexAugust {
+  width: 130px;
+}
+
+.foodIndexSeptember {
+  width: 150px;
+}
+
+.foodIndexOctober {
+  width: 180px;
+}
+
+.foodIndexNovember {
+  width: 195px;
+}
+
+.foodIndexDecember {
+  width: 210px;
+}
+
+/* Water Indexes Months  */
+
+.waterIndexJanuary {
+  width: 80px;
+}
+
+.waterIndexFebruary {
+  width: 90px;
+}
+
+.waterIndexMarch {
+  width: 100px;
+}
+
+.waterIndexApril {
+  width: 110px;
+}
+
+.waterIndexMay {
+  width: 110px;
+}
+
+.waterIndexJune {
+  width: 110px;
+}
+
+.waterIndexJuly {
+  width: 110px;
+}
+
+.waterIndexAugust {
+  width: 110px;
+}
+
+.waterIndexSeptember {
+  width: 110px;
+}
+
+.waterIndexOctober {
+  width: 110px;
+}
+
+.waterIndexNovember {
+  width: 110px;
+}
+
+.waterIndexDecember {
+  width: 110px;
+}
 
 .curve {
   hight: 200px;
 }
 
 .monthsfood {
-  width: 20px;
+  margin-top: -250px;
+  width: 100px;
   transform: rotate(270deg);
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .monthswater {
