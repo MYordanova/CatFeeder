@@ -52,7 +52,7 @@ content {
 }
 
 #historyContent {
-  z-index: 1;
+  z-index: ;
 }
 
 #profileContent {
@@ -60,7 +60,7 @@ content {
 }
 
 #settingsContent {
-  z-index: 2;
+  z-index: ;
 }
 
 .heading {
