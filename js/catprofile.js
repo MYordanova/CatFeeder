@@ -29,7 +29,7 @@ $(document).ready (function() {
 
     $('.paginationDot').click(function() {
       $('.paginationDot').removeClass('swipeActivated');
-      $(this).addClass('.swipeActivated');
+      $(this).addClass('swipeActivated');
     });
 
     $( "#naviThirdPage" ).click(function() {
