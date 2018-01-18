@@ -28,8 +28,8 @@ $(document).ready (function() {
     });
 
     $('.paginationDot').click(function() {
-      $('.paginationDot').removeClass('activated');
-      $(this).addClass('activated');
+      $('.paginationDot').removeClass('swipeActivated');
+      $(this).addClass('.swipeActivated');
     });
 
     $( "#naviThirdPage" ).click(function() {

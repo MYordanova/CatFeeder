@@ -48,25 +48,28 @@ content {
 /* z-index zum bearbeiten der jeweiligen seite auf 1 setzen */
 
 #mainPageContent {
-  z-index: 1;
-}
-
-#historyContent {
-  z-index: 1;
-}
-
-#profileContent {
   z-index: ;
 }
 
+#historyContent {
+  z-index: ;
+}
+
+#profileContent {
+  z-index: 1;
+}
+
 #settingsContent {
-  z-index: 2;
+  z-index: ;
 }
 
 .heading {
   width: 100%;
   background: blue;
 }
+
+
+/* NOTE: Pagination  */
 
 .pagination {
   height: 10px;
@@ -86,8 +89,7 @@ content {
 }
 
 
-
-#naviFirstPage .activated{
+#naviFirstPage .swipeActivated{
   background-image: url('../images/naviElements/swipeActive.svg')!important;
   width: 10px;
   height: 10px;
@@ -100,7 +102,7 @@ content {
   height: 10px;
 }
 
-#naviFirstPage .activated {
+#naviFirstPage .swipeActivated {
   background-image: url('../images/naviElements/swipeActive.svg')!important;
   width: 10px;
   height: 10px;
@@ -112,7 +114,7 @@ content {
   height:10px;
 }
 
-#naviSecondPage .activated{
+#naviSecondPage .swipeActivated{
   background-image: url('../images/naviElements/swipeActive.svg')!important;
   width: 10px;
   height:10px;
