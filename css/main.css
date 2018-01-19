@@ -222,12 +222,16 @@ content {
 
 /* page end */
 
+/* nextpages */
+
 .nextpages {
   position: absolute;
   left: 100vw;
 }
 
-/* next page */
+/* nextpages end */
+
+/* nextpage */
 
 .nextpage {
   width: 100vw;
@@ -241,7 +245,7 @@ content {
   background: green;
 }
 
-/* next page end */
+/* nextpage end */
 
 
 
@@ -292,20 +296,11 @@ hr {
   height:1px;
 }
 
-/* History Content Dividing Lines */
-
-.dividingLine {
-  width: 280px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 
 
 
-
-
-/* Main Page */
+/* main page */
 
 
 /* statusbar */
@@ -352,7 +347,6 @@ hr {
   margin: 5px;
 }
 
-/* TEST TEST TEST tank */
 
 .progressbar .background {
   background-color: #B5D8DE;
@@ -385,6 +379,7 @@ hr {
  }
 }
 
+/* statusbar end */
 
 /* feed circle */
 
@@ -440,6 +435,7 @@ hr {
   margin-top: 20px;
 }
 
+/* feedcircle end */
 
 /* autofeed circle */
 
@@ -470,6 +466,7 @@ hr {
   align-items: center;
 }
 
+/* autofeedcircle end */
 
 /* feed button */
 
@@ -483,28 +480,24 @@ hr {
   left: calc(50vw + 60px);
 }
 
+/* feedbutton end */
+
+/* main page end */
 
 
 
 
 
- .container { /* diese klasse existiert nicht im html dokument ?! */
-  width: 90px;
-  height: 60px;
+/* history */
+
+
+/* History Content Dividing Lines */
+
+.dividingLine {
+  width: 280px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
 
 .date li {
   text-align:left;
@@ -537,152 +530,6 @@ flex-direction: row;
   font-size: 1rem;
   height: 20px;
 }
-
-
-
-
-
-
-/* pet profile */
-
-/* datasheet */
-
-.datasheet form {
- width: 280px;
-}
-
-.datasheet form label {
-  display: inline-block;
-  text-align: left;
-  position: absolute;
-  opacity: 0.5;
-}
-
-.datasheet form input {
-  box-sizing: border-box;
-  outline: 0;
-  border-bottom: 1px solid;
-  border-bottom-color: #87BCD2;
-  color: #4A4A4A;
-  width: 280px;
-  height: 50px;
-}
-
-/* datasheet end */
-
-
-
-
-/* NOTE: Cat Profile Button // Seite 3 */
-
-
-.buttonAction {
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  transition: 0s;
-}
-
-#buttonAddHabit {
-  background-image: url('../images/button/addInactive.svg');
-}
-
-#buttonCloseHabit {
-  background-image: url('../images/button/closeInactive.svg');
-}
-
-#buttonConfirmHabit {
-  background-image: url('../images/button/confirmInactive.svg');
-}
-
-/* NOTE: Cat Profile new Habbit  */
-
-/* NOTE: Cat Profile add new Habbit Time and Portion  */
-
-.addnewHabit {
-  padding: 0px 10px 0 10px;
-  margin: 0px 20px 0 20px;
-  display: flex;
-  justify-content: space-around;
-  /* background-color: red; */
-}
-
-.displayHeader {
-  font-size: 14px;
-}
-
-.displayInformation {
- display: flex;
- /* background: black; */
- height: 30px;
-
-}
-
-.displayTime {
-  background: yellow;
-  display: flex;
-  justify-content: center;
-  width: 100px;
-
-}
-
-.timePicker{
-  background-color: pink;
-  text-align: center;
-}
-
-.hours{
-text-align: center;
-width: 40px;
-border-top: 1px solid;
-border-color: #87BCD2;
-border-bottom: 1px solid;
-border-bottom-color: #87BCD2;
-}
-
-.colon {
-width: 20px;
-text-align: center;
-}
-
-.portion {
-  background-color: pink;
-  width: 40px;
-}
-
-.displayPortion {
-  display: flex;
-  border-top: 1px solid;
-  border-top-color: #87BCD2;
-  border-bottom: 1px solid;
-  border-bottom-color: #87BCD2;
-}
-
-.amount {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.amount span{
-  margin-left: 4px;
-  margin-right: 10px;
-  text-align: right;
-  background-color: yellow;
-}
-
-.measure span{
-  text-align: left;
-  font-size: 12px;
-  background-color: yellow;
-  /* margin-right: 4px; */
-}
-
-
-
-
-
-
 
 /* History Content  */
 
@@ -814,11 +661,154 @@ text-align: center;
   margin-right: auto;
 }
 
-
-
 .activate svg g {
   fill: #6AAA3B;
 }
+
+/* history end */
+
+
+
+
+
+/* pet profile */
+
+
+/* datasheet */
+
+.datasheet form {
+ width: 280px;
+}
+
+.datasheet form label {
+  display: inline-block;
+  text-align: left;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.datasheet form input {
+  box-sizing: border-box;
+  outline: 0;
+  border-bottom: 1px solid;
+  border-bottom-color: #87BCD2;
+  color: #4A4A4A;
+  width: 280px;
+  height: 50px;
+}
+
+/* datasheet end */
+
+
+
+
+/* Seite 3 */
+
+
+.buttonAction {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  transition: 0s;
+}
+
+#buttonAddHabit {
+  background-image: url('../images/button/addInactive.svg');
+}
+
+#buttonCloseHabit {
+  background-image: url('../images/button/closeInactive.svg');
+}
+
+#buttonConfirmHabit {
+  background-image: url('../images/button/confirmInactive.svg');
+}
+
+/* Cat Profile new Habbit  */
+
+/* Cat Profile add new Habbit Time and Portion  */
+
+.addnewHabit {
+  padding: 0px 10px 0 10px;
+  margin: 0px 20px 0 20px;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: red; */
+}
+
+.displayHeader {
+  font-size: 14px;
+}
+
+.displayInformation {
+ display: flex;
+ /* background: black; */
+ height: 30px;
+
+}
+
+.displayTime {
+  background: yellow;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+
+}
+
+.timePicker{
+  background-color: pink;
+  text-align: center;
+}
+
+.hours{
+text-align: center;
+width: 40px;
+border-top: 1px solid;
+border-color: #87BCD2;
+border-bottom: 1px solid;
+border-bottom-color: #87BCD2;
+}
+
+.colon {
+width: 20px;
+text-align: center;
+}
+
+.portion {
+  background-color: pink;
+  width: 40px;
+}
+
+.displayPortion {
+  display: flex;
+  border-top: 1px solid;
+  border-top-color: #87BCD2;
+  border-bottom: 1px solid;
+  border-bottom-color: #87BCD2;
+}
+
+.amount {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.amount span{
+  margin-left: 4px;
+  margin-right: 10px;
+  text-align: right;
+  background-color: yellow;
+}
+
+.measure span{
+  text-align: left;
+  font-size: 12px;
+  background-color: yellow;
+  /* margin-right: 4px; */
+}
+
+/* pet profile end */
+
 
 
 
@@ -865,6 +855,7 @@ text-align: center;
   border-bottom: 1px solid #87BCD2;
 }
 
+/* settings end */
 
 
 
@@ -934,3 +925,5 @@ footer {
 #naviSettings.activated {
   background-image: url('../images/mainNaviElements/iconSettingsActive.svg') !important;
 }
+
+/* footer navigation end */
