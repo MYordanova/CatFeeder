@@ -5,6 +5,7 @@
     <title>Pet Feeder</title>
     <meta charset="utf-8" />
     <meta http-equiv="Cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/yzu5crl.css">
@@ -71,18 +72,17 @@
             <div class="heading history">
               <h1>History</h1>
               <div class="pagination">
-                <nav role="swipe">
-                  <ul id="swipeNavi">
-                    <li id="naviFirstPage"class="paginationDot activated"></li>
-                    <li id="naviSecondPage" class="paginationDot"></li>
+                <nav class="swipenav">
+                  <ul class="swipeNavi">
+                    <li id="naviFirstPageHistory" class="paginationDot swipeActivated"></li>
+                    <li id="naviSecondPageHistory" class="paginationDot"></li>
                   </ul>
                 </nav>
               </div>
             </div>
 
-            <div id="foodwaterContent" class="pages">
+            <div id="pagesFoodWaterContent" class="pages">
               <div id="foodContent" class="page">
-                <div>
                 <h2>Food</h2>
                 <div class="date">
                   <h3>2018</h3>
@@ -99,7 +99,7 @@
 
                 <section class="diagram">
 
-                    <canvas id="foodChart" ></canvas>
+                  <canvas id="foodChart" ></canvas>
 
                 </section>
 
@@ -113,10 +113,9 @@
                   <li>July</li>
                   <li>August</li>
                 </ul>
-
+              </div>
 
               <div id="waterContent" class="page">
-
                 <h2>Water</h2>
                 <div class="date">
                   <h3>2018</h3>
@@ -127,7 +126,7 @@
                   </div>
                 </div>
 
-                <div class="page">
+                <div class="dividingLine">
                   <hr class="dividingLine">
                 </div>
 
@@ -154,11 +153,11 @@
             <div class=" heading profile">
               <h1>Pet Profile</h1>
               <div class="pagination">
-                <nav role="swipe">
-                  <ul id="swipeNavi">
-                    <li id="naviFirstPage"class="paginationDot swipeActivated"></li>
-                    <li id="naviSecondPage" class="paginationDot"></li>
-                    <li id="naviThirdPage" class="paginationDot"></li>
+                <nav class="swipenav">
+                  <ul class="swipeNavi">
+                    <li id="naviFirstPageProfile" class="paginationDot swipeActivated"></li>
+                    <li id="naviSecondPageProfile" class="paginationDot"></li>
+                    <li id="naviThirdPageProfile" class="paginationDot"></li>
                   </ul>
                 </nav>
               </div>
@@ -166,106 +165,94 @@
 
             <div id="pagesPetProfile" class="pages">
               <div id="generalInfoProfile" class="page">
-                <div class="pageContent">
-                  <h2>General information</h2>
-                  <div>Round graphic with plus button</div>
-                  <section class="datasheet">
-                    <form class="catInformation" action="index.html" method="post">
-                      <div>
-                        <label class="name"></label>
-                        <input type="text" name="name" placeholder="Name">
-                      </div>
-                      <div>
-                        <label class="breed"></label>
-                        <input type="text" name="breed" placeholder="Breed">
-                      </div>
-                      <div>
-                        <label class="age"></label>
-                        <input type="text" name="age" placeholder="Age">
-                      </div>
-                      <label class="weight"></label>
-                      <input type="text" name="weight" placeholder="Weight">
-                    </form>
-                  </section>
-                </div>
+                <h2>General information</h2>
+                <div>Round graphic with plus button</div>
+                <section class="datasheet">
+                  <form class="catInformation" action="index.html" method="post">
+                    <label class="name"></label>
+                    <input type="text" name="name" placeholder="Name">
+
+                    <label class="breed"></label>
+                    <input type="text" name="breed" placeholder="Breed">
+
+                    <label class="age"></label>
+                    <input type="text" name="age" placeholder="Age">
+
+                    <label class="weight"></label>
+                    <input type="text" name="weight" placeholder="Weight">
+                  </form>
+                </section>
               </div>
 
               <div id="foodProfile" class="page">
-                <div class="pageContent">
-                  <h2>Food Profile</h2>
-                  <div>Scan Area</div>
-                  <section class="datasheet">
-                    <form class="foodinformation" action="index.html" method="post">
-                      <div>
-                        <label class="brand"></label>
-                        <input type="text" name="brand" placeholder="Brand">
-                      </div>
-                      <div>
-                        <label class="sort"></label>
-                        <input type="text" name="sort" placeholder="Sort">
-                      </div>
-                      <div>
-                        <label class="portion"></label>
-                        <input type="text" name="portion" placeholder="Portion">
-                      </div>
-                    </form>
-                  </section>
-                </div>
+                <h2>Food Profile</h2>
+                <div>Scan Area</div>
+                <section class="datasheet">
+                  <form class="foodInformation" action="index.html" method="post">
+                    <label class="brand"></label>
+                    <input type="text" name="brand" placeholder="Brand">
+
+                    <label class="sort"></label>
+                    <input type="text" name="sort" placeholder="Sort">
+
+                    <label class="portion"></label>
+                    <input type="text" name="portion" placeholder="Portion">
+                  </form>
+                </section>
               </div>
 
               <div id="eatingHabitsProfile" class="page">
-                <div class="pageContent">
-                  <h2>Eating Habits</h2>
-                  <div class="buttons">
-                    <div id="buttonAddHabit" class="buttonAction"></div>
-                    <div class="confirmHabit">
-                      <div id="buttonCloseHabit" class="buttonAction"></div>
-                      <div id="buttonConfirmHabit" class="buttonAction"></div>
+                <h2>Eating Habits</h2>
+                <div class="buttons">
+                  <div id="buttonAddHabit" class="buttonAction"></div>
+                  <div class="confirmHabit">
+                    <div id="buttonCloseHabit" class="buttonAction"></div>
+                    <div id="buttonConfirmHabit" class="buttonAction"></div>
+                  </div>
+                </div>
+                <section class="datasheet">
+                  <div id="newHabit" class="addnewHabit">
+
+                    <div class="timePicker">
+                      <span id="headerTime" class="displayHeader">Time</span>
+                      <div class="displayInformation">
+                        <div class="displayTime">
+                          <div id="time "class="hours">
+                            <span>12</span>
+                          </div>
+                          <div class="colon">
+                            <span>:</span>
+                          </div>
+                          <div id="minutes" class="hours">
+                            <span>30</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="portion">
+                      <span id="headerPortion" class="displayHeader">Portion</span>
+                      <div class="displayInformation">
+                        <div class="displayPortion">
+                          <div class="amount">
+                            <span>30</span>
+                          </div>
+                          <div class="measure">
+                            <span>g</span>
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
-                  <section>
-                    <div id="newHabit" class="addnewHabit">
-
-                      <div class="timePicker">
-                        <span id="headerTime" class="displayHeader">Time</span>
-                        <div class="displayInformation">
-                          <div class="displayTime">
-                            <div id="time "class="hours">
-                              <span>12</span>
-                            </div>
-                            <div class="colon">
-                              <span>:</span>
-                            </div>
-                            <div id="minutes" class="hours">
-                              <span>30</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="portion">
-                        <span id="headerPortion" class="displayHeader">Portion</span>
-                        <div class="displayInformation">
-                          <div class="displayPortion">
-                            <div class="amount">
-                              <span>30</span>
-                            </div>
-                            <div class="measure">
-                              <span>g</span>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </section>
-                </div>
+                </section>
               </div>
             </div>
           </li>
 
           <li id="settingsContent" class="chapter">
             <div class="heading settings">
+              <div class="back"></div>
               <h1>Settings</h1>
               <div class="pagination"></div>
             </div>
@@ -281,14 +268,18 @@
                   </div>
                 </div>
 
-                <div id="settingsAutofeed" class="settingsNavi">Auto-Feed</div>
+                <div id="settingsToAutofeed" class="settingsNavi">Auto Feed</div>
 
-                <div id="settingsMoreSettings" class="settingsNavi">More Settings</div>
+                <div id="settingsToMoreSettings" class="settingsNavi">More Settings</div>
               </div>
 
-              <div id="autofeed" class="page">
 
+              <div class="nextpages">
+                <div id="autofeed" class="nextpage">
+
+                </div>
               </div>
+
             </div>
           </li>
 
@@ -296,71 +287,75 @@
       </content>
 
 
-    <footer>
-      <nav role="navigation">
-        <ul id="mainNavi">
-          <li id="naviMainPage" class="navientry activated"></li>
-          <li id="naviHistory" class="navientry"></li>
-          <li id="naviProfile" class="navientry"></li>
-          <li id="naviSettings" class="navientry"></li>
-        </ul>
-      </nav>
-    </footer>
-  </div>
-
-  <!-- <script>
-      var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      var config = {
-          type: 'line',
-          data: {
-              xLabels: ["January", "February", "March", "April", "May", "June", "July"],
-              yLabels: ['', 'Request Added', 'Request Viewed', 'Request Accepted', 'Request Solved', 'Solving Confirmed'],
-              datasets: [{
-                  label: "My First dataset",
-                  data: ['', 'Request Added', 'Request Added', 'Request Added', 'Request Viewed', 'Request Viewed', 'Request Viewed'],
-                  fill: false,
-                  borderColor: window.chartColors.lightblue,
-                  backgroundColor: window.chartColors.lightblue
-              }]
-          },
-          options: {
-              legend: {
-                  display: false
-               },
-              responsive: true,
-              title:{
-                  display:false,
-                  text:'Chart with Non Numeric Y Axis'
-              },
-              scales: {
-                  xAxes: [{
-                      display: false,
-                      scaleLabel: {
-                          display: false,
-                          labelString: 'Month'
-                      }
-                  }],
-                  yAxes: [{
-                      type: 'category',
-                      position: 'left',
-                      display: false,
-                      scaleLabel: {
-                          display: true,
-                          labelString: 'Request State'
-                      },
-                      ticks: {
-                          reverse: true
-                      }
-                  }]
-              }
-          }
-      };
-
-      window.onload = function() {
-          var ctx = document.getElementById("foodChart").getContext("2d");
-          window.myLine = new Chart(ctx, config);
-      };
-  </script> -->
+      <footer>
+        <nav id="mainnav">
+          <ul id="mainNavi">
+            <li id="naviMainPage" class="navientry activated"></li>
+            <li id="naviHistory" class="navientry"></li>
+            <li id="naviProfile" class="navientry"></li>
+            <li id="naviSettings" class="navientry"></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
 
   </body>
   </html>
+
+
+
+
+
+  <!-- <script>
+  var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var config = {
+  type: 'line',
+  data: {
+  xLabels: ["January", "February", "March", "April", "May", "June", "July"],
+  yLabels: ['', 'Request Added', 'Request Viewed', 'Request Accepted', 'Request Solved', 'Solving Confirmed'],
+  datasets: [{
+  label: "My First dataset",
+  data: ['', 'Request Added', 'Request Added', 'Request Added', 'Request Viewed', 'Request Viewed', 'Request Viewed'],
+  fill: false,
+  borderColor: window.chartColors.lightblue,
+  backgroundColor: window.chartColors.lightblue
+}]
+},
+options: {
+legend: {
+display: false
+},
+responsive: true,
+title:{
+display:false,
+text:'Chart with Non Numeric Y Axis'
+},
+scales: {
+xAxes: [{
+display: false,
+scaleLabel: {
+display: false,
+labelString: 'Month'
+}
+}],
+yAxes: [{
+type: 'category',
+position: 'left',
+display: false,
+scaleLabel: {
+display: true,
+labelString: 'Request State'
+},
+ticks: {
+reverse: true
+}
+}]
+}
+}
+};
+
+window.onload = function() {
+var ctx = document.getElementById("foodChart").getContext("2d");
+window.myLine = new Chart(ctx, config);
+};
+</script> -->

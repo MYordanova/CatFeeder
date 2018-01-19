@@ -21,10 +21,72 @@ $(document).ready (function() {
     }
   });
 
+
+  // pagination swipe history
+
+  $('#naviFirstPageHistory').click(function() {
+    if($('#naviSecondPageHistory').hasClass('swipeActivated')) {
+      $('#pagesFoodWaterContent').css('transform', 'translateX(0vw)');
+    }
+
+    $('.paginationDot').removeClass('swipeActivated');
+    $(this).addClass('swipeActivated');
+  });
+
+  $('#naviSecondPageHistory').click(function() {
+    if($('#naviFirstPageHistory').hasClass('swipeActivated')) {
+      $('#pagesFoodWaterContent').css('transform', 'translateX(-100vw)');
+    }
+
+    $('.paginationDot').removeClass('swipeActivated');
+    $(this).addClass('swipeActivated');
+  });
+
+  // pagination swipe profile
+
+  $('#naviFirstPageProfile').click(function() {
+    if($('#naviSecondPageProfile').hasClass('swipeActivated')) {
+      $('#pagesPetProfile').css('transform', 'translateX(0vw)');
+    } else if ($('#naviThirdPageProfile').hasClass('swipeActivated')) {
+      $('#pagesPetProfile').css('transform', 'translateX(0vw)');
+    }
+
+    $('.paginationDot').removeClass('swipeActivated');
+    $(this).addClass('swipeActivated');
+  });
+
+  $('#naviSecondPageProfile').click(function() {
+    if($('#naviFirstPageProfile').hasClass('swipeActivated')) {
+      $('#pagesPetProfile').css('transform', 'translateX(-100vw)');
+    } else if ($('#naviThirdPageProfile').hasClass('swipeActivated')) {
+      $('#pagesPetProfile').css('transform', 'translateX(-100vw)');
+    }
+
+    $('.paginationDot').removeClass('swipeActivated');
+    $(this).addClass('swipeActivated');
+  });
+
+  $('#naviThirdPageProfile').click(function() {
+    if($('#naviFirstPageProfile').hasClass('swipeActivated')) {
+      $('#pagesPetProfile').css('transform', 'translateX(-200vw)');
+    } else if ($('#naviSecondPageProfile').hasClass('swipeActivated')) {
+      $('#pagesPetProfile').css('transform', 'translateX(-200vw)');
+    }
+
+    $('.paginationDot').removeClass('swipeActivated');
+    $(this).addClass('swipeActivated');
+  });
+
   // settings navigation autofeed
 
-  $('#settingsAutofeed').click(function() {
-    $('#pagesSetting').addClass('pageSwipeToLeft');
+  $('#settingsToAutofeed').click(function() {
+    $('#autofeed').css('transform', 'translateX(-100vw)');
+    $('.back').addClass('backToSettings');
+  });
+
+  $('.back').click(function() {
+    $('.back').removeClass('backToSettings');
+    $('#autofeed').css('transform', 'translateX(100vw)');
   });
 
   // main navigation

@@ -1,8 +1,10 @@
 $(document).ready(function() {
-	var DEFAULTS = {
-		percent: 0,
-		duration: 1000
-	};
+
+	var water = 1000;
+	var food = 1000;
+	var bowl = 0;
+
+	var duration = 1000;
 
 	var opts_watertank;
 	var opts_foodtank;
@@ -12,14 +14,11 @@ $(document).ready(function() {
 
     // refill tanks
     $('.refill').click(function() {
-      //$('.tank').removeData('percent');
-      //$('.tank').attr('data-percent', 1000);
-      //$('.progressbar').loading();
-			refreshData(1000,1000,0);
+			refreshData(1000,1000,null);
     })
 
 		// initial value setting
-		refreshData(0,0,0);
+		refreshData(water,food,bowl);
 
 
 		// feed circle
@@ -37,122 +36,107 @@ $(document).ready(function() {
 
 
     // feed button
-
     $('.feedButton').click(function() {
+      if(food >= circlePortion && circlePortion <= (100 - bowl)) {
+        var foodtank_new = food - circlePortion;
+        var bowl_new = bowl + circlePortion;
 
-      if(opts_foodtank.percent >= circlePortion && circlePortion <= (100 - opts_bowl.percent)) {
-        var foodtank_new = opts_foodtank.percent - circlePortion;
-        var bowl_new = opts_bowl.percent + circlePortion;
-
-        $('.bowl').attr('data-percent', bowl_new);
+        //$('.bowl').attr('data-percent', bowl_new);
 				//$('.foodtank').attr('data-percent', foodtank_new);
 
-				refreshData(foodtank_new);
+				refreshData(null,foodtank_new,bowl_new);
       }
     })
 
 	}
 
-	function refreshData(food){
+	function refreshData(waterNew,foodNew,bowlNew){
 
+		// statusbar water tank
 		$('.watertank').each(function() {
 			var target_watertank  = $(this); // var = $('.watertank')
 
-			opts_watertank = {
-			percent: target_watertank.data('percent') ? target_watertank.data('percent') : DEFAULTS.percent, // percent: if data-percent vorhanden ?dann data-percent nutzen :else DEFAULT percent nutzen
-			duration: target_watertank.data('duration') ? target_watertank.data('duration') : DEFAULTS.duration
-			};
+			water = waterNew != null ? waterNew : water;
 
-			target_watertank.append('<div class="background_watertank"></div><div class="rotate_watertank"></div><div class="left_watertank"></div><div class="right_watertank"></div><div class=""><span>' + opts_watertank.percent + '</span></div>');
+			target_watertank.append('<div class="background"></div><div class="rotate"></div><div class="left"></div><div class="right"></div><div class=""><span>' + water + '</span></div>');
 
-			var rotate_watertank = target_watertank.find('.rotate_watertank');
+			var rotate_watertank = target_watertank.find('.rotate');
 			setTimeout(function() {
 				rotate_watertank.css({
-					'transition': 'transform ' + opts_watertank.duration + 'ms linear',
-					'transform': 'rotate(' + opts_watertank.percent * 0.36 + 'deg)'
+					'transition': 'transform ' + duration + 'ms linear',
+					'transform': 'rotate(' + water * 0.36 + 'deg)'
 				});
 			},1);
 
-			if (opts_watertank.percent > 500) {
-				var animationRight = 'toggle ' + (opts_watertank.duration / opts_watertank.percent * 500) + 'ms step-end';
-				var animationLeft = 'toggle ' + (opts_watertank.duration / opts_watertank.percent * 500) + 'ms step-start';
-				target_watertank.find('.right_watertank').css({
+			if (water > 500) {
+				var animationRight = 'toggle ' + (duration / water * 500) + 'ms step-end';
+				var animationLeft = 'toggle ' + (duration / water * 500) + 'ms step-start';
+				target_watertank.find('.right').css({
 					animation: animationRight,
 					opacity: 1
 				});
-				target_watertank.find('.left_watertank').css({
+				target_watertank.find('.left').css({
 					animation: animationLeft,
 					opacity: 0
 				});
 			}
 		});
 
-
-
-		// statusbar food tank (100% = 1000)
-
+		// statusbar food tank
 		$('.foodtank').each(function() {
 			var target_foodtank  = $(this); // var = $('.foodtank')
 			$('.tank').attr('data-percent', food);
-			opts_foodtank = {
-			percent: food ? food : DEFAULTS.percent,
-			duration: target_foodtank.data('duration') ? target_foodtank.data('duration') : DEFAULTS.duration
-			};
 
-			target_foodtank.append('<div class="background_foodtank"></div><div class="rotate_foodtank"></div><div class="left_foodtank"></div><div class="right_foodtank"></div><div class=""><span>' + opts_foodtank.percent + '</span></div>');
+			food = foodNew != null ? foodNew : food;
 
-			var rotate_foodtank = target_foodtank.find('.rotate_foodtank');
+			target_foodtank.append('<div class="background"></div><div class="rotate"></div><div class="left"></div><div class="right"></div><div class=""><span>' + food + '</span></div>');
+
+			var rotate_foodtank = target_foodtank.find('.rotate');
 			setTimeout(function() {
 				rotate_foodtank.css({
-					'transition': 'transform ' + opts_foodtank.duration + 'ms linear',
-					'transform': 'rotate(' + opts_foodtank.percent * 0.36 + 'deg)'
+					'transition': 'transform ' + duration + 'ms linear',
+					'transform': 'rotate(' + food * 0.36 + 'deg)'
 				});
 			},1);
 
-			if (opts_foodtank.percent > 500) {
-				var animationRight = 'toggle ' + (opts_foodtank.duration / opts_foodtank.percent * 500) + 'ms step-end';
-				var animationLeft = 'toggle ' + (opts_foodtank.duration / opts_foodtank.percent * 500) + 'ms step-start';
-				target_foodtank.find('.right_foodtank').css({
+			if (food > 500) {
+				var animationRight = 'toggle ' + (duration / food * 500) + 'ms step-end';
+				var animationLeft = 'toggle ' + (duration / food * 500) + 'ms step-start';
+				target_foodtank.find('.right').css({
 					animation: animationRight,
 					opacity: 1
 				});
-				target_foodtank.find('.left_foodtank').css({
+				target_foodtank.find('.left').css({
 					animation: animationLeft,
 					opacity: 0
 				});
 			}
 		});
 
-
-
-		// statusbar food bowl (100% = 100)
-
+		// statusbar food bowl
 		$('.bowl').each(function() {
 			var target_bowl  = $(this);
 
-			opts_bowl = {
-			percent: target_bowl.data('percent') ? target_bowl.data('percent') : DEFAULTS.percent,
-			duration: target_bowl.data('duration') ? target_bowl.data('duration') : DEFAULTS.duration
-			};
+			bowl = bowlNew != null ? bowlNew : bowl;
 
-			target_bowl.append('<div class="background_bowl"></div><div class="rotate_bowl"></div><div class="left_bowl"></div><div class="right_bowl"></div><div class=""><span>' + opts_bowl.percent + '</span></div>');
+			target_bowl.append('<div class="background"></div><div class="rotate"></div><div class="left"></div><div class="right"></div><div class=""><span>' + bowl + '</span></div>');
 
-			var rotate_bowl = target_bowl.find('.rotate_bowl');
+			var rotate_bowl = target_bowl.find('.rotate');
 			setTimeout(function() {
 				rotate_bowl.css({
-					'transition': 'transform ' + opts_bowl.duration + 'ms linear',
-					'transform': 'rotate(' + opts_bowl.percent * 3.6 + 'deg)'
+					'transition': 'transform ' + duration + 'ms linear',
+					'transform': 'rotate(' + bowl * 3.6 + 'deg)'
 				});
 			},1);
 
-			if (opts_bowl.percent > 50) {
-				var animationRight = 'toggle ' + (opts_bowl.duration / opts_bowl.percent * 50) + 'ms step-end';
-				var animationLeft = 'toggle ' + (opts_bowl.duration / opts_bowl.percent * 50) + 'ms step-start';
-				target_bowl.find('.right_bowl').css({
+			if (bowl > 50) {
+				var animationRight = 'toggle ' + (duration / bowl * 50) + 'ms step-end';
+				var animationLeft = 'toggle ' + (duration / bowl * 50) + 'ms step-start';
+				target_bowl.find('.right').css({
 					animation: animationRight,
 					opacity: 1
 				});
-				target_bowl.find('.left_bowl').css({
+				target_bowl.find('.left').css({
 					animation: animationLeft,
 					opacity: 0
 				});

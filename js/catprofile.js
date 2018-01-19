@@ -27,17 +27,6 @@ $(document).ready (function() {
     $('#buttonAddHabit').show();
   });
 
-  // pagination aktiv/inaktiv icon
 
-  $('.paginationDot').click(function() {
-    $('.paginationDot').removeClass('swipeActivated');
-    $(this).addClass('swipeActivated');
-  });
-
-  // pagination page swipe
-
-  $('#naviFirstPage').click(function() {
-    $('#pagesPetProfile').addClass('pageSwipeToLeft');
-  });
 
 });
