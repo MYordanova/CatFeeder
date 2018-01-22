@@ -25,11 +25,13 @@ $(document).ready (function() {
     $('#buttonCloseHabit').hide();
     $('.addnewHabit').show();
     $('.displayInformation').addClass('confirm')
-    $('.displayPortion').css('border', 'none')
-    $('.hours').css('border', 'none')
     $('#buttonAddHabit').show();
   });
 
-
-
+  $('#buttonConfirmHabit').click(function() {
+    if($('.displayInformation').hasClass('confirm')) {
+      $('.displayPortion').css('border', 'none')
+      $('.hours').css('border', 'none')
+    }
+});
 });
