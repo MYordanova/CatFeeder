@@ -28,8 +28,7 @@ $(document).ready (function() {
     if($('#naviSecondPageHistory').hasClass('swipeActivated')) {
       $('#pagesFoodWaterContent').css('transform', 'translateX(0vw)');
     }
-
-    $('.paginationDot').removeClass('swipeActivated');
+    $('.paginationDotHistory').removeClass('swipeActivated');
     $(this).addClass('swipeActivated');
   });
 
@@ -37,9 +36,21 @@ $(document).ready (function() {
     if($('#naviFirstPageHistory').hasClass('swipeActivated')) {
       $('#pagesFoodWaterContent').css('transform', 'translateX(-100vw)');
     }
-
-    $('.paginationDot').removeClass('swipeActivated');
+    $('.paginationDotHistory').removeClass('swipeActivated');
     $(this).addClass('swipeActivated');
+  });
+
+
+  $('#foodContent').on('swipeleft', function(event) {
+    $('#pagesFoodWaterContent').css('transform', 'translateX(-100vw)');
+    $('.paginationDotHistory').removeClass('swipeActivated');
+    $('#naviSecondPageHistory').addClass('swipeActivated');
+  });
+
+  $('#waterContent').on('swiperight', function(event) {
+    $('#pagesFoodWaterContent').css('transform', 'translateX(0vw)');
+    $('.paginationDotHistory').removeClass('swipeActivated');
+    $('#naviFirstPageHistory').addClass('swipeActivated');
   });
 
   // pagination swipe profile
@@ -51,7 +62,7 @@ $(document).ready (function() {
       $('#pagesPetProfile').css('transform', 'translateX(0vw)');
     }
 
-    $('.paginationDot').removeClass('swipeActivated');
+    $('.paginationDotProfile').removeClass('swipeActivated');
     $(this).addClass('swipeActivated');
   });
 
@@ -62,7 +73,7 @@ $(document).ready (function() {
       $('#pagesPetProfile').css('transform', 'translateX(-100vw)');
     }
 
-    $('.paginationDot').removeClass('swipeActivated');
+    $('.paginationDotProfile').removeClass('swipeActivated');
     $(this).addClass('swipeActivated');
   });
 
@@ -73,8 +84,33 @@ $(document).ready (function() {
       $('#pagesPetProfile').css('transform', 'translateX(-200vw)');
     }
 
-    $('.paginationDot').removeClass('swipeActivated');
+    $('.paginationDotProfile').removeClass('swipeActivated');
     $(this).addClass('swipeActivated');
+  });
+
+
+  $('#generalInfoProfile').on('swipeleft', function(event) {
+    $('#pagesPetProfile').css('transform', 'translateX(-100vw)');
+    $('.paginationDotProfile').removeClass('swipeActivated');
+    $('#naviSecondPageProfile').addClass('swipeActivated');
+  });
+
+  $('#foodProfile').on('swipeleft', function(event) {
+    $('#pagesPetProfile').css('transform', 'translateX(-200vw)');
+    $('.paginationDotProfile').removeClass('swipeActivated');
+    $('#naviThirdPageProfile').addClass('swipeActivated');
+  });
+
+  $('#foodProfile').on('swiperight', function(event) {
+    $('#pagesPetProfile').css('transform', 'translateX(0vw)');
+    $('.paginationDotProfile').removeClass('swipeActivated');
+    $('#naviFirstPageProfile').addClass('swipeActivated');
+  });
+
+  $('#eatingHabitsProfile').on('swiperight', function(event) {
+    $('#pagesPetProfile').css('transform', 'translateX(-100vw)');
+    $('.paginationDotProfile').removeClass('swipeActivated');
+    $('#naviSecondPageProfile').addClass('swipeActivated');
   });
 
   // settings navigation autofeed
@@ -85,6 +121,11 @@ $(document).ready (function() {
   });
 
   $('.back').click(function() {
+    $('.back').removeClass('backToSettings');
+    $('#autofeed').css('transform', 'translateX(100vw)');
+  });
+
+  $('#autofeed').on('swiperight', function(event) {
     $('.back').removeClass('backToSettings');
     $('#autofeed').css('transform', 'translateX(100vw)');
   });
