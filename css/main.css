@@ -166,6 +166,7 @@ content {
   transition: 1s;
 }
 
+
 #pagesFoodWaterContent {
   width: 200vw;
 }
@@ -183,6 +184,15 @@ content {
 /* page */
 
 .page {
+  width: 100vw;
+  height: 490px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.nextpage {
   width: 100vw;
   height: 490px;
   display: flex;

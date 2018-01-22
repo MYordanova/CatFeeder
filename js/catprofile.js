@@ -33,5 +33,5 @@ $(document).ready (function() {
       $('.displayPortion').css('border', 'none')
       $('.hours').css('border', 'none')
     }
-});
+  });
 });
