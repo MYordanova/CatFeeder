@@ -24,9 +24,14 @@ $(document).ready (function() {
     $(this).hide();
     $('#buttonCloseHabit').hide();
     $('.addnewHabit').show();
+    $('.displayInformation').addClass('confirm')
     $('#buttonAddHabit').show();
   });
 
-
-
+  $('#buttonConfirmHabit').click(function() {
+    if($('.displayInformation').hasClass('confirm')) {
+      $('.displayPortion').css('border', 'none')
+      $('.hours').css('border', 'none')
+    }
+});
 });
