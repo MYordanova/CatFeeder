@@ -51,6 +51,7 @@ content {
   background: white !important;
   position: absolute;
   top: 0;
+  overflow: hidden;
 }
 
 #mainPageContent {
@@ -189,6 +190,7 @@ content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 

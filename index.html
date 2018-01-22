@@ -10,7 +10,11 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/yzu5crl.css">
 
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
     <script type="text/javascript" src="js/progressbar.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/catprofile.js"></script>
@@ -24,15 +28,18 @@
         <ul id="chapters">
 
           <li id="mainPageContent" class="chapter">
-            <div class="statusbar">
-              <div class="progressbar tank watertank"></div>
-              <div class="progressbar tank foodtank"></div>
-              <div class="progressbar bowl"></div>
-              <p class="statusinfo">Water Tank</p>
-              <p class="statusinfo">Food Tank</p>
-              <p class="statusinfo">Food Bowl</p>
-            </div>
-            <button type="button" name="refill" class="refill">refill</button>
+            <button type="button" name="reset" class="reset">
+              <div class="statusbar">
+                <div class="progressbar tank watertank"></div>
+                <div class="progressbar tank foodtank"></div>
+                <div class="progressbar bowl"></div>
+                <p class="statusinfo">Water Tank</p>
+                <p class="statusinfo">Food Tank</p>
+                <p class="statusinfo">Food Bowl</p>
+              </div>
+            </button>
+
+
 
             <div class="feedCircle">
 
@@ -74,8 +81,8 @@
               <div class="pagination">
                 <nav class="swipenav">
                   <ul class="swipeNavi">
-                    <li id="naviFirstPageHistory" class="paginationDot swipeActivated"></li>
-                    <li id="naviSecondPageHistory" class="paginationDot"></li>
+                    <li id="naviFirstPageHistory" class="paginationDot paginationDotHistory swipeActivated"></li>
+                    <li id="naviSecondPageHistory" class="paginationDot paginationDotHistory"></li>
                   </ul>
                 </nav>
               </div>
@@ -155,9 +162,9 @@
               <div class="pagination">
                 <nav class="swipenav">
                   <ul class="swipeNavi">
-                    <li id="naviFirstPageProfile" class="paginationDot swipeActivated"></li>
-                    <li id="naviSecondPageProfile" class="paginationDot"></li>
-                    <li id="naviThirdPageProfile" class="paginationDot"></li>
+                    <li id="naviFirstPageProfile" class="paginationDot paginationDotProfile swipeActivated"></li>
+                    <li id="naviSecondPageProfile" class="paginationDot paginationDotProfile"></li>
+                    <li id="naviThirdPageProfile" class="paginationDot paginationDotProfile"></li>
                   </ul>
                 </nav>
               </div>

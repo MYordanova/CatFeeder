@@ -12,9 +12,9 @@ $(document).ready(function() {
 	$.fn.loading = function() {
 
 
-    // refill tanks
-    $('.refill').click(function() {
-			refreshData(1000,1000,null);
+    // reset tanks
+    $('.reset').click(function() {
+			refreshData(1000,1000,0);
     })
 
 		// initial value setting
@@ -33,11 +33,9 @@ $(document).ready(function() {
 			$('.feedPicker').css('transform', 'rotate(' + circleRotation + 'deg)')
 		});
 
-
-
     // feed button
     $('.feedButton').click(function() {
-      if(food >= circlePortion && circlePortion <= (100 - bowl)) {
+      if(food > circlePortion && circlePortion <= (100 - bowl)) {
         var foodtank_new = food - circlePortion;
         var bowl_new = bowl + circlePortion;
 
