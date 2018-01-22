@@ -24,6 +24,9 @@ $(document).ready (function() {
     $(this).hide();
     $('#buttonCloseHabit').hide();
     $('.addnewHabit').show();
+    $('.displayInformation').addClass('confirm')
+    $('.displayPortion').css('border', 'none')
+    $('.hours').css('border', 'none')
     $('#buttonAddHabit').show();
   });
 

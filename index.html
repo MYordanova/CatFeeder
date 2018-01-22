@@ -166,7 +166,10 @@
             <div id="pagesPetProfile" class="pages">
               <div id="generalInfoProfile" class="page">
                 <h2>General information</h2>
-                <div>Round graphic with plus button</div>
+                <div class="addPhoto">
+                  <div id="circleAddPhoto"class="placeForPhoto"></div>
+                  <div id="buttonAddPhoto"class="placeForButton"></div>
+                </div>
                 <section class="datasheet">
                   <form class="catInformation" action="index.html" method="post">
                     <label class="name"></label>
@@ -186,7 +189,9 @@
 
               <div id="foodProfile" class="page">
                 <h2>Food Profile</h2>
-                <div>Scan Area</div>
+                <div class="scanProduct">
+                  <div id="buttonScan"class="placeScan"></div>
+                </div>
                 <section class="datasheet">
                   <form class="foodInformation" action="index.html" method="post">
                     <label class="brand"></label>
@@ -203,7 +208,7 @@
 
               <div id="eatingHabitsProfile" class="page">
                 <h2>Eating Habits</h2>
-                <div class="buttons">
+                <div class="buttonsHabits">
                   <div id="buttonAddHabit" class="buttonAction"></div>
                   <div class="confirmHabit">
                     <div id="buttonCloseHabit" class="buttonAction"></div>
@@ -215,7 +220,7 @@
 
                     <div class="timePicker">
                       <span id="headerTime" class="displayHeader">Time</span>
-                      <div class="displayInformation">
+                      <div class="displayInformation ">
                         <div class="displayTime">
                           <div id="time "class="hours">
                             <span>12</span>
@@ -225,6 +230,7 @@
                           </div>
                           <div id="minutes" class="hours">
                             <span>30</span>
+                            <div class="line-separator"></div>
                           </div>
                         </div>
                       </div>

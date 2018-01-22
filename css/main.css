@@ -673,6 +673,7 @@ flex-direction: row;
 
 /* pet profile */
 
+/* Seite 1 */
 
 /* datasheet */
 
@@ -699,11 +700,72 @@ flex-direction: row;
 
 /* datasheet end */
 
+/* add new Photo */
 
+.addPhoto {
+  margin-bottom: 40px;
 
+}
+.placeForPhoto {
+  width: 121px;
+  height: 121px;
+  background-repeat: no-repeat;
+  background-size: 121px 121px;
+  position: relative;
+
+}
+
+#circleAddPhoto{
+  background-image: url('../images/petProfile/iconCircle.svg');
+}
+
+.placeForButton {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  position: absolute;
+  top: 140px;
+  left: 226px;
+
+}
+
+#buttonAddPhoto{
+  background-image: url('../images/button/addInactive.svg');
+}
+
+/* add new photo end */
+
+/* Seite 1 end */
+
+/* Seite 2 */
+
+/* scan Product */
+
+.scanProduct{
+  margin-bottom: 40px;
+}
+
+.placeForScan {
+  background-repeat: no-repeat;
+  background-size: 142px 120px;
+}
+
+#buttonScan{
+  background-image: url('../images/petProfile/iconScan.svg');
+  width: 142px;
+  height: 120px;
+}
+/* scan Product end */
+
+/* Seite 2 end */
 
 /* Seite 3 */
 
+.buttonsHabits {
+  width: 280px;
+  margin-bottom: 40px;
+}
 
 .buttonAction {
   width: 40px;
@@ -711,6 +773,7 @@ flex-direction: row;
   background-repeat: no-repeat;
   background-size: 40px 40px;
   transition: 0s;
+  display: inline-flex;
 }
 
 #buttonAddHabit {
@@ -723,11 +786,13 @@ flex-direction: row;
 
 #buttonConfirmHabit {
   background-image: url('../images/button/confirmInactive.svg');
+  float: right;
 }
 
 /* Cat Profile new Habbit  */
 
 /* Cat Profile add new Habbit Time and Portion  */
+
 
 .addnewHabit {
   padding: 0px 10px 0 10px;
@@ -735,21 +800,31 @@ flex-direction: row;
   display: flex;
   justify-content: space-around;
   /* background-color: red; */
+  width: 240px;
 }
 
 .displayHeader {
   font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+
+/* NOTE: use for confirm */
 .displayInformation {
  display: flex;
  /* background: black; */
  height: 30px;
+ margin-top: 20px;
+}
 
+.confirm {
+ border: 1px solid;
+ border-color: #B5E1DE;
 }
 
 .displayTime {
-  background: yellow;
+  /* background: yellow; */
   display: flex;
   justify-content: center;
   width: 100px;
@@ -757,7 +832,7 @@ flex-direction: row;
 }
 
 .timePicker{
-  background-color: pink;
+  /* background-color: pink; */
   text-align: center;
 }
 
@@ -770,18 +845,25 @@ border-bottom: 1px solid;
 border-bottom-color: #87BCD2;
 }
 
+/* .hours .confirm{
+text-align: center;
+width: 40px;
+} */
+
 .colon {
 width: 20px;
 text-align: center;
 }
 
 .portion {
-  background-color: pink;
-  width: 40px;
+  /* background-color: pink; */
+  width: 47px;
+
 }
 
 .displayPortion {
   display: flex;
+  margin-left: 2px;
   border-top: 1px solid;
   border-top-color: #87BCD2;
   border-bottom: 1px solid;
@@ -796,17 +878,20 @@ text-align: center;
 .amount span{
   margin-left: 4px;
   margin-right: 10px;
-  text-align: right;
-  background-color: yellow;
+  /* text-align: right;
+  background-color: yellow; */
 }
 
 .measure span{
   text-align: left;
   font-size: 12px;
-  background-color: yellow;
+  /* background-color: yellow; */
   /* margin-right: 4px; */
 }
 
+.headerPortion{
+  margin-bottom: 20px;
+}
 /* pet profile end */
 
 
