@@ -9,8 +9,8 @@ $(document).ready(function() {
 	var opts_watertank;
 	var opts_foodtank;
 	var opts_bowl;
-	$.fn.loading = function() {
 
+	$.fn.loading = function() {
 
     // reset tanks
     $('.reset').click(function() {
@@ -20,18 +20,21 @@ $(document).ready(function() {
 		// initial value setting
 		refreshData(water,food,bowl);
 
-
 		// feed circle
 		var circlePortion;
 		var circleRotation;
 
-		$('.feedCircle').mousemove(function(event) {
-			circlePortion = Math.ceil((event.pageX - 67) / 2.4 / 5) * 5;
-			circleRotation = (circlePortion * 3.6);
+		if($('.feedCircle').hasClass('activated')) { // if funktion funktiniert nicht...
+			$('.feedCircle.activated').mousemove(function(event) {
+				circlePortion = Math.ceil((event.pageX - 67) / 2.4 / 5) * 5;
+				circleRotation = (circlePortion * 3.6);
 
-			$('.circlePortion').text(circlePortion);
-			$('.feedPicker').css('transform', 'rotate(' + circleRotation + 'deg)')
-		});
+				$('.circlePortion').text(circlePortion);
+				$('.feedPicker.activated').css('transform', 'rotate(' + circleRotation + 'deg)')
+			});
+		}
+
+
 
     // feed button
     $('.feedButton').click(function() {
@@ -39,13 +42,9 @@ $(document).ready(function() {
         var foodtank_new = food - circlePortion;
         var bowl_new = bowl + circlePortion;
 
-        //$('.bowl').attr('data-percent', bowl_new);
-				//$('.foodtank').attr('data-percent', foodtank_new);
-
 				refreshData(null,foodtank_new,bowl_new);
       }
-    })
-
+    });
 	}
 
 	function refreshData(waterNew,foodNew,bowlNew){
@@ -53,7 +52,6 @@ $(document).ready(function() {
 		// statusbar water tank
 		$('.watertank').each(function() {
 			var target_watertank  = $(this); // var = $('.watertank')
-
 			water = waterNew != null ? waterNew : water;
 
 			target_watertank.append('<div class="background"></div><div class="rotate"></div><div class="left"></div><div class="right"></div><div class=""><span>' + water + '</span></div>');
@@ -82,9 +80,7 @@ $(document).ready(function() {
 
 		// statusbar food tank
 		$('.foodtank').each(function() {
-			var target_foodtank  = $(this); // var = $('.foodtank')
-			$('.tank').attr('data-percent', food);
-
+			var target_foodtank  = $(this);
 			food = foodNew != null ? foodNew : food;
 
 			target_foodtank.append('<div class="background"></div><div class="rotate"></div><div class="left"></div><div class="right"></div><div class=""><span>' + food + '</span></div>');
@@ -114,7 +110,6 @@ $(document).ready(function() {
 		// statusbar food bowl
 		$('.bowl').each(function() {
 			var target_bowl  = $(this);
-
 			bowl = bowlNew != null ? bowlNew : bowl;
 
 			target_bowl.append('<div class="background"></div><div class="rotate"></div><div class="left"></div><div class="right"></div><div class=""><span>' + bowl + '</span></div>');
@@ -141,5 +136,4 @@ $(document).ready(function() {
 			}
 		});
 	}
-
 });

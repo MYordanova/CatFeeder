@@ -148,11 +148,11 @@ content {
   background-image: url('../images/naviElements/swipeInactive.svg');
 }
 
-#naviFirstPageHistory.swipeActivated,
-#naviSecondPageHistory.swipeActivated,
-#naviFirstPageProfile.swipeActivated,
-#naviSecondPageProfile.swipeActivated,
-#naviThirdPageProfile.swipeActivated {
+#naviFirstPageHistory.activated,
+#naviSecondPageHistory.activated,
+#naviFirstPageProfile.activated,
+#naviSecondPageProfile.activated,
+#naviThirdPageProfile.activated {
   background-image: url('../images/naviElements/swipeActive.svg')!important;
 }
 
@@ -393,11 +393,24 @@ hr {
   left: calc(50vw - 120px);
 }
 
-.feedCircleRing {
+.feedCircleRing.bigRing {
+  background-image: url(../images/mainPage/feedCircleRingBlack.svg);
+  background-size: 240px 240px;
+  background-repeat: no-repeat;
   width: 240px;
   height: 240px;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.feedCircleRing.smallRing {
+  background-image: url(../images/mainPage/feedCircleRingWhite.svg);
+  background-size: 236px 236px;
+  background-repeat: no-repeat;
+  height: 236px;
+  width: 236px;
 }
 
 .feedPicker {
@@ -446,18 +459,33 @@ hr {
   width: 120px;
   position: absolute;
   top: 450px;
-  left: calc(50vw - 120px - 100px);
+  left: calc(50vw - 120px - 100px); /* 50vw = linke kante an mittelachse - 120px = rechte kante an mittelachse - 100px abstand */
 }
 
-.autofeedCircleRing {
+.autofeedCircleRing.bigRing {
+  background-image: url(../images/mainPage/feedCircleRingBlack.svg);
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
   height: 120px;
   width: 120px;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.autofeedCircleRing.smallRing {
+  background-image: url(../images/mainPage/feedCircleRingWhite.svg);
+  background-size: 116px 116px;
+  background-repeat: no-repeat;
+  height: 116px;
+  width: 116px;
 }
 
 .autofeedCircleShape {
   background-image: url('../images/mainPage/autofeedCircleShape.svg');
   background-size: 80px 80px;
+  background-repeat: no-repeat;
   position: absolute;
   width: 80px;
   height: 80px;
@@ -475,14 +503,31 @@ hr {
 .feedButton {
   background-image: url('../images/mainPage/feedButtonInactive.svg');
   background-size: 80px 80px;
+  background-repeat: no-repeat;
   width: 80px;
   height: 80px;
   position: absolute;
   top: 470px;
-  left: calc(50vw + 60px);
+  left: calc(50vw + 60px); /* 50vw = linke kante an mittelachse + 60px abstand */
 }
 
-/* feedbutton end */
+/* feed button end */
+
+/* autofeed button */
+
+.autofeedButton {
+  background-image: url('../images/mainPage/autofeedButtonInactive.svg');
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 470px;
+  left: calc(50vw - 80px - 60px);
+  visibility: hidden;
+}
+
+/* autofeed button end */
 
 /* main page end */
 
