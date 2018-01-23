@@ -25,7 +25,15 @@ $(document).ready(function() {
 		var circleRotation;
 
 		if($('.feedCircle').hasClass('activated')) { // if funktion funktiniert nicht...
-			$('.feedCircle.activated').mousemove(function(event) {
+			$('.feedCircle.activated').on('mousemove', function(event) {
+				circlePortion = Math.ceil((event.pageX - 67) / 2.4 / 5) * 5;
+				circleRotation = (circlePortion * 3.6);
+
+				$('.circlePortion').text(circlePortion);
+				$('.feedPicker.activated').css('transform', 'rotate(' + circleRotation + 'deg)')
+			});
+
+			$('.feedCircle.activated').bind('touchmove', function(event) {
 				circlePortion = Math.ceil((event.pageX - 67) / 2.4 / 5) * 5;
 				circleRotation = (circlePortion * 3.6);
 

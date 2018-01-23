@@ -256,11 +256,26 @@ $(document).ready(function() {
     $('#autofeed').css('transform', 'translateX(100vw)');
   });
 
+  // reset swipe bei page wechsel
+
+
   // main navigation
   $('.navientry').click(function() {
     $('.navientry').removeClass('activated');
     $(this).addClass('activated');
+
+    $('#pagesFoodWaterContent').css('transform', 'translateX(0vw)');
+    $('.paginationDotHistory').removeClass('activated');
+    $('#naviFirstPageHistory').addClass('activated');
+
+    $('#pagesPetProfile').css('transform', 'translateX(0vw)');
+    $('.paginationDotProfile').removeClass('activated');
+    $('#naviFirstPageProfile').addClass('activated');
+
+    $('.back').removeClass('backToSettings');
+    $('#autofeed').css('transform', 'translateX(100vw)');
   });
+
   $('#naviMainPage').click(function() {
     $('.chapter').css('z-index','1');
     $('#mainPageContent').css('z-index','2');

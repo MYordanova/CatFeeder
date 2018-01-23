@@ -55,7 +55,7 @@ content {
 }
 
 #mainPageContent {
-  z-index: 1;
+  z-index: ;
 }
 
 #historyContent {
@@ -63,7 +63,7 @@ content {
 }
 
 #profileContent {
-  z-index: ;
+  z-index: 1;
 }
 
 #settingsContent {
@@ -190,7 +190,7 @@ content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 
@@ -730,7 +730,35 @@ flex-direction: row;
 
 /* pet profile */
 
-/* Seite 1 */
+/* general info profile */
+
+/* add photo */
+
+.addPhoto {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.placeForPhoto {
+  width: 121px;
+  height: 121px;
+  background-repeat: no-repeat;
+  background-size: 121px 121px;
+  background-image: url('../images/petProfile/iconCircle.svg');
+}
+
+.placeForButton {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  background-image: url('../images/button/addInactive.svg');
+  position: absolute;
+  right: -20px;
+  top: 40px;
+}
+
+/* add photo end */
 
 /* datasheet */
 
@@ -757,41 +785,7 @@ flex-direction: row;
 
 /* datasheet end */
 
-/* add new Photo */
 
-.addPhoto {
-  margin-bottom: 40px;
-
-}
-.placeForPhoto {
-  width: 121px;
-  height: 121px;
-  background-repeat: no-repeat;
-  background-size: 121px 121px;
-  position: relative;
-
-}
-
-#circleAddPhoto{
-  background-image: url('../images/petProfile/iconCircle.svg');
-}
-
-.placeForButton {
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  position: absolute;
-  top: 140px;
-  left: 226px;
-
-}
-
-#buttonAddPhoto{
-  background-image: url('../images/button/addInactive.svg');
-}
-
-/* add new photo end */
 
 /* Seite 1 end */
 
