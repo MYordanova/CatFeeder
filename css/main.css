@@ -999,7 +999,43 @@ text-align: center;
 
 /* settings end */
 
+/* settings Auto Feed */
 
+/* Toggle */
+
+.autoFeedHeader {
+display: inline-flex;
+align-items: center;
+}
+
+.autoFeedToggle {
+height: 20px;
+}
+/* Toggle end */
+
+/* check box */
+
+.unlimitedFunction {
+  display: inline-flex;
+  justify-content: flex-start;
+  width: 96px;
+}
+.checkmarkbox {
+  width: 20px;
+  height: 20px;
+}
+
+#markUnlimited{
+  background-image: url(../images/settings/checkInactive.svg);
+  width: 20px;
+  height: 20px;
+}
+
+/* check box end */
+
+
+
+/* settings Auto Feed end */
 
 
 
