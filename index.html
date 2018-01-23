@@ -18,6 +18,7 @@
     <script type="text/javascript" src="js/progressbar.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/catprofile.js"></script>
+      <script type="text/javascript" src="js/autofeedSettings.js"></script>
     <script type="text/javascript" src="js/chartjsUtils.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   </head>
@@ -298,24 +299,21 @@
                   </div>
 
                   <div class="buttonsAutoFeed">
-                    <div id="buttonAddAutoFeed" class="buttonAction"></div>
-                    <div class="confirmHabit">
+                    <div id="buttonEditAutoFeed" class="buttonAction"></div>
                     <div id="buttonCloseAutoFeed" class="buttonAction"></div>
                     <div id="buttonConfirmAutoFeed" class="buttonAction"></div>
-                    <div id="buttonEditAutoFeed" class="buttonAction"></div>
-                    </div>
                   </div>
 
                   <div id="newDate"class="addnewDate">
                     <div class="beginAutoFeed">
-                      <span>Begin</span>
-                      <div class="datePicker">
+                      <h3 class="captionDatePicker">Begin</h3>
+                      <div id="datePickerBegin" class="datePicker">
 
                       </div>
                     </div>
 
                     <div class="endAutoFeed">
-                      <span>End</span>
+                      <h3>End</h3>
                       <div class="datePicker">
                       </div>
                     </div>
@@ -332,10 +330,11 @@
                       </div>
                     </div>
 
-                    <div class="startautomatically">
-                      <div id="markautomatically"class="checkmarkbox">
+                    <div class="automaticallyFunction">
+                      <div id="markAutomatically"class="checkmarkBox ">
                       </div>
                       <div id="captionAutomatically"class="checkmarkTitel">
+                        <span>start automatically</span>
                       </div>
                     </div>
                   </div>
