@@ -789,7 +789,6 @@ hr {
 
 
 
-
 /* pet profile */
 
 /* general info profile */
@@ -876,11 +875,43 @@ hr {
 
 
 
+.displayHeader {
+  width: 280px;
+  display: flex;
+  justify-content:space-around;
+  margin: 0px 50px 20px 50px;
+}
+
+.captionNewHabit  {
+  font-size: 14px;
+  font-weight: 500;
+
+}
+
+#captionPortion {
+padding-right: 6px;
+}
+
+.displayInformation {
+  background-size: 232px 31px;
+  background-repeat: no-repeat;
+  display: block;
+  margin: auto;
+}
+
+#timePortionPickerActive {
+  background-image: url(../images/petProfile/displayInformationActive.svg);
+  width: 221px;
+  height: 31px;
+}
+
+#timePortionPickerInactive {
+  background-image: url(../images/petProfile/displayInformationInactive.svg);
+  width: 232px;
+  height: 32px;
+}
+
 /* pet profile end */
-
-
-
-
 
 /* settings */
 .settingsNavi {
