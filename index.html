@@ -15,6 +15,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+    <script type="text/javascript" src="js/jquery-mobile-swipeupdown.js"></script>
     <script type="text/javascript" src="js/progressbar.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/catprofile.js"></script>
@@ -71,7 +72,10 @@
               </div>
 
               <div class="autofeedCircleShape">
-                <p class="autofeedPosition">OFF</p>
+                <p class="autofeedPosition">
+                  OFF
+                  <p class="autofeedOption"></p>
+                </p>
               </div>
             </div>
 
@@ -290,36 +294,34 @@
                     <div id="confirmButtonAutofeed" class="button confirmButton"></div>
                   </div>
 
-                  <div id="newDate"class="addnewDate">
-
-                    <div class="beginAutoFeed">
-                      <h4 class="captionDatePicker">Begin</h4>
-                      <div id="datePickerBeginInactive" class="datePicker">
-                      </div>
-                      <div id="datePickerBeginActive" class="datePicker">
-                      </div>
-                    </div>
-
-                    <div class="endAutoFeed">
-                      <h4 class="captionDatePicker">End</h4>
-                      <div id="datePickerEndInactive" class="datePicker">
-                      </div>
-                      <div id="datePickerEndActive" class="datePicker">
+                  <div class="autofeedDate">
+                    <div id="autofeedBegin" class="autofeedDuration">
+                      <h4>Begin</h4>
+                      <div id="datePickerBegin" class="datePickerContent border">
+                        <div id="datePickerBeginDay" class="datePicker"></div>
+                        <div id="datePickerBeginMonth" class="datePicker"></div>
+                        <div id="datePickerBeginYear" class="datePicker"></div>
                       </div>
                     </div>
 
+                    <div id="autofeedEnd" class="autofeedDuration">
+                      <h4>End</h4>
+                      <div id="datePickerEnd" class="datePickerContent border">
+                        <div id="datePickerEndDay" class="datePicker"></div>
+                        <div id="datePickerEndMonth" class="datePicker"></div>
+                        <div id="datePickerEndYear" class="datePicker"></div>
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="checkboxes">
-
                     <div class="unlimitedFunction">
-                      <div id="markUnlimited"class="checkmarkBox">
+                      <div id="checkboxUnlimited" class="checkbox">
                       </div>
-                      <div id="captionUnlimited"class="checkmarkTitel">
+                      <div id="checkboxTextUnlimited" class="checkboxText">
                         <span>unlimited</span>
                       </div>
                     </div>
-                  </div>
+
 
                 </div>
               </div>
