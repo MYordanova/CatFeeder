@@ -1,25 +1,36 @@
 $(document).ready (function() {
 
-  $('#buttonCloseAutoFeed').hide();
-  $('#buttonConfirmAutoFeed').hide();
+  $('#closeButtonAutofeed').hide();
+  $('#confirmButtonAutofeed').hide();
 
-
-  $('#buttonEditAutoFeed').click(function(){
-    $(this).hide();
-    $('#buttonCloseAutoFeed').show();
-    $('#buttonConfirmAutoFeed').show();
+  $('#editButtonAutofeed').click(function(){
+    $(this).addClass('activated');
+    setTimeout(function() {
+      $('#editButtonAutofeed').removeClass('activated');
+      $('#editButtonAutofeed').hide();
+      $('#closeButtonAutofeed').show();
+      $('#confirmButtonAutofeed').show();
+    }, 100);
   });
 
-  $('#buttonCloseAutoFeed').click(function(){
-    $(this).hide();
-    $('#buttonEditAutoFeed').show();
-    $('#buttonConfirmAutoFeed').hide();
+  $('#closeButtonAutofeed').click(function(){
+    $(this).addClass('activated');
+    setTimeout(function() {
+      $('#closeButtonAutofeed').removeClass('activated');
+      $('#closeButtonAutofeed').hide();
+      $('#editButtonAutofeed').show();
+      $('#confirmButtonAutofeed').hide();
+    }, 100);
   });
 
-  $('#buttonConfirmAutoFeed').click(function(){
-    $(this).hide();
-    $('#buttonEditAutoFeed').show();
-    $('#buttonCloseAutoFeed').hide();
+  $('#confirmButtonAutofeed').click(function(){
+    $(this).addClass('activated');
+    setTimeout(function() {
+      $('#confirmButtonAutofeed').removeClass('activated');
+      $('#confirmButtonAutofeed').hide();
+      $('#editButtonAutofeed').show();
+      $('#closeButtonAutofeed').hide();
+    }, 100);
   });
 
 });
