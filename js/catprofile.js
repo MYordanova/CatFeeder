@@ -9,16 +9,19 @@ $(document).ready (function() {
 
   $('#confirmButtonHabit').hide();
   $('#closeButtonHabit').hide();
-  $('.addnewHabit').hide();
+  $('#editButtonHabit').hide();
+  $('.displayInformation').hide();
+  $('.captionNewHabit').hide();
 
   $('#addButtonHabit').click(function(){
     $(this).addClass('activated');
     setTimeout(function() {
       $('#addButtonHabit').removeClass('activated');
       $('#addButtonHabit').hide();
+      $('#timePortionPickerActive').show();
       $('#confirmButtonHabit').show();
       $('#closeButtonHabit').show();
-      $('.addnewHabit').show();
+      $('.captionNewHabit').show();
     }, 100);
   });
 
@@ -28,7 +31,8 @@ $(document).ready (function() {
       $('#closeButtonHabit').removeClass('activated');
       $('#closeButtonHabit').hide();
       $('#confirmButtonHabit').hide();
-      $('.addnewHabit').hide();
+      $('.captionNewHabit').hide();
+      $('.displayInformation').hide();
       $('#addButtonHabit').show();
     }, 100);
   });
@@ -39,20 +43,20 @@ $(document).ready (function() {
       $('#confirmButtonHabit').removeClass('activated');
       $('#confirmButtonHabit').hide();
       $('#closeButtonHabit').hide();
-      $('.addnewHabit').show();
-      $('.displayInformation').addClass('confirm')
       $('#addButtonHabit').show();
+      $('#timePortionPickerActive').hide();
+      $('#timePortionPickerInactive').show();
     }, 100);
   });
 
-  $('#confirmButtonHabit').click(function() {
-    $(this).addClass('activated');
-    setTimeout(function() {
-      $('#confirmButtonHabit').removeClass('activated');
-      if($('.displayInformation').hasClass('confirm')) {
-        $('.displayPortion').css('border', 'none')
-        $('.hours').css('border', 'none')
-      }
-    }, 100);
-  });
+  // $('#confirmButtonHabit').click(function() {
+  //   $(this).addClass('activated');
+  //   setTimeout(function() {
+  //     $('#confirmButtonHabit').removeClass('activated');
+  //     if($('.displayInformation').hasClass('confirm')) {
+  //       $('.displayPortion').css('border', 'none')
+  //       $('.hours').css('border', 'none')
+  //     }
+  //   }, 100);
+  // });
 });
