@@ -1,18 +1,12 @@
 
 
 /* allgemein */
-
 * {
+  box-sizing: border-box;
   border: 0;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "sofia-pro", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400; /* NOTE: font weight for normal is 400. The Info is from typekit */
 }
-
 html,
 body {
   width: 100vw;
@@ -20,6 +14,11 @@ body {
   background-color: #ffffff;
   color: #4A4A4A;
   overflow: hidden;
+
+  font-family: "sofia-pro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400; /* 400 = regular */
 }
 
 #all {
@@ -63,11 +62,11 @@ content {
 }
 
 #profileContent {
-  z-index: 1;
+  z-index: ;
 }
 
 #settingsContent {
-  z-index: ;
+  z-index: 1;
 }
 
 /* chapter end */
@@ -97,7 +96,7 @@ content {
 
 /* heading end */
 
-.back {
+.backToSettings {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -105,16 +104,7 @@ content {
   top: 43px;
 }
 
-.back.backToSettings {
-  background-image: url('../images/button/backButtonInactive.svg');
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  left: calc(50% - 140px);
-  top: 43px;
-}
+
 
 /* pagination  */
 
@@ -191,15 +181,7 @@ content {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-}
-
-
-.nextpage {
-  width: 100vw;
-  height: 490px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: white;
 }
 
 #foodContent {
@@ -223,7 +205,7 @@ content {
 }
 
 #settingsNavigation {
-  background: yellow;
+
 }
 
 .pageSwipeToLeft {
@@ -248,13 +230,16 @@ content {
 .nextpage {
   width: 100vw;
   height: 490px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 3;
   transition: 1s;
+  background: white;
 }
 
 #autofeed {
 
-  background: green;
 }
 
 /* nextpage end */
@@ -293,9 +278,9 @@ ul {
 }
 
 li {
-/* font-family: "sofia-pro",sans-serif; */
-font-style: normal;
-font-weight: 500;
+  /* font-family: "sofia-pro",sans-serif; */
+  font-style: normal;
+  font-weight: 500;
 }
 
 
@@ -307,6 +292,78 @@ hr {
   border:#4A4A4A;
   height:1px;
 }
+
+
+/* buttons  */
+
+.button {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+
+.addButton {
+  background-image: url('../images/button/addInactive.svg');
+}
+.addButton.activated {
+  background-image: url('../images/button/addActive.svg') !important;
+}
+
+.closeButton {
+  background-image: url('../images/button/closeInactive.svg');
+}
+.closeButton.activated {
+  background-image: url('../images/button/closeActive.svg') !important;
+}
+
+.confirmButton {
+  background-image: url('../images/button/confirmInactive.svg');
+}
+.confirmButton.activated {
+  background-image: url('../images/button/confirmActive.svg') !important;
+}
+
+.editButton {
+  background-image: url(../images/button/editInactive.svg);
+}
+.editButton.activated {
+  background-image: url(../images/button/editActive.svg) !important;
+}
+
+.backButton {
+  background-image: url('../images/button/backButtonInactive.svg');
+  position: absolute;
+  left: calc(50% - 140px);
+  top: 43px;
+}
+.backButton.activated {
+  background-image: url('../images/button/backButtonActive.svg') !important;
+}
+
+.toggle {
+  height: 20px;
+  width: 40px;
+  background-size: 40px 20px;
+  display: flex;
+  transition: 0.5s;
+}
+.toggle.on {
+  background-image: url(../images/button/toggleButtonActive.svg);
+}
+.toggle.off {
+  background-image: url(../images/button/toggleButtonInactive.svg);
+}
+.toggleCircle {
+  height: 16px;
+  width: 16px;
+  margin: 2px;
+  background-size: 16px 16px;
+  background-image: url(../images/button/toggleButtonCircle.svg);
+  transition: 0.5s;
+}
+
+/* buttons end */
 
 
 
@@ -344,7 +401,7 @@ hr {
 
 .progressbar div span {
   position: absolute;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 56px;
   height: 56px;
   width: 56px;
@@ -356,9 +413,11 @@ hr {
 }
 
 .statusinfo {
-  margin: 5px;
+  position: absolute;
+  top: 75px;
+  width: 60px;
+  text-align: center;
 }
-
 
 .progressbar .background {
   background-color: #B5D8DE;
@@ -386,9 +445,9 @@ hr {
   0% {
     opacity: 0;
   }
- 100% {
-   opacity: 1;
- }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* statusbar end */
@@ -502,8 +561,9 @@ hr {
   top: 12px;
   right: 6px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  color: white;
 }
 
 /* autofeedcircle end */
@@ -521,6 +581,10 @@ hr {
   left: calc(50vw + 60px); /* 50vw = linke kante an mittelachse + 60px abstand */
 }
 
+.feedButton.activated {
+  background-image: url('../images/mainPage/feedButtonActive.svg') !important;
+}
+
 /* feed button end */
 
 /* autofeed button */
@@ -535,6 +599,10 @@ hr {
   top: 470px;
   left: calc(50vw - 80px - 60px);
   visibility: hidden;
+}
+
+.autofeedButton.activated {
+  background-image: url('../images/mainPage/autofeedButtonActive.svg') !important;
 }
 
 /* autofeed button end */
@@ -568,8 +636,8 @@ hr {
 }
 
 .views li {
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
 }
 
@@ -580,12 +648,6 @@ flex-direction: row;
   height: 30px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.date h3 {
-  float: left;
-  font-size: 1rem;
-  height: 20px;
 }
 
 /* History Content  */
@@ -747,12 +809,7 @@ flex-direction: row;
   background-image: url('../images/petProfile/iconCircle.svg');
 }
 
-.placeForButton {
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  background-image: url('../images/button/addInactive.svg');
+#addButtonPhoto {
   position: absolute;
   right: -20px;
   top: 40px;
@@ -763,7 +820,7 @@ flex-direction: row;
 /* datasheet */
 
 .datasheet form {
- width: 280px;
+  width: 280px;
 }
 
 .datasheet form label {
@@ -782,17 +839,11 @@ flex-direction: row;
   width: 280px;
   height: 50px;
 }
-
 /* datasheet end */
+/* general info profile end */
 
-
-
-/* Seite 1 end */
-
-/* Seite 2 */
-
+/* food profile */
 /* scan Product */
-
 .scanProduct{
   margin-bottom: 40px;
 }
@@ -808,36 +859,15 @@ flex-direction: row;
   height: 120px;
 }
 /* scan Product end */
+/* food profile end */
 
-/* Seite 2 end */
-
-/* Seite 3 */
-
+/* eating habits profile */
 .buttonsHabits {
   width: 280px;
   margin-bottom: 40px;
-}
-
-.buttonAction {
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  transition: 0s;
-  display: inline-flex;
-}
-
-#buttonAddHabit {
-  background-image: url('../images/button/addInactive.svg');
-}
-
-#buttonCloseHabit {
-  background-image: url('../images/button/closeInactive.svg');
-}
-
-#buttonConfirmHabit {
-  background-image: url('../images/button/confirmInactive.svg');
-  float: right;
+  background: yellow;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Cat Profile new Habbit  */
@@ -855,7 +885,7 @@ flex-direction: row;
 }
 
 .displayHeader {
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -863,15 +893,15 @@ flex-direction: row;
 
 /* NOTE: use for confirm */
 .displayInformation {
- display: flex;
- /* background: black; */
- height: 30px;
- margin-top: 20px;
+  display: flex;
+  /* background: black; */
+  height: 30px;
+  margin-top: 20px;
 }
 
 .confirm {
- border: 1px solid;
- border-color: #B5E1DE;
+  border: 1px solid;
+  border-color: #B5E1DE;
 }
 
 .displayTime {
@@ -888,12 +918,12 @@ flex-direction: row;
 }
 
 .hours{
-text-align: center;
-width: 40px;
-border-top: 1px solid;
-border-color: #87BCD2;
-border-bottom: 1px solid;
-border-bottom-color: #87BCD2;
+  text-align: center;
+  width: 40px;
+  border-top: 1px solid;
+  border-color: #87BCD2;
+  border-bottom: 1px solid;
+  border-bottom-color: #87BCD2;
 }
 
 /* .hours .confirm{
@@ -902,8 +932,8 @@ width: 40px;
 } */
 
 .colon {
-width: 20px;
-text-align: center;
+  width: 20px;
+  text-align: center;
 }
 
 .portion {
@@ -935,7 +965,7 @@ text-align: center;
 
 .measure span{
   text-align: left;
-  font-size: 12px;
+  font-size: 0.875rem;
   /* background-color: yellow; */
   /* margin-right: 4px; */
 }
@@ -950,7 +980,6 @@ text-align: center;
 
 
 /* settings */
-
 .settingsNavi {
   height: 50px;
   width: 280px;
@@ -960,79 +989,42 @@ text-align: center;
   justify-content: space-between;
 }
 
-.reminderToggle {
-  height: 20px;
-  width: 40px;
-  background-size: 40px 20px;
-  display: flex;
-  transition: 0.5s;
-}
-
-.reminderToggle.on {
-  background-image: url(../images/button/toggleButtonActive.svg);
-}
-
-.reminderToggle.off {
-  background-image: url(../images/button/toggleButtonInactive.svg);
-}
-
-.reminderToggleCircle {
-  height: 16px;
-  width: 16px;
-  margin: 2px;
+/* reminder toggle */
+#reminderToggleCircle {
   margin-left: 22px;
-  background-size: 16px 16px;
-  background-image: url(../images/button/toggleButtonCircle.svg);
-  transition: 0.5s;
 }
+/* reminder toggle end */
 
 #settingsToAutofeed {
   border-top: 1px solid #87BCD2;
   border-bottom: 1px solid #87BCD2;
 }
-
 /* settings end */
 
-/* settings Auto Feed */
-
-/* Toggle */
-
-.autoFeedHeader {
-display: inline-flex;
-align-items: center;
-width: 280px;
+/* settings autofeed */
+.autofeedHeader {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
-.autoFeedToggle {
-height: 20px;
+/* autofeed toggle */
+#autofeedToggle {
+  position: absolute;
+  right: 0px;
+  top: 30px;
 }
-/* Toggle end */
+/* autofeed toggle end */
 
-
-/* buttons Auto Feed*/
-.buttonsAutoFeed {
+/* buttons autofeed */
+.buttonsAutofeed {
   width: 280px;
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
 }
-
-#buttonEditAutoFeed{
-  background-image: url(../images/button/editInactive.svg);
-  width: 40px;
-  height: 40px;
-}
-#buttonCloseAutoFeed{
-  background-image: url(../images/button/closeInactive.svg);
-  width: 40px;
-  height: 40px;
-}
-#buttonConfirmAutoFeed{
-  background-image: url(../images/button/confirmInactive.svg);
-  width: 40px;
-  height: 40px;
-}
-
 /* buttons Auto Feed end*/
 
 /* date picker Auto Feed */
@@ -1092,12 +1084,16 @@ height: 20px;
 
 #markUnlimited{
   background-image: url(../images/settings/checkInactive.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
   width: 20px;
   height: 20px;
 }
 
 #markUnlimited.activeCheckBox {
   background-image: url(../images/settings/checkActive.svg)!important;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
   width: 20px;
   height: 20px;
 }
@@ -1105,12 +1101,16 @@ height: 20px;
 
 #markAutomatically {
   background-image: url(../images/settings/checkInactive.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
   width: 20px;
   height: 20px;
 }
 
 #markAutomatically.activeCheckBox {
   background-image: url(../images/settings/checkActive.svg) !important;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
   width: 20px;
   height: 20px;
 }
@@ -1134,7 +1134,7 @@ footer {
   z-index: 3;
 }
 
- footer nav  {
+footer nav  {
   width: 280px;
   height: 40px;
   margin: 20px auto;

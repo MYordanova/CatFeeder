@@ -31,12 +31,17 @@
           <li id="mainPageContent" class="chapter">
             <button type="button" name="reset" class="reset">
               <div class="statusbar">
-                <div class="progressbar tank watertank"></div>
-                <div class="progressbar tank foodtank"></div>
-                <div class="progressbar bowl"></div>
-                <p class="statusinfo">Water Tank</p>
-                <p class="statusinfo">Food Tank</p>
-                <p class="statusinfo">Food Bowl</p>
+                <div class="progressbar tank watertank">
+                  <p class="statusinfo">Water Tank</p>
+                </div>
+                <div class="progressbar tank foodtank">
+                  <p class="statusinfo">Food Tank</p>
+                </div>
+                <div class="progressbar bowl">
+                  <p class="statusinfo">Food Bowl</p>
+                </div>
+
+
               </div>
             </button>
 
@@ -65,7 +70,9 @@
                 </div>
               </div>
 
-              <div class="autofeedCircleShape"></div>
+              <div class="autofeedCircleShape">
+                <p class="autofeedPosition">OFF</p>
+              </div>
             </div>
 
             <div class="feedButton"></div>
@@ -172,8 +179,8 @@
               <div id="generalInfoProfile" class="page">
                 <h2>General information</h2>
                 <div class="addPhoto">
-                  <div id="circleAddPhoto" class="placeForPhoto"></div>
-                  <div id="buttonAddPhoto" class="placeForButton"></div>
+                  <div class="placeForPhoto"></div>
+                  <div id="addButtonPhoto" class="button addButton"></div>
                 </div>
                 <section class="datasheet">
                   <form class="catInformation" action="index.html" method="post">
@@ -214,11 +221,10 @@
               <div id="eatingHabitsProfile" class="page">
                 <h2>Eating Habits</h2>
                 <div class="buttonsHabits">
-                  <div id="buttonAddHabit" class="buttonAction"></div>
-                  <div class="confirmHabit">
-                    <div id="buttonCloseHabit" class="buttonAction"></div>
-                    <div id="buttonConfirmHabit" class="buttonAction"></div>
-                  </div>
+                  <div id="addButtonHabit" class="button addButton"></div>
+
+                  <div id="closeButtonHabit" class="button closeButton"></div>
+                  <div id="confirmButtonHabit" class="button confirmButton"></div>
                 </div>
                 <section class="datasheet">
                   <div id="newHabit" class="addnewHabit">
@@ -263,7 +269,7 @@
 
           <li id="settingsContent" class="chapter">
             <div class="heading settings">
-              <div class="back"></div>
+              <div class="backToSettings button"></div>
               <h1>Settings</h1>
               <div class="pagination"></div>
             </div>
@@ -272,10 +278,8 @@
               <div id="settingsNavigation" class="page">
                 <div id="settingsReminder" class="settingsNavi">
                   Reminder
-                  <div class="reminderToggle on">
-                    <div class="reminderToggleCircle">
-
-                    </div>
+                  <div id="reminderToggle" class="toggle on">
+                    <div id="reminderToggleCircle" class="toggleCircle"></div>
                   </div>
                 </div>
 
@@ -288,20 +292,17 @@
 
               <div class="nextpages">
                 <div id="autofeed" class="nextpage">
-                  <div class="autoFeedHeader">
+                  <div class="autofeedHeader">
                     <h2>Auto Feed</h2>
-                    <div id="autoFeedReminder" class="autoFeedToggle">
-                      <div class="reminderToggle on">
-                        <div class="reminderToggleCircle">
-                        </div>
-                      </div>
+                    <div id="autofeedToggle" class="toggle off">
+                      <div id="autofeedToggleCircle" class="toggleCircle"></div>
                     </div>
                   </div>
 
-                  <div class="buttonsAutoFeed">
-                    <div id="buttonEditAutoFeed" class="buttonAction"></div>
-                    <div id="buttonCloseAutoFeed" class="buttonAction"></div>
-                    <div id="buttonConfirmAutoFeed" class="buttonAction"></div>
+                  <div class="buttonsAutofeed">
+                    <div id="editButtonAutofeed" class="button editButton"></div>
+                    <div id="closeButtonAutofeed" class="button closeButton"></div>
+                    <div id="confirmButtonAutofeed" class="button confirmButton"></div>
                   </div>
 
                   <div id="newDate"class="addnewDate">

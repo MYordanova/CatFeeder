@@ -46,12 +46,17 @@ $(document).ready(function() {
 
     // feed button
     $('.feedButton').click(function() {
-      if(food > circlePortion && circlePortion <= (100 - bowl)) {
-        var foodtank_new = food - circlePortion;
-        var bowl_new = bowl + circlePortion;
+			$('.feedButton').addClass('activated');
+			setTimeout(function() {
+				$('.feedButton').removeClass('activated');
+      }, 100);
+
+			if(food > circlePortion && circlePortion <= (100 - bowl)) {
+				var foodtank_new = food - circlePortion;
+				var bowl_new = bowl + circlePortion;
 
 				refreshData(null,foodtank_new,bowl_new);
-      }
+			}
     });
 	}
 
