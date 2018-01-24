@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="32" viewBox="0 0 220 32">
+  <g fill="none" fill-rule="evenodd" transform="translate(0 -1)">
+    <text fill="#4A4A4A" font-family="SofiaProRegular, Sofia Pro" font-size="16">
+      <tspan x="12.5" y="22">01</tspan>
+    </text>
+    <text fill="#4A4A4A" font-family="SofiaProRegular, Sofia Pro" font-size="16">
+      <tspan x="178.5" y="22">2018</tspan>
+    </text>
+    <text fill="#4A4A4A" font-family="SofiaProRegular, Sofia Pro" font-size="16">
+      <tspan x="76" y="22">Februar</tspan>
+    </text>
+    <path stroke="#87BCD2" stroke-linecap="round" stroke-linejoin="round" d="M.5 2L40.5 2M170.5 2L219.5 2M60.5 2L150.5 2M.5 32L40.5 32M171 32L219 32M61.5 32L149.5 32"/>
+  </g>
+</svg>

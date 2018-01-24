@@ -835,6 +835,7 @@ hr {
   outline: 0;
   border-bottom: 1px solid;
   border-bottom-color: #87BCD2;
+  font-size: 16px;
   color: #4A4A4A;
   width: 280px;
   height: 50px;
@@ -865,7 +866,6 @@ hr {
 .buttonsHabits {
   width: 280px;
   margin-bottom: 40px;
-  background: yellow;
   display: flex;
   justify-content: space-between;
 }
@@ -1028,6 +1028,11 @@ width: 40px;
 /* buttons Auto Feed end*/
 
 /* date picker Auto Feed */
+
+.addnewDate {
+  margin-bottom: 40px;
+}
+
 .beginAutoFeed {
   width: 280px;
   margin-bottom: 40px;
@@ -1038,7 +1043,10 @@ width: 40px;
   width: 280px;
   display: flex;
   justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
 }
+
 
 .datePicker {
   background-size: 220px 31px;
@@ -1046,8 +1054,26 @@ width: 40px;
   margin: auto;
 }
 
-#datePickerBegin{
+#datePickerBeginInactive{
   background-image: url(../images/settings/datePickerConfirm.svg);
+  width: 220px;
+  height: 31px;
+}
+
+#datePickerBeginActive{
+  background-image: url(../images/settings/datePickerEdit.svg);
+  width: 220px;
+  height: 31px;
+}
+
+#datePickerEndInactive{
+  background-image: url(../images/settings/datePickerConfirm.svg);
+  width: 220px;
+  height: 31px;
+}
+
+#datePickerEndActive{
+  background-image: url(../images/settings/datePickerEdit.svg);
   width: 220px;
   height: 31px;
 }
@@ -1069,13 +1095,6 @@ width: 40px;
   margin-bottom: 10px;
 }
 
-.automaticallyFunction {
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 167px;
-  height: 30px;
-}
 
 .checkmarkbox {
   width: 20px;
@@ -1098,22 +1117,6 @@ width: 40px;
   height: 20px;
 }
 
-
-#markAutomatically {
-  background-image: url(../images/settings/checkInactive.svg);
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  width: 20px;
-  height: 20px;
-}
-
-#markAutomatically.activeCheckBox {
-  background-image: url(../images/settings/checkActive.svg) !important;
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  width: 20px;
-  height: 20px;
-}
 
 /* check box end */
 
