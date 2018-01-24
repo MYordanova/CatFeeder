@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101" height="32" viewBox="0 0 101 32">
+  <g fill="none" fill-rule="evenodd" transform="translate(0 -1)">
+    <text fill="#4A4A4A" font-family="SofiaProRegular, Sofia Pro" font-size="16">
+      <tspan x="14" y="22">12</tspan>
+    </text>
+    <text fill="#4A4A4A" font-family="SofiaProMedium, Sofia Pro" font-size="16" font-weight="400">
+      <tspan x="48" y="21">:</tspan>
+    </text>
+    <text fill="#4A4A4A" font-family="SofiaProRegular, Sofia Pro" font-size="16">
+      <tspan x="72" y="22">30</tspan>
+    </text>
+    <path stroke="#87BCD2" stroke-linecap="round" stroke-linejoin="round" d="M.5 2L40.5 2M60.5 2L100.5 2M.5 32L40.5 32M60.5 32L100.5 32"/>
+  </g>
+</svg>
