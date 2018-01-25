@@ -205,6 +205,17 @@ $(document).ready(function() {
       $('#autofeedToggle').addClass('on');
       $('#autofeedToggleCircle').css('transform', 'translateX(20px)');
       $('.autofeedPosition').text('ON');
+
+      if($('#checkboxUnlimited').hasClass('activated')) {
+        $('.autofeedOption').text('unlimited');
+      } else {
+        if($('.datePicker').hasClass('notdefault')) {
+          $('.autofeedOption').text(oldBeginDay + '.' + (i + 1) + '.' + oldBeginYear + '-' + oldEndDay + '.' + (j + 1) + '.' + oldEndYear);
+        }
+        if($('.datePicker').hasClass('default')) {
+          $('.autofeedOption').text('');
+        }
+      }
     }
   });
 
@@ -214,19 +225,21 @@ $(document).ready(function() {
 
   $('#editButtonAutofeed').click(function(){
     $(this).addClass('activated');
+    $('.datePicker').removeClass('default');
     setTimeout(function() {
       $('#editButtonAutofeed').hide();
       $('#closeButtonAutofeed').show();
       $('#confirmButtonAutofeed').show();
       $('.datePickerContent').removeClass('border');
       $('.datePicker').addClass('border');
-      $('#editButtonAutofeed').addClass('activated');
     }, 100);
   });
 
   $('#closeButtonAutofeed').click(function(){
     $(this).addClass('activated');
     $('#editButtonAutofeed').removeClass('activated');
+    $('.datePicker').removeClass('notdefault');
+    $('.datePicker').addClass('default');
     setTimeout(function() {
       $('#closeButtonAutofeed').removeClass('activated');
       $('#closeButtonAutofeed').hide();
@@ -234,12 +247,20 @@ $(document).ready(function() {
       $('#confirmButtonAutofeed').hide();
       $('.datePicker').removeClass('border');
       $('.datePickerContent').addClass('border');
+      $('.datePicker').empty();
+      $('#datePickerBeginDay').append(DEFAULTS.currday);
+      $('#datePickerEndDay').append(DEFAULTS.nextday);
+      $('#datePickerBeginMonth').append(DEFAULTS.currmonthB);
+      $('#datePickerEndMonth').append(DEFAULTS.currmonthE);
+      $('#datePickerBeginYear, #datePickerEndYear').append(DEFAULTS.curryear);
     }, 100);
   });
 
   $('#confirmButtonAutofeed').click(function(){
     $(this).addClass('activated');
     $('#editButtonAutofeed').removeClass('activated');
+    $('.datePicker').removeClass('default');
+    $('.datePicker').addClass('notdefault');
     setTimeout(function() {
       $('#confirmButtonAutofeed').removeClass('activated');
       $('#confirmButtonAutofeed').hide();
@@ -250,6 +271,23 @@ $(document).ready(function() {
     }, 100);
   });
 
+  $('.button').click(function(){
+    // aktualisiere
+    if($('#autofeedToggle').hasClass('on')) {
+      if($('#checkboxUnlimited').hasClass('activated')) {
+        $('.autofeedOption').text('unlimited');
+      } else if($('.datePicker').hasClass('notdefault')) {
+        if(i < 10) {
+          $('.autofeedOption').text(oldBeginDay + '.' + ('' + i + 1) + '.' + oldBeginYear + '\n' + ' - ' + oldEndDay + '.' + ('' + j + 1) + '.' + oldEndYear);
+        } else {
+          $('.autofeedOption').text(oldBeginDay + '.' + (i + 1) + '.' + oldBeginYear + '\n' + ' - ' + oldEndDay + '.' + (j + 1) + '.' + oldEndYear);
+        }
+      }
+       else if($('.datePicker').hasClass('default')) {
+        $('.autofeedOption').text('');
+      }
+    }
+  });
 
   //autofeed date
   var currdate = new Date();
@@ -267,23 +305,26 @@ $(document).ready(function() {
   month[10] = "November";
   month[11] = "December";
   var i = currdate.getMonth();
+  var j = currdate.getMonth();
   var DEFAULTS = {
     currday: currdate.getDate(),
-    currmonth: month[i],
+    currmonthB: month[i],
+    currmonthE: month[j],
     curryear: currdate.getFullYear(),
     nextday: (currdate.getDate() + 1)
   };
-  var newBeginDay = DEFAULTS.currday;
-  var newEndDay = DEFAULTS.nextday;
-  var newBeginMonth = DEFAULTS.currmonth;
-  var newEndMonth = DEFAULTS.currmonth;
-  var newBeginYear = DEFAULTS.curryear;
-  var newEndYear = DEFAULTS.curryear;
+  var oldBeginDay = DEFAULTS.currday;
+  var oldEndDay = DEFAULTS.nextday;
+  var oldBeginMonth = DEFAULTS.currmonthB;
+  var oldEndMonth = DEFAULTS.currmonthE;
+  var oldBeginYear = DEFAULTS.curryear;
+  var oldEndYear = DEFAULTS.curryear;
 
   // DEFAULT werte ausgeben
   $('#datePickerBeginDay').append(DEFAULTS.currday);
   $('#datePickerEndDay').append(DEFAULTS.nextday);
-  $('#datePickerBeginMonth, #datePickerEndMonth').append(DEFAULTS.currmonth);
+  $('#datePickerBeginMonth').append(DEFAULTS.currmonthB);
+  $('#datePickerEndMonth').append(DEFAULTS.currmonthE);
   $('#datePickerBeginYear, #datePickerEndYear').append(DEFAULTS.curryear);
 
   // day
@@ -291,30 +332,30 @@ $(document).ready(function() {
     if($('#editButtonAutofeed').hasClass('activated')) {
       $(this).empty();
       if(i == 0 || i == 2 || i == 4 || i == 6 || i == 7 || i == 9 || i == 11) {
-        if(newBeginDay < 31) {
-          newBeginDay = newBeginDay + 1;
-          $(this).append(newBeginDay);
+        if(oldBeginDay < 31) {
+          oldBeginDay = oldBeginDay + 1;
+          $(this).append(oldBeginDay);
         } else {
-          newBeginDay = newBeginDay - 30;
-          $(this).append(newBeginDay);
+          oldBeginDay = oldBeginDay - 30;
+          $(this).append(oldBeginDay);
         }
       } else
       if(i == 3 || i == 5 || i == 8 || i == 10) {
-        if(newBeginDay < 30) {
-          newBeginDay = newBeginDay + 1;
-          $(this).append(newBeginDay);
+        if(oldBeginDay < 30) {
+          oldBeginDay = oldBeginDay + 1;
+          $(this).append(oldBeginDay);
         } else {
-          newBeginDay = newBeginDay - 29;
-          $(this).append(newBeginDay);
+          oldBeginDay = oldBeginDay - 29;
+          $(this).append(oldBeginDay);
         }
       } else
       if(i == 1) {
-        if(newBeginDay < 28) {
-          newBeginDay = newBeginDay + 1;
-          $(this).append(newBeginDay);
+        if(oldBeginDay < 28) {
+          oldBeginDay = oldBeginDay + 1;
+          $(this).append(oldBeginDay);
         } else {
-          newBeginDay = newBeginDay - 27;
-          $(this).append(newBeginDay);
+          oldBeginDay = oldBeginDay - 27;
+          $(this).append(oldBeginDay);
         }
       }
     }
@@ -323,62 +364,62 @@ $(document).ready(function() {
     if($('#editButtonAutofeed').hasClass('activated')) {
       $(this).empty();
       if(i == 0 || i == 2 || i == 4 || i == 6 || i == 7 || i == 9 || i == 11) {
-        if(newBeginDay > 1) {
-          newBeginDay = newBeginDay - 1;
-          $(this).append(newBeginDay);
+        if(oldBeginDay > 1) {
+          oldBeginDay = oldBeginDay - 1;
+          $(this).append(oldBeginDay);
         } else {
-          newBeginDay = newBeginDay + 30;
-          $(this).append(newBeginDay);
+          oldBeginDay = oldBeginDay + 30;
+          $(this).append(oldBeginDay);
         }
       } else
       if(i == 3 || i == 5 || i == 8 || i == 10) {
-        if(newBeginDay > 1) {
-          newBeginDay = newBeginDay - 1;
-          $(this).append(newBeginDay);
+        if(oldBeginDay > 1) {
+          oldBeginDay = oldBeginDay - 1;
+          $(this).append(oldBeginDay);
         } else {
-          newBeginDay = newBeginDay + 29;
-          $(this).append(newBeginDay);
+          oldBeginDay = oldBeginDay + 29;
+          $(this).append(oldBeginDay);
         }
       } else
       if(i == 1) {
-        if(newBeginDay > 1) {
-          newBeginDay = newBeginDay - 1;
-          $(this).append(newBeginDay);
+        if(oldBeginDay > 1) {
+          oldBeginDay = oldBeginDay - 1;
+          $(this).append(oldBeginDay);
         } else {
-          newBeginDay = newBeginDay + 27;
-          $(this).append(newBeginDay);
+          oldBeginDay = oldBeginDay + 27;
+          $(this).append(oldBeginDay);
         }
       }
     }
   });
   $('#datePickerEndDay').on('swipeup', function(event) {
-      if($('#editButtonAutofeed').hasClass('activated')) {
+    if($('#editButtonAutofeed').hasClass('activated')) {
       $(this).empty();
-      if(i == 0 || i == 2 || i == 4 || i == 6 || i == 7 || i == 9 || i == 11) {
-        if(newEndDay < 31) {
-          newEndDay = newEndDay + 1;
-          $(this).append(newEndDay);
+      if(j == 0 || j == 2 || j == 4 || j == 6 || j == 7 || j == 9 || j == 11) {
+        if(oldEndDay < 31) {
+          oldEndDay = oldEndDay + 1;
+          $(this).append(oldEndDay);
         } else {
-          newEndDay = newEndDay - 30;
-          $(this).append(newEndDay);
+          oldEndDay = oldEndDay - 30;
+          $(this).append(oldEndDay);
         }
       } else
-      if(i == 3 || i == 5 || i == 8 || i == 10) {
-        if(newEndDay < 30) {
-          newEndDay = newEndDay + 1;
-          $(this).append(newEndDay);
+      if(j == 3 || j == 5 || j == 8 || j == 10) {
+        if(oldEndDay < 30) {
+          oldEndDay = oldEndDay + 1;
+          $(this).append(oldEndDay);
         } else {
-          newEndDay = newEndDay - 29;
-          $(this).append(newEndDay);
+          oldEndDay = oldEndDay - 29;
+          $(this).append(oldEndDay);
         }
       } else
-      if(i == 1) {
-        if(newEndDay < 28) {
-          newEndDay = newEndDay + 1;
-          $(this).append(newEndDay);
+      if(j == 1) {
+        if(oldEndDay < 28) {
+          oldEndDay = oldEndDay + 1;
+          $(this).append(oldEndDay);
         } else {
-          newEndDay = newEndDay - 27;
-          $(this).append(newEndDay);
+          oldEndDay = oldEndDay - 27;
+          $(this).append(oldEndDay);
         }
       }
     }
@@ -386,31 +427,31 @@ $(document).ready(function() {
   $('#datePickerEndDay').on('swipedown', function(event) {
     if($('#editButtonAutofeed').hasClass('activated')) {
       $(this).empty();
-      if(i == 0 || i == 2 || i == 4 || i == 6 || i == 7 || i == 9 || i == 11) {
-        if(newEndDay > 1) {
-          newEndDay = newEndDay - 1;
-          $(this).append(newEndDay);
+      if(j == 0 || j == 2 || j == 4 || j == 6 || j == 7 || j == 9 || j == 11) {
+        if(oldEndDay > 1) {
+          oldEndDay = oldEndDay - 1;
+          $(this).append(oldEndDay);
         } else {
-          newEndDay = newEndDay + 30;
-          $(this).append(newEndDay);
+          oldEndDay = oldEndDay + 30;
+          $(this).append(oldEndDay);
         }
       } else
-      if(i == 3 || i == 5 || i == 8 || i == 10) {
-        if(newEndDay > 1) {
-          newEndDay = newEndDay - 1;
-          $(this).append(newEndDay);
+      if(j == 3 || j == 5 || j == 8 || j == 10) {
+        if(oldEndDay > 1) {
+          oldEndDay = oldEndDay - 1;
+          $(this).append(oldEndDay);
         } else {
-          newEndDay = newEndDay + 29;
-          $(this).append(newEndDay);
+          oldEndDay = oldEndDay + 29;
+          $(this).append(oldEndDay);
         }
       } else
-      if(i == 1) {
-        if(newEndDay > 1) {
-          newEndDay = newEndDay - 1;
-          $(this).append(newEndDay);
+      if(j == 1) {
+        if(oldEndDay > 1) {
+          oldEndDay = oldEndDay - 1;
+          $(this).append(oldEndDay);
         } else {
-          newEndDay = newEndDay + 27;
-          $(this).append(newEndDay);
+          oldEndDay = oldEndDay + 27;
+          $(this).append(oldEndDay);
         }
       }
     }
@@ -421,22 +462,22 @@ $(document).ready(function() {
     if($('#editButtonAutofeed').hasClass('activated')) {
       $(this).empty();
       if(i < 11) {
-        newBeginMonth = month[i = i + 1];
-        $(this).append(newBeginMonth);
+        oldBeginMonth = month[i = i + 1];
+        $(this).append(oldBeginMonth);
       } else {
-        newBeginMonth = month[i = i - 11];
-        $(this).append(newBeginMonth);
+        oldBeginMonth = month[i = i - 11];
+        $(this).append(oldBeginMonth);
       }
 
-      if(i == 3 || i == 5 || i == 8 || i == 10 && newBeginDay < 30) {
-        newBeginDay = 30;
+      if(i == 3 || i == 5 || i == 8 || i == 10 && oldBeginDay < 30) {
+        oldBeginDay = 30;
         $('#datePickerBeginDay').empty();
-        $('#datePickerBeginDay').append(newBeginDay);
+        $('#datePickerBeginDay').append(oldBeginDay);
       }
-      if(i == 1 || i == 12 && newBeginDay < 28) { // 12 gibts nicht, aber ohne funktionierts nicht
-        newBeginDay = 28;
+      if(i == 1 || i == 12 && oldBeginDay < 28) { // 12 gibts nicht, aber ohne funktionierts nicht
+        oldBeginDay = 28;
         $('#datePickerBeginDay').empty();
-        $('#datePickerBeginDay').append(newBeginDay);
+        $('#datePickerBeginDay').append(oldBeginDay);
       }
     }
   });
@@ -444,68 +485,68 @@ $(document).ready(function() {
     if($('#editButtonAutofeed').hasClass('activated')) {
       $(this).empty();
       if(i > 0) {
-        newBeginMonth = month[i = i - 1];
-        $(this).append(newBeginMonth);
+        oldBeginMonth = month[i = i - 1];
+        $(this).append(oldBeginMonth);
       } else {
-        newBeginMonth = month[i = i + 11];
-        $(this).append(newBeginMonth);
+        oldBeginMonth = month[i = i + 11];
+        $(this).append(oldBeginMonth);
       }
 
-      if(i == 3 || i == 5 || i == 8 || i == 10 && newBeginDay < 30) {
-        newBeginDay = 30;
+      if(i == 3 || i == 5 || i == 8 || i == 10 && oldBeginDay < 30) {
+        oldBeginDay = 30;
         $('#datePickerBeginDay').empty();
-        $('#datePickerBeginDay').append(newBeginDay);
+        $('#datePickerBeginDay').append(oldBeginDay);
       }
-      if(i == 1 || i == 12 && newBeginDay < 28) { // 12 gibts nicht, aber ohne funktionierts nicht
-        newBeginDay = 28;
+      if(i == 1 || i == 12 && oldBeginDay < 28) { // 12 gibts nicht, aber ohne funktionierts nicht
+        oldBeginDay = 28;
         $('#datePickerBeginDay').empty();
-        $('#datePickerBeginDay').append(newBeginDay);
+        $('#datePickerBeginDay').append(oldBeginDay);
       }
     }
   });
   $('#datePickerEndMonth').on('swipeup', function(event) {
     if($('#editButtonAutofeed').hasClass('activated')) {
       $(this).empty();
-      if(i < 11) {
-        newEndMonth = month[i = i + 1];
-        $(this).append(newEndMonth);
+      if(j < 11) {
+        oldEndMonth = month[j = j + 1];
+        $(this).append(oldEndMonth);
       } else {
-        newEndMonth = month[i = i - 11];
-        $(this).append(newEndMonth);
+        oldEndMonth = month[j = j - 11];
+        $(this).append(oldEndMonth);
       }
 
-      if(i == 3 || i == 5 || i == 8 || i == 10 && newEndDay < 30) {
-        newEndDay = 30;
+      if(j == 3 || j == 5 || j == 8 || j == 10 && oldEndDay < 30) {
+        oldEndDay = 30;
         $('#datePickerEndDay').empty();
-        $('#datePickerEndDay').append(newEndDay);
+        $('#datePickerEndDay').append(oldEndDay);
       }
-      if(i == 1 || i == 12 && newEndDay < 28) { // 12 gibts nicht, aber ohne funktionierts nicht
-        newEndDay = 28;
+      if(j == 1 || j == 12 && oldEndDay < 28) { // 12 gibts nicht, aber ohne funktionierts nicht
+        oldEndDay = 28;
         $('#datePickerEndDay').empty();
-        $('#datePickerEndDay').append(newEndDay);
+        $('#datePickerEndDay').append(oldEndDay);
       }
     }
   });
   $('#datePickerEndMonth').on('swipedown', function(event) {
     if($('#editButtonAutofeed').hasClass('activated')) {
       $(this).empty();
-      if(i > 0) {
-        newEndMonth = month[i = i - 1];
-        $(this).append(newEndMonth);
+      if(j > 0) {
+        oldEndMonth = month[j = j - 1];
+        $(this).append(oldEndMonth);
       } else {
-        newEndMonth = month[i = i + 11];
-        $(this).append(newEndMonth);
+        oldEndMonth = month[j = j + 11];
+        $(this).append(oldEndMonth);
       }
 
-      if(i == 3 || i == 5 || i == 8 || i == 10 && newEndDay < 30) {
-        newEndDay = 30;
+      if(j == 3 || j == 5 || j == 8 || j == 10 && oldEndDay < 30) {
+        oldEndDay = 30;
         $('#datePickerEndDay').empty();
-        $('#datePickerEndDay').append(newEndDay);
+        $('#datePickerEndDay').append(oldEndDay);
       }
-      if(i == 1 || i == 12 && newEndDay < 28) { // 12 gibts nicht, aber ohne funktionierts nicht
-        newEndDay = 28;
+      if(j == 1 || j == 12 && oldEndDay < 28) { // 12 gibts nicht, aber ohne funktionierts nicht
+        oldEndDay = 28;
         $('#datePickerEndDay').empty();
-        $('#datePickerEndDay').append(newEndDay);
+        $('#datePickerEndDay').append(oldEndDay);
       }
     }
   });
@@ -514,32 +555,37 @@ $(document).ready(function() {
   $('#datePickerBeginYear').on('swipeup', function(event) {
     if($('#editButtonAutofeed').hasClass('activated')) {
       $(this).empty();
-      newBeginYear = newBeginYear + 1;
-      $(this).append(newBeginYear);
+      oldBeginYear = oldBeginYear + 1;
+      $(this).append(oldBeginYear);
+      if(oldEndYear < oldBeginYear) {
+        $('#datePickerEndYear').empty();
+        oldEndYear = oldEndYear + 1;
+        $('#datePickerEndYear').append(oldEndYear);
+      }
     }
   });
   $('#datePickerBeginYear').on('swipedown', function(event) {
     if($('#editButtonAutofeed').hasClass('activated')) {
-      if(newBeginYear > DEFAULTS.curryear) {
+      if(oldBeginYear > DEFAULTS.curryear) {
         $(this).empty();
-        newBeginYear = newBeginYear - 1;
-        $(this).append(newBeginYear);
+        oldBeginYear = oldBeginYear - 1;
+        $(this).append(oldBeginYear);
       }
     }
   });
   $('#datePickerEndYear').on('swipeup', function(event) {
     if($('#editButtonAutofeed').hasClass('activated')) {
       $(this).empty();
-      newEndYear = newEndYear + 1;
-      $(this).append(newEndYear);
+      oldEndYear = oldEndYear + 1;
+      $(this).append(oldEndYear);
     }
   });
   $('#datePickerEndYear').on('swipedown', function(event) {
     if($('#editButtonAutofeed').hasClass('activated')) {
-      if(newEndYear > DEFAULTS.curryear) {
+      if(oldEndYear > DEFAULTS.curryear && oldEndYear > oldBeginYear) {
         $(this).empty();
-        newEndYear = newEndYear - 1;
-        $(this).append(newEndYear);
+        oldEndYear = oldEndYear - 1;
+        $(this).append(oldEndYear);
       }
     }
   });
@@ -550,15 +596,21 @@ $(document).ready(function() {
       $(this).removeClass('activated');
       $('.buttonsAutofeed').show();
       $('.autofeedDate').show();
-      $('.autofeedOption').text('');
     } else {
       $(this).addClass('activated');
       $('.buttonsAutofeed').hide();
       $('.autofeedDate').hide();
-      if($('#autofeedToggle').hasClass('on')) {
+      // text unlimited anzeigen -> s. autofeed toggle
+    }
+
+    // aktualisiere
+    if($('#autofeedToggle').hasClass('on')) {
+      if($('#checkboxUnlimited').hasClass('activated')) {
         $('.autofeedOption').text('unlimited');
-      } else
-      if($('#autofeedToggle').hasClass('off')) {
+      } else if($('.datePicker').hasClass('notdefault')) {
+        $('.autofeedOption').text(oldBeginDay + '.' + (i + 1) + '.' + oldBeginYear + '-' + oldEndDay + '.' + (j + 1) + '.' + oldEndYear);
+      }
+       else if($('.datePicker').hasClass('default')) {
         $('.autofeedOption').text('');
       }
     }

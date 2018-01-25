@@ -360,7 +360,6 @@ hr {
 .checkbox.activated {
   background-image: url(../images/button/checkActive.svg) !important;
 }
-
 /* buttons end */
 
 
@@ -570,6 +569,7 @@ hr {
 
 .autofeedOption {
   font-size: 0.5rem;
+  text-align: center;
 }
 
 /* autofeedcircle end */
@@ -1043,6 +1043,10 @@ padding-right: 6px;
   padding: 10px ;
 }
 
+.datePicker.default {
+  opacity: 0.5;
+}
+
 .datePicker.border {
   border-top: 1px solid #87BCD2;
   border-bottom: 1px solid #87BCD2;
@@ -1065,8 +1069,6 @@ padding-right: 6px;
 .unlimitedFunction {
   width: 280px;
   display:flex;
-
-  background: red;
 }
 /* check box end */
 

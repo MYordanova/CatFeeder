@@ -24,25 +24,15 @@ $(document).ready(function() {
 		var circlePortion;
 		var circleRotation;
 
-		if($('.feedCircle').hasClass('activated')) { // if funktion funktiniert nicht...
-			$('.feedCircle.activated').on('mousemove', function(event) {
-				circlePortion = Math.ceil((event.pageX - 67) / 2.4 / 5) * 5;
-				circleRotation = (circlePortion * 3.6);
-
+		$('.feedCircle.activated').on('touchmove', function(event) {
+			var fingerX = event.originalEvent.touches[0].pageX;
+			circlePortion = Math.ceil((fingerX - 67) / 2.4 / 5) * 5;
+			circleRotation = (circlePortion * 3.6);
+			if(circlePortion <= 100 && circlePortion >= 0) {
 				$('.circlePortion').text(circlePortion);
 				$('.feedPicker.activated').css('transform', 'rotate(' + circleRotation + 'deg)')
-			});
-
-			$('.feedCircle.activated').bind('touchmove', function(event) {
-				circlePortion = Math.ceil((event.pageX - 67) / 2.4 / 5) * 5;
-				circleRotation = (circlePortion * 3.6);
-
-				$('.circlePortion').text(circlePortion);
-				$('.feedPicker.activated').css('transform', 'rotate(' + circleRotation + 'deg)')
-			});
-		}
-
-
+			}
+		});
 
     // feed button
     $('.feedButton').click(function() {
