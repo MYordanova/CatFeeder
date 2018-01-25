@@ -229,26 +229,19 @@
               <div id="eatingHabitsProfile" class="page">
                 <h2>Eating Habits</h2>
                 <div class="buttonsHabits">
-                  <div id="addButtonHabit" class="button addButton"></div>
+                  <div id="addcloseButtonHabit" class="button addButton"></div>
 
-                  <div id="closeButtonHabit" class="button closeButton"></div>
                   <div id="confirmButtonHabit" class="button confirmButton"></div>
                   <div id="editButtonHabit" class="button editButton"></div>
                 </div>
                 <section class="datasheet">
 
                   <div id="newHabit" class="addnewHabit">
-
                     <div class="displayHeader">
                       <h4 id="captionTime"class="captionNewHabit">Time</h4>
                       <h4 id="captionPortion"class="captionNewHabit">Portion</h4>
                     </div>
-
-                    <div id="timePortionPickerActive" class="displayInformation">
-                    </div>
-                    <div id="timePortionPickerInactive" class="displayInformation">
-                    </div>
-
+                    <div class="habits"></div>
                   </div>
                 </section>
               </div>
@@ -343,74 +336,5 @@
         </nav>
       </footer>
     </div>
-
   </body>
   </html>
-
-
-
-
-
-  <script>
-  var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  var config = {
-  type: 'line',
-  data: {
-  xLabels: ["January", "February", "March", "April", "May", "June", "July", "August"],
-  yLabels: ['', 'Request Added', 'Request Viewed', 'Request Accepted', 'Request Solved', 'Solving Confirmed'],
-  datasets: [{
-  label: "My First dataset",
-  data: ['', 'Request Added', 'Request Added', 'Request Added', 'Request Viewed', 'Request Viewed', 'Request Viewed','Request Added'],
-  fill: false,
-  pointRadius: 5,
-  borderColor: window.chartColors.lightblue,
-  backgroundColor: window.chartColors.lightblue,
-}]
-},
-options: {
-legend: {
-display: false
-},
-responsive: true,
-title:{
-display:false,
-text:'Chart with Non Numeric Y Axis'
-},
-scales: {
-xAxes: [{
-  ticks: {
-        autoSkip: false,
-        maxRotation: 90,
-        minRotation: 90,
-        fontFamily: "sofia-pro",
-        fontSize: 16
-      },
-display: true,
-scaleLabel: {
-display: false,
-labelString: 'Month'
-}
-}],
-yAxes: [{
-type: 'category',
-position: 'left',
-display: false,
-scaleLabel: {
-display: true,
-labelString: 'Request State'
-},
-ticks: {
-reverse: true,
-
-}
-}]
-}
-}
-};
-
-window.onload = function() {
-var ctx = document.getElementById("foodChart").getContext("2d");
-ctx.canvas.height = 200;
-window.myLine = new Chart(ctx, config);
-};
-</script>

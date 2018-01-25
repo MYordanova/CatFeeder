@@ -287,6 +287,7 @@ hr {
   height: 40px;
   background-repeat: no-repeat;
   background-size: 40px 40px;
+  transition: 0.4s ease-in-out;
 }
 
 .addButton {
@@ -946,16 +947,30 @@ padding-right: 6px;
   background-size: 232px 31px;
   background-repeat: no-repeat;
   display: block;
-  margin: auto;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
+.editpicker #timePortionPickerActive {
+  display: block;
+}
+.editpicker #timePortionPickerInactive {
+  display: none;
+}
+.cancelmode {
+  transform: rotate(45deg);
+}
 #timePortionPickerActive {
   background-image: url(../images/petProfile/displayInformationActive.svg);
   width: 221px;
   height: 31px;
+  display: none;
 }
 
 #timePortionPickerInactive {
+  display: block;
   background-image: url(../images/petProfile/displayInformationInactive.svg);
   width: 232px;
   height: 32px;
@@ -1144,3 +1159,11 @@ footer nav  {
 }
 
 /* footer navigation end */
+
+
+
+
+
+.prototype{
+  display: none;
+}
