@@ -12,6 +12,12 @@ $(document).ready (function() {
       $('#addButtonPhoto').removeClass('activated');
     }, 100);
   });
+console.log("W");
+  $('.timePortionPicker').click(function(){
+    console.log(this);
+    $(this).css({"transform":"translateX(50px)"});
+  });
+
 
   $('#confirmButtonHabit').hide();
   $('#editButtonHabit').hide();
@@ -77,26 +83,9 @@ $(document).ready (function() {
       $('#editButtonHabit').removeClass('activated');
       $('#editButtonHabit').hide();
       $('#confirmButtonHabit').show();
-
       $("#newHabit .habits").toggleClass("editmode",true);
       $(".timePortionPicker").toggleClass("editpicker",true);
-
       $('#addcloseButtonHabit').toggleClass("cancelmode");
     }, 100);
   });
-
-
-
-
-
-  // $('#confirmButtonHabit').click(function() {
-  //   $(this).addClass('activated');
-  //   setTimeout(function() {
-  //     $('#confirmButtonHabit').removeClass('activated');
-  //     if($('.displayInformation').hasClass('confirm')) {
-  //       $('.displayPortion').css('border', 'none')
-  //       $('.hours').css('border', 'none')
-  //     }
-  //   }, 100);
-  // });
 });

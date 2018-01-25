@@ -168,6 +168,9 @@ content {}
   width: 100vw;
 }
 
+#eatingHabitsProfile {
+
+}
 /* pages end */
 
 /* page */
@@ -918,7 +921,8 @@ hr {
   width: 280px;
   display: flex;
   justify-content:space-around;
-  margin: 0px 50px 20px 50px;
+  margin: 0px 50px 20px 53px;
+  padding-left: 10px;
 }
 
 .captionNewHabit  {
@@ -927,19 +931,19 @@ hr {
 
 }
 
-#captionPortion {
-padding-right: 6px;
+#captionTime {
+
 }
 
-.displayInformation {
+.displayInformation  {
   background-size: 232px 31px;
   background-repeat: no-repeat;
   display: block;
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
-
 }
+
 
 .editpicker #timePortionPickerActive {
   display: block;
@@ -950,6 +954,7 @@ padding-right: 6px;
 .cancelmode {
   transform: rotate(45deg);
 }
+
 #timePortionPickerActive {
   background-image: url(../images/petProfile/displayInformationActive.svg);
   width: 221px;
@@ -960,9 +965,20 @@ padding-right: 6px;
 #timePortionPickerInactive {
   display: block;
   background-image: url(../images/petProfile/displayInformationInactive.svg);
-  width: 232px;
-  height: 32px;
+  width: 221px;
+  height: 31px;
 }
+
+/* pet profile scroll */
+
+.habits {
+  height: 43vh;
+  overflow: scroll;
+}
+
+/* pet profile scroll end */
+
+
 
 /* pet profile end */
 
