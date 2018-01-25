@@ -220,6 +220,7 @@ $(document).ready(function() {
       $('#confirmButtonAutofeed').show();
       $('.datePickerContent').removeClass('border');
       $('.datePicker').addClass('border');
+      $('#editButtonAutofeed').addClass('activated');
     }, 100);
   });
 
