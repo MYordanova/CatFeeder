@@ -19,7 +19,6 @@
     <script type="text/javascript" src="js/progressbar.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/catprofile.js"></script>
-      <script type="text/javascript" src="js/autofeedSettings.js"></script>
     <script type="text/javascript" src="js/chartjsUtils.js"></script>
     <script type="text/javascript" src="js/history-charts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
@@ -228,26 +227,19 @@
               <div id="eatingHabitsProfile" class="page">
                 <h2>Eating Habits</h2>
                 <div class="buttonsHabits">
-                  <div id="addButtonHabit" class="button addButton"></div>
+                  <div id="addcloseButtonHabit" class="button addButton"></div>
 
-                  <div id="closeButtonHabit" class="button closeButton"></div>
                   <div id="confirmButtonHabit" class="button confirmButton"></div>
                   <div id="editButtonHabit" class="button editButton"></div>
                 </div>
                 <section class="datasheet">
 
                   <div id="newHabit" class="addnewHabit">
-
                     <div class="displayHeader">
                       <h4 id="captionTime"class="captionNewHabit">Time</h4>
                       <h4 id="captionPortion"class="captionNewHabit">Portion</h4>
                     </div>
-
-                    <div id="timePortionPickerActive" class="displayInformation">
-                    </div>
-                    <div id="timePortionPickerInactive" class="displayInformation">
-                    </div>
-
+                    <div class="habits"></div>
                   </div>
                 </section>
               </div>
@@ -296,18 +288,18 @@
                     <div id="autofeedBegin" class="autofeedDuration">
                       <h4>Begin</h4>
                       <div id="datePickerBegin" class="datePickerContent border">
-                        <div id="datePickerBeginDay" class="datePicker"></div>
-                        <div id="datePickerBeginMonth" class="datePicker"></div>
-                        <div id="datePickerBeginYear" class="datePicker"></div>
+                        <div id="datePickerBeginDay" class="datePicker default"></div>
+                        <div id="datePickerBeginMonth" class="datePicker default"></div>
+                        <div id="datePickerBeginYear" class="datePicker default"></div>
                       </div>
                     </div>
 
                     <div id="autofeedEnd" class="autofeedDuration">
                       <h4>End</h4>
                       <div id="datePickerEnd" class="datePickerContent border">
-                        <div id="datePickerEndDay" class="datePicker"></div>
-                        <div id="datePickerEndMonth" class="datePicker"></div>
-                        <div id="datePickerEndYear" class="datePicker"></div>
+                        <div id="datePickerEndDay" class="datePicker default"></div>
+                        <div id="datePickerEndMonth" class="datePicker default"></div>
+                        <div id="datePickerEndYear" class="datePicker default"></div>
                       </div>
                     </div>
                   </div>
@@ -342,6 +334,5 @@
         </nav>
       </footer>
     </div>
-
   </body>
   </html>

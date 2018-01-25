@@ -286,6 +286,7 @@ hr {
   height: 40px;
   background-repeat: no-repeat;
   background-size: 40px 40px;
+  transition: 0.4s ease-in-out;
 }
 
 .addButton {
@@ -359,7 +360,6 @@ hr {
 .checkbox.activated {
   background-image: url(../images/button/checkActive.svg) !important;
 }
-
 /* buttons end */
 
 
@@ -569,6 +569,7 @@ hr {
 
 .autofeedOption {
   font-size: 0.5rem;
+  text-align: center;
 }
 
 /* autofeedcircle end */
@@ -940,16 +941,30 @@ padding-right: 6px;
   background-size: 232px 31px;
   background-repeat: no-repeat;
   display: block;
-  margin: auto;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
+.editpicker #timePortionPickerActive {
+  display: block;
+}
+.editpicker #timePortionPickerInactive {
+  display: none;
+}
+.cancelmode {
+  transform: rotate(45deg);
+}
 #timePortionPickerActive {
   background-image: url(../images/petProfile/displayInformationActive.svg);
   width: 221px;
   height: 31px;
+  display: none;
 }
 
 #timePortionPickerInactive {
+  display: block;
   background-image: url(../images/petProfile/displayInformationInactive.svg);
   width: 232px;
   height: 32px;
@@ -1037,6 +1052,10 @@ padding-right: 6px;
   padding: 10px ;
 }
 
+.datePicker.default {
+  opacity: 0.5;
+}
+
 .datePicker.border {
   border-top: 1px solid #87BCD2;
   border-bottom: 1px solid #87BCD2;
@@ -1059,8 +1078,6 @@ padding-right: 6px;
 .unlimitedFunction {
   width: 280px;
   display:flex;
-
-  background: red;
 }
 /* check box end */
 
@@ -1136,3 +1153,11 @@ footer nav  {
 }
 
 /* footer navigation end */
+
+
+
+
+
+.prototype{
+  display: none;
+}
