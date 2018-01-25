@@ -46,8 +46,16 @@ $(document).ready(function() {
 				var bowl_new = bowl + circlePortion;
 
 				refreshData(null,foodtank_new,bowl_new);
+				
+				updateChartLastValue(bowl_new, window.myLineFood);
 			}
     });
+	}
+
+	function updateChartLastValue(valueToUpdate, chartToUpdate) {
+		var lastValuePosition = chartToUpdate.data.datasets[0].data.length - 1;
+		chartToUpdate.data.datasets[0].data[lastValuePosition] = valueToUpdate;
+		chartToUpdate.update();
 	}
 
 	function refreshData(waterNew,foodNew,bowlNew){
