@@ -98,10 +98,11 @@
                 <h2>Food</h2>
                 <div class="date">
                   <h3>2018</h3>
-                  <div class="views">
-                    <span>M</span>
-                    <span>W</span>
-                    <span>D</span>
+                  <div id="views">
+                    <span id="historyDayView"></span>
+                    <span id="historyWeekView"></span>
+                    <span id="historyMonthView"></span>
+                    <span id="historyYearChartView" class="yearChartView_activated"></span>
                   </div>
                 </div>
 
@@ -114,8 +115,8 @@
                   <canvas id="foodChart" ></canvas>
 
                 </section>
-
-                <ul style="list-style-type: none;" class="monthsfood">
+<!--
+                <ul style="list-style-type: none;" class="monthsFoodAmount">
                   <li>January</li>
                   <li>February</li>
                   <li>March</li>
@@ -124,17 +125,18 @@
                   <li>June</li>
                   <li>July</li>
                   <li>August</li>
-                </ul>
+                </ul> -->
               </div>
 
               <div id="waterContent" class="page">
                 <h2>Water</h2>
                 <div class="date">
                   <h3>2018</h3>
-                  <div class="views">
-                    <span>M</span>
-                    <span>W</span>
-                    <span>D</span>
+                  <div id="views">
+                    <span id="historyDayView"></span>
+                    <span id="historyWeekView"></span>
+                    <span id="historyMonthView"></span>
+                    <span id="historyYearChartView" class="yearChartView_activated"></span>
                   </div>
                 </div>
 
@@ -143,10 +145,12 @@
                 </div>
 
                 <section class="diagram">
+                  <canvas id="foodChart" ></canvas>
+                  <!--
                   <div class="infocirle">Info Circle</div>
                   <div class="curclepointer">Circle Pointer</div>
                   <div class="curve">Curve</div>
-                  <ul style="list-style-type: none;" class="monthswater">
+                  <ul style="list-style-type: none;" class="monthsWaterAmount">
                     <li>January</li>
                     <li>February</li>
                     <li>March</li>
@@ -155,7 +159,8 @@
                     <li>June</li>
                     <li>July</li>
                     <li>August</li>
-                  </ul>
+                  </ul> -->
+
                 </section>
               </div>
             </div>
@@ -345,19 +350,20 @@
 
 
 
-  <!-- <script>
+  <script>
   var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   var config = {
   type: 'line',
   data: {
-  xLabels: ["January", "February", "March", "April", "May", "June", "July"],
+  xLabels: ["January", "February", "March", "April", "May", "June", "July", "August"],
   yLabels: ['', 'Request Added', 'Request Viewed', 'Request Accepted', 'Request Solved', 'Solving Confirmed'],
   datasets: [{
   label: "My First dataset",
-  data: ['', 'Request Added', 'Request Added', 'Request Added', 'Request Viewed', 'Request Viewed', 'Request Viewed'],
+  data: ['', 'Request Added', 'Request Added', 'Request Added', 'Request Viewed', 'Request Viewed', 'Request Viewed','Request Added'],
   fill: false,
+  pointRadius: 5,
   borderColor: window.chartColors.lightblue,
-  backgroundColor: window.chartColors.lightblue
+  backgroundColor: window.chartColors.lightblue,
 }]
 },
 options: {
@@ -371,7 +377,14 @@ text:'Chart with Non Numeric Y Axis'
 },
 scales: {
 xAxes: [{
-display: false,
+  ticks: {
+        autoSkip: false,
+        maxRotation: 90,
+        minRotation: 90,
+        fontFamily: "sofia-pro",
+        fontSize: 16
+      },
+display: true,
 scaleLabel: {
 display: false,
 labelString: 'Month'
@@ -386,7 +399,8 @@ display: true,
 labelString: 'Request State'
 },
 ticks: {
-reverse: true
+reverse: true,
+
 }
 }]
 }
@@ -395,6 +409,7 @@ reverse: true
 
 window.onload = function() {
 var ctx = document.getElementById("foodChart").getContext("2d");
+ctx.canvas.height = 200;
 window.myLine = new Chart(ctx, config);
 };
-</script> -->
+</script>

@@ -184,30 +184,6 @@ content {
   background: white;
 }
 
-#foodContent {
-  background: yellow;
-}
-
-#waterContent {
-  background: pink;
-}
-
-#generalInfoProfile {
-  background: yellow;
-}
-
-#foodProfile {
-  background-color: pink;
-}
-
-#eatingHabitsProfile {
-  background-color: grey;
-}
-
-#settingsNavigation {
-
-}
-
 .pageSwipeToLeft {
   /* margin-left: -375px; */
   transform: translateX(-100vw);
@@ -260,7 +236,6 @@ h2 {
   font-size: 1.25rem; /* NOTE: 20px  */
   font-weight: 500;
   width: 280px;
-  background: green;
   height: 50px;
   line-height: 1.25rem;
   display: flex;
@@ -269,8 +244,13 @@ h2 {
 }
 
 h3 {
+  width: 50%;
   font-size: 1rem;
-  height: 20px;
+  font-weight: 400;
+  line-height: 1rem;
+  height: 31px;
+  display: flex;
+  align-items: flex-end;
 }
 
 ul {
@@ -628,26 +608,65 @@ hr {
   text-align:left;
 }
 
-.views {
-  width: 50px;
-  height: 100vh;
-  display: block;
+#views {
+  width: 50%;
+  height: 31px;
+  display: flex;
+  justify-content: space-between;
   float: right;
 }
 
-.views li {
+#views li {
   display: flex;
   flex-direction: row;
+  margin-left: 60px;
+}
 
+#views span {
+  width: 31px;
+  height: 31px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 31px 31px;
+  transition: 0s;
+}
+/*
+#views yearChartView_activated {
+  width: 31px;
+  height: 31px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 31px 31px;
+  transition: 0s;
+} */
+
+/* NOTE: History View Buttons */
+
+#historyDayView {
+  background-image: url('../images/history/dayViewInactive.svg')
+}
+
+#historyWeekView {
+  background-image: url('../images/history/weekViewInactive.svg')
+}
+
+#historyMonthView {
+  background-image: url('../images/history/monthViewInactive.svg')
+}
+
+#historyYearChartView {
+  background-image: url('../images/history/yearChartViewActive.svg') !important;
 }
 
 .date {
-  display: block;
+  display: flex;
   flex-flow: row;
+  justify-content: flex-end;
   width: 280px;
   height: 30px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
 }
 
 /* History Content  */
@@ -659,8 +678,13 @@ hr {
   margin-left: auto;
   margin-right: auto;
   /*background-color: red;*/
+}
+
+#foodChart{
+  margin-top: 100px !important;
 
 }
+
 /* Food Indexes Months  */
 
 .foodIndexJanuary {
@@ -765,7 +789,7 @@ hr {
   hight: 200px;
 }
 
-.monthsfood {
+.monthsFoodAmount {
   margin-top: -250px;
   width: 100px;
   transform: rotate(270deg);
@@ -773,7 +797,7 @@ hr {
   margin-right: auto;
 }
 
-.monthswater {
+.monthsWaterAmount {
   width: 20px;
   transform: rotate(270deg);
   margin-left: auto;
