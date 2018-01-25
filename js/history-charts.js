@@ -17,9 +17,6 @@ backgroundColor: window.chartColors.lightblue,
 }]
 },
 options: {
-legend: {
-display: false
-},
 responsive: true,
 title:{
 display:false,
@@ -66,19 +63,24 @@ window.myLine = new Chart(ctx, config);
 
 
 //Water Chart
-var testconfig = {
+var waterdata = {
+  xLabels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+  datasets: [{
+    data: [15,20,18,15,18,40,45,45,80,95,80,40],
+    fill: false,
+    pointRadius: 5,
+    borderColor: window.chartColors.lightblue,
+    backgroundColor: window.chartColors.lightblue,
+  }]
+};
+
+window.onload = function() {
+var ctx = document.getElementById("waterChart").getContext("2d");
+ctx.canvas.height = 300;
+window.myLine = new Chart(ctx, {
   type: 'line',
-  data: {
-    xLabels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
-    datasets: [{
-      data: [15,20,18,15,18,40,45,45,80,95,80,40],
-      fill: false,
-      pointRadius: 5,
-      borderColor: window.chartColors.lightblue,
-      backgroundColor: window.chartColors.lightblue,
-    }]
-  },
-  options: {
+  data: waterdata,
+  options : {
     legend: {
       display: false
     },
@@ -123,67 +125,25 @@ var testconfig = {
             top: 50,
             bottom: 50
         }
+    },
+    animation: {
+      duration: 1,
+      onComplete: function() {
+        var controller = this.chart.controller;
+        var chart = controller.chart;
+        var xAxis = controller.scales['x-axis-0'];
+
+        var numTicks = xAxis.ticks.length;
+        var yOffsetStart = xAxis.width / numTicks;
+        var halfBarWidth = (xAxis.width / (numTicks * 2));
+
+        xAxis.ticks.forEach(function(value, index) {
+            var xOffset = chart.height - 20;
+            var yOffset = (yOffsetStart * index) + halfBarWidth;
+            ctx.fillText(value, yOffset, xOffset);
+        });
+      }
     }
   }
-}
-
-
-var configWater = {
-type: 'line',
-data: {
-xLabels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
-yLabels: ['', 'Request Added', 'Request Viewed', 'Request Accepted', 'Request Solved', 'Solving Confirmed'],
-datasets: [{
-label: "My First dataset",
-data: ['Request Solved', 'Request Added', 'Request Added', 'Request Added', 'Request Viewed', 'Request Viewed', 'Request Viewed','Request Added'],
-fill: false,
-pointRadius: 5,
-borderColor: window.chartColors.lightblue,
-backgroundColor: window.chartColors.lightblue,
-}]
-},
-options: {
-legend: {
-display: false
-},
-responsive: true,
-title:{
-display:false,
-text:'Chart with Non Numeric Y Axis'
-},
-scales: {
-  xAxes: [{
-    ticks: {
-      autoSkip: false,
-      maxRotation: 90,
-      minRotation: 90,
-      fontFamily: "sofia-pro",
-      fontSize: 16
-    },
-    display: true,
-    scaleLabel: {
-      display: false,
-      labelString: 'Month'
-    }
-  }],
-  yAxes: [{
-    type: 'category',
-    position: 'left',
-    display: false,
-    scaleLabel: {
-      display: true,
-      labelString: 'Request State'
-    },
-    ticks: {
-      reverse: false,
-    }
-}]
-}
-}
-};
-
-window.onload = function() {
-var ctx = document.getElementById("waterChart").getContext("2d");
-ctx.canvas.height = 300;
-window.myLine = new Chart(ctx, testconfig);
+});
 };

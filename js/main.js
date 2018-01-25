@@ -1,3 +1,8 @@
+var futterTag = 0;
+var futterWoche = 253;
+var futterMonat = 3482;
+
+
 $(document).ready(function() {
   //mydegree = currentfingerposition*3.6;
   //$(".meinkringel").css("transform","rotate("+mydegree+")");
@@ -164,7 +169,6 @@ $(document).ready(function() {
       $('#autofeed').css('transform', 'translateX(-100vw)');
       $('.backToSettings').addClass('backButton');
     }, 100);
-
 
   });
 
