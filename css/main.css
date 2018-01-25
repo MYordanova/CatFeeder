@@ -26,18 +26,14 @@ body {
   height:100vh;
 }
 
-content {
-  width:100vw;
-  height:587px;
-}
+content {}
 
 /* allgemein end */
 
 /* chapters */
 
 #chapters {
-  width: 100vw;
-  height: 587px;
+
 }
 
 /* chapters end */
@@ -45,8 +41,10 @@ content {
 /* chapter */
 
 .chapter {
-  width: 100vw;
-  height: 587px;
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height:100%;
   background: white !important;
   position: absolute;
   top: 0;
@@ -152,8 +150,8 @@ content {
 
 .pages {
   display: flex;
+  flex-grow: 1;
   justify-content: flex-start;
-  position: absolute;
   transition: 1s;
 }
 
@@ -175,11 +173,12 @@ content {
 /* page */
 
 .page {
-  width: 100vw;
-  height: 490px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-grow: 1;
   overflow-x: hidden;
   background: white;
 }
@@ -688,28 +687,23 @@ hr {
   display: flex;
   flex-flow: row;
   justify-content: flex-end;
+  align-items: center;
   width: 280px;
-  height: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+  height: 50px;
+
+  border-bottom: 1px solid #4A4A4A;
 }
 
 /* History Content  */
 
 .diagram {
-  width: 280px;
-  height: 300px;
-  margin-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  /*background-color: red;*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-#foodChart{
-  margin-top: 100px !important;
-
-}
+#waterChart{}
 
 /* Food Indexes Months  */
 
