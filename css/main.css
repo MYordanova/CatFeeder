@@ -183,13 +183,6 @@ content {
   overflow-x: hidden;
   background: white;
 }
-
-.pageSwipeToLeft {
-  /* margin-left: -375px; */
-  transform: translateX(-100vw);
-  transition: 1s;
-}
-
 /* page end */
 
 /* nextpages */
