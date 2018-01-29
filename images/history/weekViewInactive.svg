@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
-    <title>Artboard Copy 5</title>
+    <title>Artboard Copy 16</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-Copy-5">
+        <g id="Artboard-Copy-16">
             <g id="Group-12-Copy-9" transform="translate(1.000000, 1.000000)" fill="#FFFFFF">
                 <g id="Group-10" transform="translate(14.500000, 14.500000) rotate(-270.000000) translate(-14.500000, -14.500000) ">
                     <g id="Group-5">
@@ -16,7 +16,9 @@
                     </g>
                 </g>
             </g>
-            <polygon id="W-Copy" fill="#87BCD2" points="21.932 9 23.678 9 19.484 21.402 18.062 21.402 15.83 13.572 13.616 21.402 12.194 21.402 8 9 9.746 9 12.914 18.81 15.218 10.692 16.46 10.692 18.782 18.774"></polygon>
+            <text id="W" font-family="SofiaProRegular, Sofia Pro" font-size="16" font-weight="normal" fill="#85BCD3">
+                <tspan x="8" y="21">W</tspan>
+            </text>
         </g>
     </g>
 </svg>

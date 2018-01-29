@@ -75,10 +75,13 @@ window.myLineFood = new Chart(ctxFood, {
 
         yAxes: [{
             display: false,
-            beginAtZero: true,
-            steps: 10,
-            stepValue: 5,
-            max: 100
+            ticks: {
+              scaleOverride : true,
+              scaleSteps : 10,
+              scaleStepWidth : 50,
+              scaleStartValue : 0,
+              max: 100,
+            },
         }]
     },
     layout: {
@@ -139,11 +142,14 @@ window.myLineWater = new Chart(ctxWater, {
         }],
 
         yAxes: [{
-          display: false,
-          beginAtZero: true,
-          steps: 10,
-          stepValue: 10,
-          max: 100
+            display: false,
+            ticks: {
+              scaleOverride : true,
+              scaleSteps : 10,
+              scaleStepWidth : 50,
+              scaleStartValue : 0,
+              max: 100,
+            },
         }]
     },
     layout: {
