@@ -3,10 +3,11 @@
 var fooddata = {
   xLabels: ["26 Jan", "27 Jan", "28 Jan","29 Jan", "30 Jan", "31 Jan", "1 Feb"],
   datasets: [{
-    data: [0,20,18,15,18,40,0],
+    data: [0,40,20,25,20,40,0],
     fill: false,
     pointRadius: 0,
     pointHitRadius: 20,
+    hoverRadius: 20,
     borderColor: window.chartColors.lightblue,
     backgroundColor: window.chartColors.lightblue,
   }]
@@ -16,8 +17,8 @@ var fooddata = {
 var waterdata = {
   xLabels: ["26 Jan", "27 Jan", "28 Jan","29 Jan", "30 Jan", "31 Jan", "1 Feb"],
   datasets: [{
-    data: [15,20,18,15,18,40,60],
-    fill: false,
+    data: [0,40,50,40,70,60,70],
+    fill: true,
     pointRadius: 0,
     pointHitRadius: 20,
     borderColor: window.chartColors.lightblue,
@@ -37,7 +38,7 @@ window.myLineFood = new Chart(ctxFood, {
   options : {
 scaleStartValue: 0,
     legend: {
-      display: false
+      display: false,
     },
     responsive: true,
     title:{
@@ -46,19 +47,26 @@ scaleStartValue: 0,
     tooltips: {
       mode: 'index',
       position: 'nearest',
-      intersect: true,
-      yPadding: 16,
-      xPadding: 12,
+      intersect: false,
+      yPadding: 18,
+      xPadding: 20,
       caretSize: 0,
-      cornerRadius: 32,
+      caretPadding: 10,
+      cornerRadius: 29,
       displayColors: false,
       backgroundColor: window.chartColors.lightblue,
       titleFontColor: window.chartColors.white,
       bodyFontColor: window.chartColors.white,
-      borderWidth: 4,
+      bodyFontSize: 16,
+      bodyFontFamily: 'sofia-pro',
+      yAlign: 'bottom',
       callbacks: {
+
                    label: function (tooltipItems, data) {
-                       return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' g';
+                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + '';
+                   },
+                   title: function (tooltipItems, data) {
+                      return '';
                    }
               }
     },
@@ -111,6 +119,7 @@ scaleStartValue: 0,
   }
 });
 
+
 // creating water chart
 var ctxWater = document.getElementById("waterChart").getContext("2d");
 ctxWater.canvas.height = 300;
@@ -129,20 +138,26 @@ window.myLineWater = new Chart(ctxWater, {
     tooltips: {
       mode: 'index',
       position: 'nearest',
-      intersect: true,
-      yPadding: 12,
-      xPadding: 12,
-      caretSize: 5,
-      cornerRadius: 30,
+      intersect: false,
+      yPadding: 18,
+      xPadding: 20,
+      caretSize: 0,
+      caretPadding: 10,
+      cornerRadius: 29,
       displayColors: false,
       backgroundColor: window.chartColors.lightblue,
       titleFontColor: window.chartColors.white,
       bodyFontColor: window.chartColors.white,
-      borderWidth: 0,
-      tooltipCornerRadius: 10,
+      bodyFontSize: 16,
+      bodyFontFamily: 'sofia-pro',
+      yAlign: 'bottom',
       callbacks: {
+
                    label: function (tooltipItems, data) {
-                       return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' g';
+                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + '';
+                   },
+                   title: function (tooltipItems, data) {
+                      return '';
                    }
               }
     },

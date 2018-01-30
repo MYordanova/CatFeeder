@@ -664,14 +664,14 @@ hr {
   transition: 0s;
 } */
 
-/* NOTE: History View Buttons */
+/* History View Buttons */
 
 #historyDayView {
   background-image: url('../images/history/dayViewInactive.svg')
 }
 
 #historyWeekView {
-  background-image: url('../images/history/weekViewInactive.svg')
+  background-image: url('../images/history/weekViewActive.svg') !important;
 }
 
 #historyMonthView {
@@ -679,7 +679,7 @@ hr {
 }
 
 #historyYearChartView {
-  background-image: url('../images/history/yearChartViewActive.svg') !important;
+  background-image: url('../images/history/yearChartViewActive.svg')
 }
 
 .date {
@@ -689,7 +689,6 @@ hr {
   align-items: center;
   width: 280px;
   height: 50px;
-
   border-bottom: 1px solid #87BCD2;;
 }
 
@@ -703,6 +702,9 @@ hr {
   height: 100%;
   justify-content:center;
   align-items:center;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
 }
 
 #waterChart{
