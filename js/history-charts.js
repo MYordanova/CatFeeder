@@ -1,12 +1,11 @@
 
 //Food Chart
-
 var fooddata = {
   xLabels: ["26 Jan", "27 Jan", "28 Jan","29 Jan", "30 Jan", "31 Jan", "1 Feb"],
   datasets: [{
     data: [0,20,18,15,18,40,0],
     fill: false,
-    pointRadius: 5,
+    pointRadius: 0,
     pointHitRadius: 20,
     borderColor: window.chartColors.lightblue,
     backgroundColor: window.chartColors.lightblue,
@@ -19,7 +18,7 @@ var waterdata = {
   datasets: [{
     data: [15,20,18,15,18,40,60],
     fill: false,
-    pointRadius: 5,
+    pointRadius: 0,
     pointHitRadius: 20,
     borderColor: window.chartColors.lightblue,
     backgroundColor: window.chartColors.lightblue,
@@ -47,7 +46,7 @@ scaleStartValue: 0,
     tooltips: {
       mode: 'index',
       position: 'nearest',
-      intersect: false,
+      intersect: true,
       yPadding: 16,
       xPadding: 12,
       caretSize: 0,
@@ -130,7 +129,7 @@ window.myLineWater = new Chart(ctxWater, {
     tooltips: {
       mode: 'index',
       position: 'nearest',
-      intersect: false,
+      intersect: true,
       yPadding: 12,
       xPadding: 12,
       caretSize: 5,
