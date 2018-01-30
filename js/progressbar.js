@@ -28,10 +28,16 @@ $(document).ready(function() {
 			var fingerX = event.originalEvent.touches[0].pageX;
 			circlePortion = Math.ceil((fingerX - 67) / 2.4 / 5) * 5;
 			circleRotation = (circlePortion * 3.6);
+			$('.feedPicker').addClass('activated');
 			if(circlePortion <= 100 && circlePortion >= 0) {
 				$('.circlePortion').text(circlePortion);
-				$('.feedPicker.activated').css('transform', 'rotate(' + circleRotation + 'deg)')
+
+				$('.feedPicker').css('transform', 'rotate(' + circleRotation + 'deg)')
 			}
+		});
+
+		$('.feedCircle.activated').on('touchend', function(event) {
+			$('.feedPicker').removeClass('activated');
 		});
 
     // feed button
@@ -46,7 +52,7 @@ $(document).ready(function() {
 				var bowl_new = bowl + circlePortion;
 
 				refreshData(null,foodtank_new,bowl_new);
-				
+
 				updateChartLastValue(bowl_new, window.myLineFood);
 			}
     });

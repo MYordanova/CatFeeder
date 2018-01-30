@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="282px" height="42px" viewBox="0 0 282 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>displayInfoInactive</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="catprofile-feed-habits-complete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-47.000000, -299.000000)">
+        <g id="displayInfoInactive" transform="translate(48.000000, 299.000000)">
+            <path d="M0,1 L280,1" id="Line-Copy-2" stroke="#87BCD2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M0,41 L280,41" id="Line-Copy-3" stroke="#87BCD2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <text id="12" font-family="SofiaProRegular, Sofia Pro" font-size="16" font-weight="normal" fill="#4A4A4A">
+                <tspan x="33.112" y="26">12</tspan>
+            </text>
+            <text id=":" font-family="SofiaProMedium, Sofia Pro" font-size="16" font-weight="400" fill="#4A4A4A">
+                <tspan x="88" y="26">:</tspan>
+            </text>
+            <text id="30" font-family="SofiaProRegular, Sofia Pro" font-size="16" font-weight="normal" fill="#4A4A4A">
+                <tspan x="130.88" y="26">30</tspan>
+            </text>
+            <text id="30g" font-family="SofiaProRegular, Sofia Pro" font-size="16" font-weight="normal" fill="#4A4A4A">
+                <tspan x="226.714" y="26">30</tspan>
+                <tspan x="244.954" y="26" font-size="12">g</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

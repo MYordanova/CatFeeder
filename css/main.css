@@ -267,7 +267,6 @@ li {
 
 
 /* Lines  */
-
 hr {
   background-color:#4A4A4A;
   color:#4A4A4A;
@@ -275,45 +274,38 @@ hr {
   height:1px;
 }
 
-
 /* buttons  */
-
 .button {
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
   background-size: 40px 40px;
-  transition: 0.4s ease-in-out;
+  transition: 0;
 }
-
 .addButton {
   background-image: url('../images/button/addInactive.svg');
 }
 .addButton.activated {
   background-image: url('../images/button/addActive.svg') !important;
 }
-
 .closeButton {
   background-image: url('../images/button/closeInactive.svg');
 }
 .closeButton.activated {
   background-image: url('../images/button/closeActive.svg') !important;
 }
-
 .confirmButton {
   background-image: url('../images/button/confirmInactive.svg');
 }
 .confirmButton.activated {
   background-image: url('../images/button/confirmActive.svg') !important;
 }
-
 .editButton {
   background-image: url(../images/button/editInactive.svg);
 }
 .editButton.activated {
   background-image: url(../images/button/editActive.svg) !important;
 }
-
 .backButton {
   background-image: url('../images/button/backButtonInactive.svg');
   position: absolute;
@@ -323,13 +315,12 @@ hr {
 .backButton.activated {
   background-image: url('../images/button/backButtonActive.svg') !important;
 }
-
 .toggle {
   height: 20px;
   width: 40px;
   background-size: 40px 20px;
   display: flex;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 .toggle.on {
   background-image: url(../images/button/toggleButtonActive.svg);
@@ -343,9 +334,8 @@ hr {
   margin: 2px;
   background-size: 16px 16px;
   background-image: url(../images/button/toggleButtonCircle.svg);
-  transition: 0.5s;
+  transition: 0.4s;
 }
-
 .checkbox {
   background-image: url(../images/button/checkInactive.svg);
   background-repeat: no-repeat;
@@ -365,9 +355,7 @@ hr {
 
 /* main page */
 
-
 /* statusbar */
-
 .statusbar {
   position: absolute;
   height: 80px;
@@ -477,17 +465,26 @@ hr {
 }
 
 .feedPicker {
-  background-image: url('../images/mainPage/feedPickerActive.svg');
-  background-size: 30px 132px;
-  position: absolute;
+  background-image: url('../images/mainPage/feedPickerInactive.svg');
+  background-size: 30px 135px;
   width: 30px;
-  height: 132px;
-  top: -12px;
+  height: 135px;
+  top: -15px;
   left: calc(120px - 15px);
+  position: absolute;
   transform-origin: bottom ;
   z-index: 1;
 
   transition: 0.2s ease-out;
+}
+
+.feedPicker.activated {
+  background-image: url('../images/mainPage/feedPickerActive.svg');
+  background-size: 30px 135px;
+  width: 30px;
+  height: 135px;
+  top: -15px;
+  left: calc(120px - 15px);
 }
 
 .feedCircleShape {
@@ -524,7 +521,7 @@ hr {
   width: 120px;
   position: absolute;
   top: 450px;
-  left: calc(50vw - 120px - 100px); /* 50vw = linke kante an mittelachse - 120px = rechte kante an mittelachse - 100px abstand */
+  left: calc(50vw - 120px - 120px); /* 50vw = linke kante an mittelachse - 120px = rechte kante an mittelachse - 100px abstand */
 }
 
 .autofeedCircleRing.bigRing {
@@ -569,8 +566,8 @@ hr {
 .autofeedOption {
   font-size: 0.5rem;
   text-align: center;
+  line-height: 0.5rem;
 }
-
 /* autofeedcircle end */
 
 /* feed button */
@@ -832,23 +829,18 @@ hr {
 .activate svg g {
   fill: #6AAA3B;
 }
-
 /* history end */
 
 
 
 
 /* pet profile */
-
-/* general info profile */
-
+/* general info profile / seite 1 */
 /* add photo */
-
 .addPhoto {
   margin-bottom: 40px;
   position: relative;
 }
-
 .placeForPhoto {
   width: 121px;
   height: 121px;
@@ -856,28 +848,23 @@ hr {
   background-size: 121px 121px;
   background-image: url('../images/petProfile/iconCircle.svg');
 }
-
 #addButtonPhoto {
   position: absolute;
   right: -20px;
   top: 40px;
 }
-
 /* add photo end */
 
 /* datasheet */
-
 .datasheet form {
   width: 280px;
 }
-
 .datasheet form label {
   display: inline-block;
   text-align: left;
   position: absolute;
   opacity: 0.5;
 }
-
 .datasheet form input {
   box-sizing: border-box;
   outline: 0;
@@ -891,17 +878,15 @@ hr {
 /* datasheet end */
 /* general info profile end */
 
-/* food profile */
+/* food profile / seite 2 */
 /* scan Product */
 .scanProduct{
   margin-bottom: 40px;
 }
-
 .placeForScan {
   background-repeat: no-repeat;
   background-size: 142px 120px;
 }
-
 #buttonScan{
   background-image: url('../images/petProfile/iconScan.svg');
   width: 142px;
@@ -910,38 +895,28 @@ hr {
 /* scan Product end */
 /* food profile end */
 
-/* eating habits profile */
+/* eating habits profile / seite 3 */
 .buttonsHabits {
   width: 280px;
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
 }
-
-/* Cat Profile new Habbit  */
-
-/* Cat Profile add new Habbit Time and Portion  */
-
-
-
 .displayHeader {
   width: 280px;
   display: flex;
-  justify-content:space-around;
-  margin: 0px 50px 20px 53px;
-  padding-left: 10px;
+  justify-content: space-between;
+  padding: 0 20px 0 25px;
+  margin-bottom: 20px;
 }
-
 .captionNewHabit  {
   font-size: 14px;
   font-weight: 500;
-
 }
-
-#captionTime {
-
+.habits {
+  height: 43vh;
+  overflow: scroll;
 }
-
 .displayInformation  {
   background-size: 232px 31px;
   background-repeat: no-repeat;
@@ -950,43 +925,35 @@ hr {
   margin-left: auto;
   margin-right: auto;
 }
-
-
 .editpicker #timePortionPickerActive {
   display: block;
 }
 .editpicker #timePortionPickerInactive {
   display: none;
 }
-.cancelmode {
+.addclosetrans {
+  transition: 0.2s ease-in-out;
+}
+.cancelmode_add {
   transform: rotate(45deg);
 }
-
 #timePortionPickerActive {
-  background-image: url(../images/petProfile/displayInformationActive.svg);
-  width: 221px;
-  height: 31px;
+  background-image: url(../images/petProfile/displayInfoActive.svg);
+  background-repeat: no-repeat;
+  background-size: 280px 42px;
+  width: 280px;
+  height: 42px;
   display: none;
 }
-
 #timePortionPickerInactive {
   display: block;
-  background-image: url(../images/petProfile/displayInformationInactive.svg);
-  width: 221px;
-  height: 31px;
+  background-image: url(../images/petProfile/displayInfoInactive.svg);
+  background-repeat: no-repeat;
+  background-size: 280px 42px;
+  width: 280px;
+  height: 42px;
 }
-
-/* pet profile scroll */
-
-.habits {
-  height: 43vh;
-  overflow: scroll;
-}
-
-/* pet profile scroll end */
-
-
-
+/* eating habits profile end */
 /* pet profile end */
 
 /* settings */
@@ -1035,56 +1002,52 @@ hr {
   display: flex;
   justify-content: space-between;
 }
+.editclosetrans {
+  transition: 0.2s ease-in-out;
+}
+.cancelmode_edit {
+  transform: rotate(-90deg);
+}
 /* buttons Auto Feed end*/
 
 /* date picker Auto Feed */
-
 .autofeedDate {
 
 }
-
 .autofeedDuration {
   width: 280px;
   margin-bottom: 40px;
 }
-
 .autofeedDuration h4 {
   margin-bottom: 20px;
   width: 280px;
 }
-
 .datePickerContent {
   width: 280px;
   display: flex;
   justify-content: space-between;
 }
-
 .datePickerContent.border {
   border-top: 1px solid #87BCD2;
   border-bottom: 1px solid #87BCD2;
 }
-
 .datePicker {
   text-align: center;
   padding: 10px ;
 }
-
 .datePicker.default {
   opacity: 0.5;
 }
-
 .datePicker.border {
   border-top: 1px solid #87BCD2;
   border-bottom: 1px solid #87BCD2;
 }
-
 #datePickerBeginDay,
 #datePickerEndDay,
 #datePickerBeginYear,
 #datePickerEndYear {
   width: 60px;
 }
-
 #datePickerBeginMonth,
 #datePickerEndMonth {
   width: 120px;
@@ -1096,16 +1059,10 @@ hr {
   width: 280px;
   display:flex;
 }
-/* check box end */
-
-
-
+/* unlimited check box end */
 /* settings Auto Feed end */
 
-
-
 /* footer navigation */
-
 footer {
   width: 100vw;
   height: 80px;
@@ -1114,20 +1071,17 @@ footer {
   background: white;
   z-index: 3;
 }
-
 footer nav  {
   width: 280px;
   height: 40px;
   margin: 20px auto;
 }
-
 #mainNavi {
   width: 280px;
   height: 40px;
   display: flex;
   justify-content: space-between;
 }
-
 #mainNavi .navientry {
   width: 40px;
   height: 40px;
@@ -1136,45 +1090,32 @@ footer nav  {
   background-size: 40px 40px;
   transition: 0s;
 }
-
-
 #naviMainPage {
   background-image: url('../images/mainNaviElements/iconMainPageInactive.svg');
 }
-
 #naviMainPage.activated {
   background-image: url('../images/mainNaviElements/iconMainPageActive.svg') !important;
 }
-
 #naviHistory {
   background-image: url('../images/mainNaviElements/iconHistoryInactive.svg');
 }
-
 #naviHistory.activated {
   background-image: url('../images/mainNaviElements/iconHistoryActive.svg') !important;
 }
-
 #naviProfile {
   background-image: url('../images/mainNaviElements/iconProfileInactive.svg');
 }
 #naviProfile.activated {
   background-image: url('../images/mainNaviElements/iconProfileActive.svg') !important;
 }
-
 #naviSettings {
   background-image: url('../images/mainNaviElements/iconSettingsInactive.svg');
 }
-
 #naviSettings.activated {
   background-image: url('../images/mainNaviElements/iconSettingsActive.svg') !important;
 }
-
 /* footer navigation end */
 
-
-
-
-
-.prototype{
+.prototype {
   display: none;
 }
