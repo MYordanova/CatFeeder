@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
-    <title>Artboard Copy</title>
+    <title>Artboard Copy 12</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-Copy">
-            <g id="Group-14" transform="translate(1.000000, 1.000000)">
-                <g id="Group-12-Copy-8" fill="#87BCD2" stroke="#87BCD2">
-                    <g id="Group-10" transform="translate(14.500000, 14.500000) rotate(-270.000000) translate(-14.500000, -14.500000) ">
-                        <g id="Group-5">
-                            <circle id="Oval-12" cx="14.5" cy="14.5" r="14.5"></circle>
-                        </g>
+        <g id="Artboard-Copy-12">
+            <g id="Group-12-Copy-8" transform="translate(1.000000, 1.000000)" fill="#87BCD2" stroke="#87BCD2">
+                <g id="Group-10" transform="translate(14.500000, 14.500000) rotate(-270.000000) translate(-14.500000, -14.500000) ">
+                    <g id="Group-5">
+                        <circle id="Oval-12" cx="14.5" cy="14.5" r="14.5"></circle>
                     </g>
                 </g>
-                <polygon id="M-Copy" fill="#FFFFFF" points="21.832 20.402 20.23 20.402 19.078 10.952 15.136 19.052 13.714 19.052 9.736 10.952 8.602 20.402 7 20.402 8.512 8 9.988 8 14.416 17.198 18.826 8 20.302 8"></polygon>
             </g>
+            <text id="M" font-family="SofiaProRegular, Sofia Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="8" y="21">M</tspan>
+            </text>
         </g>
     </g>
 </svg>

@@ -2,22 +2,14 @@ var timeportionpicker = "<div class='timePortionPicker editpicker'>";
 timeportionpicker +=  "<div id='timePortionPickerActive' class='displayInformation'></div>";
 timeportionpicker +=  "<div id='timePortionPickerInactive' class='displayInformation'></div></div>";
 
-
-
 $(document).ready (function() {
 
   $('#addButtonPhoto').click(function() {
     $(this).addClass('activated');
     setTimeout(function() {
       $('#addButtonPhoto').removeClass('activated');
-    }, 100);
+    }, 200);
   });
-console.log("W");
-  $('.timePortionPicker').click(function(){
-    console.log(this);
-    $(this).css({"transform":"translateX(50px)"});
-  });
-
 
   $('#confirmButtonHabit').hide();
   $('#editButtonHabit').hide();
@@ -25,39 +17,37 @@ console.log("W");
   $('#newHabit .displayHeader').hide();
 
   $('#addcloseButtonHabit').click(function(){
-
     var numOfHabits = $("#newHabit .habits .timePortionPicker").length;
     $(this).toggleClass("activated",true);
 
-
-    if ($(this).hasClass("cancelmode")) {
+    if ($('.addclosetrans').hasClass("cancelmode_add")) {
+      $('#editButtonHabit').show();
       if ($("#newHabit .habits").hasClass("editmode")) {
         $(".timePortionPicker").toggleClass("editpicker",false);
       } else if ($("#newHabit .habits").hasClass("addmode")) {
         $("#newHabit .habits .timePortionPicker").first().remove();
-        if (numOfHabits == 1) $('#newHabit .displayHeader').hide();
+        if (numOfHabits == 1) {
+          $('#newHabit .displayHeader').hide();
+          $('#editButtonHabit').hide();
+        }
       }
-
-      $(this).toggleClass("cancelmode",false);
-
+      $('.addclosetrans').toggleClass("cancelmode_add",false);
       $('#confirmButtonHabit').hide();
-      $('#editButtonHabit').show();
-      $('#closeButtonHabit').hide();
       $("#newHabit .habits").toggleClass("editmode",false);
       $("#newHabit .habits").toggleClass("addmode",false);
-
-
     } else {
+
       $("#newHabit .habits").toggleClass("addmode",true);
       $("#newHabit .habits").prepend(timeportionpicker);
-      $(this).toggleClass("cancelmode",true);
+      $('.addclosetrans').toggleClass("cancelmode_add",true);
       $('#confirmButtonHabit').show();
       $('#editButtonHabit').hide();
-      $('#closeButtonHabit').show();
       $('#newHabit .displayHeader').show();
     }
 
-    setTimeout(function() {$('#addcloseButtonHabit').toggleClass("activated",false);}, 300);
+    setTimeout(function() {
+      $('#addcloseButtonHabit').toggleClass("activated",false);
+    }, 200);
   });
 
   $('#confirmButtonHabit').click(function(){
@@ -66,14 +56,14 @@ console.log("W");
       $('#confirmButtonHabit').removeClass('activated');
       $('#editButtonHabit').removeClass('activated');
       $('#confirmButtonHabit').hide();
-      $('#addcloseButtonHabit').toggleClass("cancelmode");
+      $('.addclosetrans').toggleClass("cancelmode_add");
       $('#editButtonHabit').show();
 
       $(".timePortionPicker").toggleClass("editpicker",false);
       $("#newHabit .habits").toggleClass("editmode",false);
       $("#newHabit .habits").toggleClass("addmode",false);
 
-    }, 100);
+    }, 200);
   });
 
 
@@ -85,7 +75,7 @@ console.log("W");
       $('#confirmButtonHabit').show();
       $("#newHabit .habits").toggleClass("editmode",true);
       $(".timePortionPicker").toggleClass("editpicker",true);
-      $('#addcloseButtonHabit').toggleClass("cancelmode");
-    }, 100);
+      $('.addclosetrans').toggleClass("cancelmode_add");
+    }, 200);
   });
 });

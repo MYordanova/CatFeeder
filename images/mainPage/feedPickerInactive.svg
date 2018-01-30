@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="30px" height="135px" viewBox="0 0 30 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>feedPickerActive</title>
+    <title>feedPickerInactive</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="v" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-376.000000, -86.000000)">
-        <g id="feedPickerActive" transform="translate(376.000000, 86.000000)">
+    <g id="v" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-537.000000, -86.000000)">
+        <g id="feedPickerInactive" transform="translate(537.000000, 86.000000)">
             <rect id="Rectangle-3" fill="#B5E1DE" x="14" y="133" width="2" height="2"></rect>
             <circle id="Oval-11-Copy" stroke="#87BCD2" stroke-width="2" cx="15" cy="15" r="14"></circle>
-            <circle id="Oval-11-Copy" stroke="#87BCD2" stroke-width="2" fill="#87BCD2" cx="15" cy="15" r="8"></circle>
+            <circle id="Oval-11-Copy" stroke="#87BCD2" stroke-width="2" fill="#FFFFFF" cx="15" cy="15" r="8"></circle>
         </g>
     </g>
 </svg>

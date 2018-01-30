@@ -21,7 +21,7 @@
     <script type="text/javascript" src="js/catprofile.js"></script>
     <script type="text/javascript" src="js/chartjsUtils.js"></script>
     <script type="text/javascript" src="js/history-charts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
   </head>
 
   <body>
@@ -56,7 +56,7 @@
                 </div>
               </div>
 
-              <div class="feedPicker activated"></div>
+              <div class="feedPicker"></div>
 
               <div class="feedCircleShape">
                 <p class="circlePortion">0</p>
@@ -72,10 +72,12 @@
               </div>
 
               <div class="autofeedCircleShape">
-                <p class="autofeedPosition">
+                <div class="autofeedPosition">
                   OFF
-                  <p class="autofeedOption"></p>
-                </p>
+                </div>
+                <div class="autofeedOption">
+                </div>
+
               </div>
             </div>
 
@@ -195,7 +197,10 @@
               <div id="eatingHabitsProfile" class="page">
                 <h2>Eating Habits</h2>
                 <div class="buttonsHabits">
-                  <div id="addcloseButtonHabit" class="button addButton"></div>
+                  <div class="addclosetrans">
+                    <div id="addcloseButtonHabit" class="button addButton"></div>
+                  </div>
+
 
                   <div id="confirmButtonHabit" class="button confirmButton"></div>
                   <div id="editButtonHabit" class="button editButton"></div>
@@ -247,8 +252,12 @@
                   </div>
 
                   <div class="buttonsAutofeed">
-                    <div id="editButtonAutofeed" class="button editButton"></div>
-                    <div id="closeButtonAutofeed" class="button closeButton"></div>
+                    <div class="editclosetrans">
+                      <div id="editButtonAutofeed" class="button editButton"></div>
+                      <div id="closeButtonAutofeed" class="button closeButton"></div>
+                    </div>
+
+
                     <div id="confirmButtonAutofeed" class="button confirmButton"></div>
                   </div>
 
@@ -272,13 +281,13 @@
                     </div>
                   </div>
 
-                    <div class="unlimitedFunction">
-                      <div id="checkboxUnlimited" class="checkbox">
-                      </div>
-                      <div id="checkboxTextUnlimited" class="checkboxText">
-                        <span>unlimited</span>
-                      </div>
+                  <div class="unlimitedFunction">
+                    <div id="checkboxUnlimited" class="checkbox">
                     </div>
+                    <div id="checkboxTextUnlimited" class="checkboxText">
+                      <span>unlimited</span>
+                    </div>
+                  </div>
 
 
                 </div>
