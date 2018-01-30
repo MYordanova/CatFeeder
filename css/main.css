@@ -6,6 +6,7 @@
   border: 0;
   margin: 0;
   padding: 0;
+  font-family: "sofia-pro", sans-serif;
 }
 html,
 body {
@@ -14,11 +15,10 @@ body {
   background-color: #ffffff;
   color: #4A4A4A;
   overflow: hidden;
-
-  font-family: "sofia-pro", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400; /* 400 = regular */
+
 }
 
 #all {
@@ -26,7 +26,39 @@ body {
   height:100vh;
 }
 
-content {}
+#all.activated {
+  filter: blur(5px);
+}
+
+#all-eskalation.activated {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.eskalation.activated {
+  width: 200px;
+  height: 100px;
+  z-index: 5;
+  position: absolute;
+  background: #4A4A4A;
+  border-radius: 5px;
+  top: calc(50vh - 50px);
+  left: calc(50vw - 100px);
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+content {
+
+}
+
 
 /* allgemein end */
 
@@ -213,9 +245,7 @@ content {}
 #autofeed {
 
 }
-
 /* nextpage end */
-
 
 
 h1 {
@@ -226,7 +256,6 @@ h1 {
   line-height: 0;
   width: 280px;
 }
-
 h2 {
   text-align: left;
   font-size: 1.25rem; /* NOTE: 20px  */
@@ -238,7 +267,6 @@ h2 {
   align-items: flex-end;
   margin-bottom: 40px;
 }
-
 h3 {
   width: 50%;
   font-size: 1rem;
@@ -248,25 +276,18 @@ h3 {
   display: flex;
   align-items: flex-end;
 }
-
 h4 {
   font-size: 0.875rem;
   font-weight: 500;
 }
-
 ul {
   list-style-type: none;
 }
-
 li {
-  /* font-family: "sofia-pro",sans-serif; */
   font-style: normal;
   font-weight: 500;
   list-style-type: none;
 }
-
-
-/* Lines  */
 hr {
   background-color:#4A4A4A;
   color:#4A4A4A;
@@ -371,7 +392,8 @@ hr {
   height: 60px;
   width: 60px;
   margin: 0 10px;
-
+  display: flex;
+  justify-content: center;
 }
 
 .progressbar div {
@@ -392,15 +414,14 @@ hr {
   text-align: center;
   border-radius: 50%;
   background-color: white;
-  font-family: "sofia-pro", sans-serif;
 }
 
 .statusinfo {
   position: absolute;
   top: 75px;
-  width: 60px;
+  width: 75px;
   text-align: center;
-  font-family: "sofia-pro", sans-serif;
+  font-size: 0.875rem;
 }
 
 .progressbar .background {
@@ -523,7 +544,7 @@ hr {
   width: 120px;
   position: absolute;
   top: 450px;
-  left: calc(50vw - 120px - 120px); /* 50vw = linke kante an mittelachse - 120px = rechte kante an mittelachse - 100px abstand */
+  left: calc(50vw - 120px - 100px); /* 50vw = linke kante an mittelachse - 120px = rechte kante an mittelachse - 100px abstand */
 }
 
 .autofeedCircleRing.bigRing {
@@ -775,7 +796,6 @@ width : 5px
   border-bottom: 1px solid;
   border-bottom-color: #87BCD2;
   font-size: 1rem;
-  font-family: "sofia-pro", sans-serif;
   color: #4A4A4A;
   width: 280px;
   height: 50px;

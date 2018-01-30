@@ -1,7 +1,4 @@
-var futterTag = 0;
-var futterWoche = 253;
-var futterMonat = 3482;
-
+$.mobile.autoInitializePage = false;
 
 $(document).ready(function() {
 
@@ -20,7 +17,7 @@ $(document).ready(function() {
       $('.circleGram').hide();
       $('.feedButton').hide();
 
-      var calc_2 = $(window).width() / 2 + 120 + 'px';
+      var calc_2 = $(window).width() / 2 + 100 + 'px';
       $('.feedCircle').animate({
         width: '120px',
         height: '120px',
@@ -91,7 +88,7 @@ $(document).ready(function() {
   // wechsel von autofeed zu feed
   $('.feedCircle').click(function() {
     if($('.autofeedCircle').hasClass('activated')) {
-      var calc_2 = $(window).width() / 2 - 120 - 120 + 'px';
+      var calc_2 = $(window).width() / 2 - 120 - 100 + 'px';
       $('.autofeedCircle').animate({
         width: '120px',
         height: '120px',
@@ -321,9 +318,21 @@ $(document).ready(function() {
           $('.autofeedPosition').text('');
           $('.autofeedOption').text('unlimited');
         } else {
-          alert('Set Duration first');
+          $('#all').toggleClass('activated', true);
+          $('#all-eskalation').toggleClass('activated', true);
+          $('.eskalation').toggleClass('activated', true);
+          $('#setDuration').text('First set duration.');
         }
       }
+    }
+  });
+
+  $('#all-eskalation').click(function() {
+    if($('#all').hasClass('activated')) {
+      $('#all').toggleClass('activated', false);
+      $('#all-eskalation').toggleClass('activated', false);
+      $('.eskalation').toggleClass('activated', false);
+      $('.eskalation').text('');
     }
   });
 
@@ -730,7 +739,7 @@ $(document).ready(function() {
 
 
 
-  
+
 
   // allgemein
 
