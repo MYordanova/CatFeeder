@@ -404,6 +404,7 @@ hr {
   text-align: center;
   border-radius: 50%;
   background-color: white;
+  font-family: "sofia-pro", sans-serif;
 }
 
 .statusinfo {
@@ -411,6 +412,7 @@ hr {
   top: 75px;
   width: 60px;
   text-align: center;
+  font-family: "sofia-pro", sans-serif;
 }
 
 .progressbar .background {
@@ -879,6 +881,7 @@ hr {
   border-bottom: 1px solid;
   border-bottom-color: #87BCD2;
   font-size: 16px;
+  font-family: "sofia-pro", sans-serif;
   color: #4A4A4A;
   width: 280px;
   height: 50px;
