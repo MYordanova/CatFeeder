@@ -774,7 +774,7 @@ width : 5px
   outline: 0;
   border-bottom: 1px solid;
   border-bottom-color: #87BCD2;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: "sofia-pro", sans-serif;
   color: #4A4A4A;
   width: 280px;
@@ -815,7 +815,7 @@ width : 5px
   margin-bottom: 20px;
 }
 .captionNewHabit  {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 .habits {
