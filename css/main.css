@@ -691,7 +691,7 @@ hr {
   width: 280px;
   height: 50px;
 
-  border-bottom: 1px solid #4A4A4A;
+  border-bottom: 1px solid #87BCD2;;
 }
 
 /* History Content  */
@@ -710,108 +710,10 @@ hr {
 
 }
 
-/* Food Indexes Months  */
-
-.foodIndexJanuary {
-  width: 130px;
-}
-
-.foodIndexFebruary {
-  width: 120px;
-}
-
-.foodIndexMarch {
-  width: 110px;
-}
-
-.foodIndexApril {
-  width: 105px;
-}
-
-.foodIndexMay {
-  width: 105px;
-}
-
-.foodIndexJune {
-  width: 110px;
-}
-
-.foodIndexJuly {
-  width: 120px;
-}
-
-.foodIndexAugust {
-  width: 130px;
-}
-
-.foodIndexSeptember {
-  width: 150px;
-}
-
-.foodIndexOctober {
-  width: 180px;
-}
-
-.foodIndexNovember {
-  width: 195px;
-}
-
-.foodIndexDecember {
-  width: 210px;
-}
-
-/* Water Indexes Months  */
-
-.waterIndexJanuary {
-  width: 80px;
-}
-
-.waterIndexFebruary {
-  width: 90px;
-}
-
-.waterIndexMarch {
-  width: 100px;
-}
-
-.waterIndexApril {
-  width: 110px;
-}
-
-.waterIndexMay {
-  width: 110px;
-}
-
-.waterIndexJune {
-  width: 110px;
-}
-
-.waterIndexJuly {
-  width: 110px;
-}
-
-.waterIndexAugust {
-  width: 110px;
-}
-
-.waterIndexSeptember {
-  width: 110px;
-}
-
-.waterIndexOctober {
-  width: 110px;
-}
-
-.waterIndexNovember {
-  width: 110px;
-}
-
-.waterIndexDecember {
-  width: 110px;
-}
-
-.curve {
-  hight: 200px;
+.chartjs-tooltip-key {
+border-radius: 5px;
+height : 5px;
+width : 5px
 }
 
 .monthsFoodAmount {

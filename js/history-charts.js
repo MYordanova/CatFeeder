@@ -7,6 +7,7 @@ var fooddata = {
     data: [0,20,18,15,18,40,0],
     fill: false,
     pointRadius: 5,
+    pointHitRadius: 20,
     borderColor: window.chartColors.lightblue,
     backgroundColor: window.chartColors.lightblue,
   }]
@@ -19,6 +20,7 @@ var waterdata = {
     data: [15,20,18,15,18,40,60],
     fill: false,
     pointRadius: 5,
+    pointHitRadius: 20,
     borderColor: window.chartColors.lightblue,
     backgroundColor: window.chartColors.lightblue,
   }]
@@ -34,7 +36,7 @@ window.myLineFood = new Chart(ctxFood, {
   type: 'line',
   data: fooddata,
   options : {
-    scaleStartValue: 0,
+scaleStartValue: 0,
     legend: {
       display: false
     },
@@ -43,8 +45,23 @@ window.myLineFood = new Chart(ctxFood, {
         display:false
     },
     tooltips: {
-        mode: 'index',
-        intersect: false,
+      mode: 'index',
+      position: 'nearest',
+      intersect: false,
+      yPadding: 16,
+      xPadding: 12,
+      caretSize: 0,
+      cornerRadius: 32,
+      displayColors: false,
+      backgroundColor: window.chartColors.lightblue,
+      titleFontColor: window.chartColors.white,
+      bodyFontColor: window.chartColors.white,
+      borderWidth: 4,
+      callbacks: {
+                   label: function (tooltipItems, data) {
+                       return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' g';
+                   }
+              }
     },
     hover: {
         mode: 'nearest',
@@ -54,7 +71,7 @@ window.myLineFood = new Chart(ctxFood, {
             xAxes: [{
             stacked: true,
             gridLines: {
-              drawBorder: false
+              drawBorder: false,
             },
             display: true,
 
@@ -66,7 +83,7 @@ window.myLineFood = new Chart(ctxFood, {
               minRotation: 90,
               fontFamily: "sofia-pro",
               fontSize: 12,
-              beginAtZero:true
+              beginAtZero:true,
             },
               scaleLabel: {
                 display: false,
@@ -111,8 +128,24 @@ window.myLineWater = new Chart(ctxWater, {
         display:false
     },
     tooltips: {
-        mode: 'index',
-        intersect: false,
+      mode: 'index',
+      position: 'nearest',
+      intersect: false,
+      yPadding: 12,
+      xPadding: 12,
+      caretSize: 5,
+      cornerRadius: 30,
+      displayColors: false,
+      backgroundColor: window.chartColors.lightblue,
+      titleFontColor: window.chartColors.white,
+      bodyFontColor: window.chartColors.white,
+      borderWidth: 0,
+      tooltipCornerRadius: 10,
+      callbacks: {
+                   label: function (tooltipItems, data) {
+                       return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' g';
+                   }
+              }
     },
     hover: {
         mode: 'nearest',
