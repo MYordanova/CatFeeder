@@ -141,7 +141,7 @@ window.myLineWater = new Chart(ctxWater, {
       mode: 'index',
       position: 'nearest',
       intersect: true,
-      yPadding: 17,
+      yPadding: 15,
       xPadding: 8,
       caretSize: 0,
       caretPadding: 10,
