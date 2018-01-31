@@ -47,7 +47,7 @@ $(document).ready(function() {
 				$('.feedButton').removeClass('activated');
       }, 100);
 
-			if(food > circlePortion && circlePortion <= (100 - bowl)) {
+			if(food > circlePortion && circlePortion <= (100 - bowl) && circlePortion > 0) {
 				var foodtank_new = food - circlePortion;
 				var bowl_new = bowl + circlePortion;
 
