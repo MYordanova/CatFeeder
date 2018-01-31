@@ -44,7 +44,7 @@ body {
   height: 100px;
   z-index: 5;
   position: absolute;
-  background: #4A4A4A;
+  background: #B5E1DE;
   border-radius: 5px;
   top: calc(50vh - 50px);
   left: calc(50vw - 100px);
@@ -84,11 +84,11 @@ content {
 }
 
 #mainPageContent {
-  z-index: ;
+  z-index: 1;
 }
 
 #historyContent {
-  z-index: 1;
+  z-index: ;
 }
 
 #profileContent {
@@ -425,22 +425,22 @@ hr {
 }
 
 .progressbar .background {
-  background-color: #B5D8DE;
+  background-color: #B5E1DE;
 }
 
 .progressbar .rotate {
-  background-color: #5C5C61;
+  background-color: #4A4A4A;
   clip: rect(0 30px 60px 0);
 }
 
 .progressbar .left {
-  background-color: #B5D8DE;
+  background-color: #B5E1DE;
   clip: rect(0 30px 60px 0);
   opacity: 1;
 }
 
 .progressbar .right {
-  background-color: #5C5C61;
+  background-color: #4A4A4A;
   clip: rect(0 30px 60px 0);
   transform: rotate(180deg);
   opacity: 0;

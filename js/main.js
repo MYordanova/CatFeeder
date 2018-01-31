@@ -321,7 +321,7 @@ $(document).ready(function() {
           $('#all').toggleClass('activated', true);
           $('#all-eskalation').toggleClass('activated', true);
           $('.eskalation').toggleClass('activated', true);
-          $('#setDuration').text('First set duration.');
+          $('#setDuration').text('Set duration first.');
         }
       }
     }
