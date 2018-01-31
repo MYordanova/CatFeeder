@@ -3,7 +3,7 @@
 var fooddata = {
   xLabels: ["26 Jan", "27 Jan", "28 Jan","29 Jan", "30 Jan", "31 Jan", "1 Feb"],
   datasets: [{
-    data: [0,40,20,25,20,40,0],
+    data: ['  0','40','20','25','20','40',0],
     fill: false,
     pointRadius: 0,
     pointHitRadius: 20,
@@ -17,7 +17,7 @@ var fooddata = {
 var waterdata = {
   xLabels: ["26 Jan", "27 Jan", "28 Jan","29 Jan", "30 Jan", "31 Jan", "1 Feb"],
   datasets: [{
-    data: [0,40,50,40,70,60,70],
+    data: ['  0','40','50','40','70','60','70'],
     fill: false,
     pointRadius: 0,
     pointHitRadius: 20,
@@ -42,9 +42,10 @@ scaleStartValue: 0,
     },
     responsive: true,
     title:{
-        display:false
+        display:false,
     },
     tooltips: {
+      titleMarginBottom: 6,
       mode: 'index',
       position: 'nearest',
       intersect: true,
@@ -60,6 +61,7 @@ scaleStartValue: 0,
       bodyFontSize: 16,
       bodyFontFamily: 'sofia-pro',
       yAlign: 'bottom',
+      bodySpacing:10,
       callbacks: {
 
                    label: function (tooltipItems, data) {
@@ -139,8 +141,8 @@ window.myLineWater = new Chart(ctxWater, {
       mode: 'index',
       position: 'nearest',
       intersect: true,
-      yPadding: 15,
-      xPadding: 3,
+      yPadding: 16,
+      xPadding: 4,
       caretSize: 0,
       caretPadding: 10,
       cornerRadius: 5,
