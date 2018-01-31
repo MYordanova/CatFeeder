@@ -17,7 +17,7 @@ var fooddata = {
 var waterdata = {
   xLabels: ["26 Jan", "27 Jan", "28 Jan","29 Jan", "30 Jan", "31 Jan", "1 Feb"],
   datasets: [{
-    data: ['  0','40','50','40','70','60','70'],
+    data: ['  0','40','50','40','100','60','70'],
     fill: false,
     pointRadius: 0,
     pointHitRadius: 20,
@@ -141,8 +141,8 @@ window.myLineWater = new Chart(ctxWater, {
       mode: 'index',
       position: 'nearest',
       intersect: true,
-      yPadding: 16,
-      xPadding: 4,
+      yPadding: 17,
+      xPadding: 8,
       caretSize: 0,
       caretPadding: 10,
       cornerRadius: 5,
