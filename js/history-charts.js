@@ -49,7 +49,7 @@ scaleStartValue: 0,
       position: 'nearest',
       intersect: true,
       yPadding: 15,
-      xPadding: 15,
+      xPadding: 8,
       caretSize: 0,
       caretPadding: 15,
       cornerRadius: 5,
@@ -63,7 +63,7 @@ scaleStartValue: 0,
       callbacks: {
 
                    label: function (tooltipItems, data) {
-                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + '';
+                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' g';
                    },
                    title: function (tooltipItems, data) {
                       return '';
@@ -140,7 +140,7 @@ window.myLineWater = new Chart(ctxWater, {
       position: 'nearest',
       intersect: true,
       yPadding: 15,
-      xPadding: 15,
+      xPadding: 3,
       caretSize: 0,
       caretPadding: 10,
       cornerRadius: 5,
@@ -154,7 +154,7 @@ window.myLineWater = new Chart(ctxWater, {
       callbacks: {
 
                    label: function (tooltipItems, data) {
-                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + '';
+                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' ml';
                    },
                    title: function (tooltipItems, data) {
                       return '';
